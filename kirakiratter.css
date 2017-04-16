@@ -266,7 +266,7 @@
     .search-results .display-name span { color: #dfafaf; }
     .search__icon .fa.active { color: #FFF; opacity: 1; }
     .search__icon .fa-times-circle.active { color: #FFF; opacity: 1; }
-    .search__input { background: #d0e093; color: #FFF; }
+    .search__input { background: #d0e093; color: #6a4643; }
     .search__input::-webkit-input-placeholder, .search__input::-moz-placeholder, .search__input::-ms-input-placeholder, .search__input::-moz-placeholder { color: #FFF; }
     .search__input:focus { background: #7c8658; color: #FFF; }
 
