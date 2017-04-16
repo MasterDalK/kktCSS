@@ -1,4 +1,5 @@
-/* Matsodon: Kirakiratter Custom CSS V7.2
+/*
+  Mastodon: Kirakiratter Custom CSS V7.2
   By Salil Gupta (@MasterDalK)
   Other Contributors: @pomo, @sumire, @bitmap, @hisagi, @lae
 
@@ -11,7 +12,8 @@
   Toggles:
     Meiryo UI
     Column Resizing based on Browser Width
-    Reply Indiciator Colour */
+    Reply Indiciator Colour
+*/
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
