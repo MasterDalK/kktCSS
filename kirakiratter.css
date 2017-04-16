@@ -41,7 +41,7 @@
 
   .ui {
     background-color: #ecf5be;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="114" viewBox="0 0 80 114"><rect x="0" y="0" height="114" width="80" fill="#ecf5be"/><path d="m0 57 40-57 40 57-40 57z" fill="#e0ea95"/></svg>');
+    background-image: url('data:image/svg+xml;utf8, <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" height="114" viewBox="0 0 80 114" width="80" version="1.1"><rect height="114" width="80" y="0" x="0" fill="#ecf5be"/><path fill="#e0ea95" d="m0 57 40-57 40 57-40 57z"/></svg>');
     background-repeat: repeat;
  }
 
@@ -83,7 +83,7 @@
   }
   /* Banner -- END */
 
-  .drawer__header, .drawer__inner, .drawer__inner.darker, .tabs-bar { background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="28" viewBox="0 0 20 28"><rect x="0" y="0" width="20" height="28" fill="#e56cac"/><path d="m0 14 10-14 10 14-10 14z" fill="#d84a9d"/></svg>'); }
+  .drawer__header, .drawer__inner, .drawer__inner.darker, .tabs-bar { background: url('data:image/svg+xml;utf8,<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" height="28" width="20" viewBox="0 0 20 28"><rect height="28" width="20" y="0" x="0" fill="#e56cac"/><path d="m0 14 10-14 10 14-10 14z" fill="#d84a9d"/></svg>'); }
   .column>.scrollable { background: none; }
   .column-header, .column-icon, .column-back-button, .column-link { background: #d0e093; }
   .column>.scrollable, .empty-column-indicator, .media-spoiler { background: rgba(0,0,0,0.1); }
