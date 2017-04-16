@@ -3,13 +3,7 @@ CSS Styling for Matsodon to look like KiraKiratter / キラキラッター from 
 
 Join the kirakiratter community: https://kirakiratter.com
 
-## 日本語で解説するね
-氷上スミレ( https://kirakiratter.com/@sumire )です。
-みなさんはキラキラッター( https://kirakiratter.com )、してますか？
-
-キラキラッターがもっと魅力的になる、DalKちゃんの素敵なCSSコーデ(ィング)の使いかたを、解説するよ。
-
-## Install Instructions:
+## Installation Instructions:
 ### Desktop
 
 Get extension "Stylish" -  
@@ -24,6 +18,12 @@ Create a new bookmark with the following as a URL:
 
 Then visit kirakiratter (or matsodon instance of your choice) and _then_ go to the bookmark you just created, and you'll be set.
 You will need to do this everytime you load it up on mobile however.
+
+## 日本語で解説するね
+氷上スミレ( https://kirakiratter.com/@sumire )です。
+みなさんはキラキラッター( https://kirakiratter.com )、してますか？
+
+キラキラッターがもっと魅力的になる、DalKちゃんの素敵なCSSコーデ(ィング)の使いかたを、解説するよ。
 
 ## 素敵なキラキラッターのはじめかた
 ### Desktop
