@@ -1,3 +1,4 @@
+@-moz-document url-prefix("https://kirakiratter.com") {
 /* Matsodon: Kirakiratter Custom CSS V7.2
   By Salil Gupta (@MasterDalK)
   Other Contributors: @pomo, @sumire, @bitmap, @hisagi, @lae
@@ -339,3 +340,5 @@
 
 /* Things Are Not O.K */
    .notification-bar.notification-bar-active { background: black; font-family: "Lucida Console"; font-size: 9rem; }
+  
+}
