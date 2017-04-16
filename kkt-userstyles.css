@@ -1,6 +1,6 @@
 @-moz-document url-prefix("https://kirakiratter.com") {
 /*
-  Mastodon: Kirakiratter Custom CSS V7.2
+  Mastodon: Kirakiratter Custom CSS V7.3
   By Salil Gupta (@MasterDalK)
   Other Contributors: @pomo, @sumire, @bitmap, @hisagi, @lae
 */
@@ -130,7 +130,6 @@
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   background: linear-gradient(to bottom, rgba(252, 252, 225, 1) 0%, rgba(252, 252, 225, 1) 65%, rgba(252, 252, 225, 1) 65%, rgba(249, 240, 174, 1) 100%);
   /* IE6-9 */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfce1', endColorstr='#f9f0ae', GradientType=0);
   border-radius: 8px;
   margin-bottom: 8px;
   margin-left: 64px;
@@ -171,7 +170,6 @@
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   background: linear-gradient(to bottom, rgba(252, 252, 225, 1) 0%, rgba(252, 252, 225, 1) 65%, rgba(252, 252, 225, 1) 65%, rgba(249, 240, 174, 1) 100%);
   /* IE6-9 */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfce1', endColorstr='#f9f0ae', GradientType=0);
   border-radius: 8px;
   margin-bottom: 8px;
   border: solid 2px #e1c152;
@@ -440,6 +438,16 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
 .search__input:focus {
   background: #7c8658;
   color: #fff;
+}
+
+.search__input, .autosuggest-textarea__textarea {
+	font-size: 16px;
+}
+
+@media screen and (min-width: 1024px) {
+	.search__input, .autosuggest-textarea__textarea {
+		font-size: 14px;
+	}
 }
 
 /* Settings Dropdown */
