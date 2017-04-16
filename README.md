@@ -4,6 +4,12 @@ CSS stylesheet for Mastodon to look like Kirakiratter (キラキラッター) fr
 
 Join the Kirakiratter community: https://kirakiratter.com
 
+## 日本語で解説するね
+氷上スミレ( https://kirakiratter.com/@sumire )です。
+みなさんはキラキラッター( https://kirakiratter.com )、してますか？
+
+キラキラッターがもっと魅力的になる、DalKちゃんの素敵なCSSコーデ(ィング)の使いかたを、解説するよ。  
+
 ## Installation Instructions:
 ### Desktop
 
@@ -25,12 +31,6 @@ Create a new bookmark using the following as the URL:
 Visit [Kirakiratter](https://kirakiratter.com) (or another Mastodon instance of your choice) and _then_ go to the bookmark you just created to load the stylesheet.
 
 You'll need to do this every time you access Kirakiratter via mobile. If you have a better method for using a custom stylesheet on mobile, please feel free to suggest in GitHub Issues or on Kirakiratter!
-
-## 日本語で解説するね
-氷上スミレ( https://kirakiratter.com/@sumire )です。
-みなさんはキラキラッター( https://kirakiratter.com )、してますか？
-
-キラキラッターがもっと魅力的になる、DalKちゃんの素敵なCSSコーデ(ィング)の使いかたを、解説するよ。
 
 ## 素敵なキラキラッターのはじめかた
 
