@@ -504,6 +504,16 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
   color: #fff;
 }
 
+.search__input, .autosuggest-textarea__textarea { 
+	font-size: 16px;
+}
+
+@media screen and (min-width: 1024px) {
+	.search__input, .autosuggest-textarea__textarea { 
+		font-size: 14px;
+	}
+}
+
 /* Settings Dropdown */
 .react-toggle-track {
   background: rgba(0, 0, 0, 0.6);
