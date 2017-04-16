@@ -510,7 +510,7 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
 
 @media screen and (min-width: 1024px) {
 	.search__input, .autosuggest-textarea__textarea { 
-		font-size: inherit;
+		font-size: 14px;
 	}
 }
 
