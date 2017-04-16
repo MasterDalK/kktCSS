@@ -309,19 +309,19 @@
     @media screen and (min-width: 360px) {
       .columns-area { padding: 0px; }
       .tabs-bar {  margin: 0px; }
-      .fa.fa-fw.fa-pencil { position: relative; top: 3px; }
+      .tabs-bar, .drawer__header:first-child { height: 57px; }
       .search { margin-bottom: 0px; }
     }
 
     @media screen and (min-width: 768px) {
       .columns-area { padding: 10px 10px 0px 10px; }
       .tabs-bar { margin: 10px 10px 0px 10px; }
-      .fa.fa-fw.fa-pencil { position: relative; top: 0px; }
+      .tabs-bar .fa-fw, .drawer__header:first-child .fa-fw { margin-top: 7px; }
       .search { margin-bottom: 10px; }
     }
 
     @media screen and (min-width: 1024px) {
-      .columns-area { padding: 0px 10px 0px 0px; }
+      .columns-area { padding: 10px 10px 0px 10px; }
     }
     /* MOBILE -- END */
 
