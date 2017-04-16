@@ -10,6 +10,10 @@
 
 /* BACKGROUNDS */
 
+/*[[mui]]*/
+/*[[columnsize]]*/
+/*[[replyindicator]]*/
+
   .ui {
     background-color: #ecf5be;
     background-image: url('data:image/svg+xml;utf8, <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" height="114" viewBox="0 0 80 114" width="80" version="1.1"><rect height="114" width="80" y="0" x="0" fill="#ecf5be"/><path fill="#e0ea95" d="m0 57 40-57 40 57-40 57z"/></svg>');
