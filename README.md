@@ -3,6 +3,12 @@ CSS Styling for Matsodon to look like KiraKiratter / キラキラッター from 
 
 Join the kirakiratter community: https://kirakiratter.com
 
+# 日本語で解説するね
+氷上スミレ( https://kirakiratter.com/@sumire )です。
+みなさんはキラキラッター(https://kirakiratter.com)、してますか？
+
+キラキラッターがもっと魅力的になる、DalKちゃんの素敵なCSSコーデ(ィング)の使いかたを、解説するよ。
+
 ## Install Instructions:
 ### Desktop
 
