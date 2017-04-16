@@ -14,7 +14,7 @@ Visit us on [Userstyles.org](https://userstyles.org/styles/141350/kirakiratter) 
 Or create a new style and apply it to domains starting with https://kirakiratter.com and then copy & paste [kirakiratter.css](https://raw.githubusercontent.com/MasterDalK/kktCSS/master/kirakiratter.css) into the code section.
 ### Mobile
 Create a new bookmark with the following as a URL:  
-`javascript:(function(){var s=document.createElement('link');s.setAttribute('href','https://hoshi903.github.io/kkttcss/kirakira.css');s.setAttribute('rel','stylesheet');s.setAttribute('type','text/css');document.getElementsByTagName('head')[0].appendChild(s);})()`
+`javascript:(function(){var s=document.createElement('link');s.setAttribute('href','https://masterdalk.github.io/kktCSS/kirakiratter.css');s.setAttribute('rel','stylesheet');s.setAttribute('type','text/css');document.getElementsByTagName('head')[0].appendChild(s);})()`
 
 Then visit kirakiratter (or matsodon instance of your choice) and _then_ go to the bookmark you just created, and you'll be set.
 You will need to do this everytime you load it up on mobile however.
