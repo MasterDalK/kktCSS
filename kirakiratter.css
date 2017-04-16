@@ -94,7 +94,7 @@ body {
   background-size: contain;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .drawer__header {
     height: 50px;
   }
@@ -508,7 +508,7 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
 	font-size: 16px;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
 	.search__input, .autosuggest-textarea__textarea {
 		font-size: 14px;
 	}
@@ -575,7 +575,7 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
   z-index: 100;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .column,
   .drawer {
     padding-bottom: 0;
@@ -662,7 +662,7 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .columns-area {
     padding: 10px 10px 0 10px;
   }
