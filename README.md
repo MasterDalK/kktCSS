@@ -39,6 +39,7 @@ Stylishはデザインを自分で編集できるから、新しいCSSコーデ(
 ### Mobile
 下の文字列でブックマークを作って、キラキラブックマークレットを用意してね
 `javascript:(function(){var s=document.createElement('link');s.setAttribute('href','https://masterdalk.github.io/kktCSS/kirakiratter.css');s.setAttribute('rel','stylesheet');s.setAttribute('type','text/css');document.getElementsByTagName('head')[0].appendChild(s);})()`
+
 名前は短くて、後で打ち込みやすいのにするのがおすすめ。
 私は「kkt」で登録してる。
 
