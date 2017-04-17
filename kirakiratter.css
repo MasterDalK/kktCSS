@@ -643,10 +643,6 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
   }
 }
 
-.media-modal div button {
-  z-index: 100;
-}
-
 @media screen and (min-width: 1025px) {
   .column,
   .drawer {
@@ -840,4 +836,9 @@ button.icon-button.active i.fa-retweet {
   background: black;
   font-family: "Lucida Console";
   font-size: 9rem;
+}
+
+/* GIF plyer close button hack */
+.media-modal div button {
+  z-index: 100;
 }
