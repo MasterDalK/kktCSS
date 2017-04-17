@@ -1,5 +1,5 @@
 /*
-  Mastodon: Kirakiratter Custom CSS V7.3
+  Mastodon: Kirakiratter Custom CSS V7.5
   By Salil Gupta (@MasterDalK)
   Other Contributors: @pomo, @sumire, @bitmap, @hisagi, @lae
 
@@ -94,17 +94,6 @@ body {
   background-size: contain;
 }
 
-@media screen and (min-width: 1025px) {
-  .drawer__header {
-    height: 50px;
-  }
-
-  .ui::after {
-    top: 0;
-    left: 1px;
-  }
-}
-
 @media screen and (min-width: 360px) {
   .ui::after {
     top: -5px;
@@ -118,12 +107,25 @@ body {
     left: -4px;
   }
 }
+
+@media screen and (min-width: 1025px) {
+  .drawer__header {
+    height: 50px;
+  }
+
+  .ui::after {
+    top: 0;
+    left: 1px;
+  }
+}
+
 /* Banner -- END */
 
 .drawer__header,
 .drawer__inner,
 .drawer__inner.darker,
-.tabs-bar {
+.tabs-bar,
+.onboarding-modal__page .figure {
   background-color: #e56cac;
   background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6Y2M9Imh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL25zIyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiBoZWlnaHQ9IjI4IiB3aWR0aD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyOCI+DQo8cmVjdCBoZWlnaHQ9IjI4IiB3aWR0aD0iMjAiIHk9IjAiIHg9IjAiIGZpbGw9IiNlNTZjYWMiLz4NCjxwYXRoIGQ9Im0wIDE0IDEwLTE0IDEwIDE0LTEwIDE0eiIgZmlsbD0iI2Q4NGE5ZCIvPg0KPC9zdmc+');
 }
@@ -182,7 +184,8 @@ body {
 }
 
 .status,
-.notification {
+.notification,
+.onboarding-modal__pager::before {
   /* Old browsers */
   background: rgb(252, 252, 225);
   /* FF3.6-15 */
@@ -216,6 +219,22 @@ body {
 .notification__message {
   margin-left: 25px;
   padding: 6px 0 6px 0;
+}
+
+.onboarding-modal {
+  background: none;
+}
+
+.onboarding-modal__pager::before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
+  border-radius: 0px;
+  margin: 0px;
+  padding-left: 0px;
+  border: none;
+  box-shadow: none;
 }
 
 .account {
@@ -442,6 +461,10 @@ button.icon-button i.fa-retweet:hover {
   text-shadow: none;
 }
 
+.column-header:focus {
+  outline: none;
+}
+
 .search-results__header {
   background: rgba(237, 42, 144, 0.6);
   border-bottom: solid 1px #8b6461;
@@ -544,6 +567,55 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
 .account__action-bar div:last-child {
   max-width: calc(86% - 32px);
   justify-content: space-between;
+}
+
+/* Onboarding Modal */
+
+.onboarding-modal__paginator {
+  background: rgb(226,72,152); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(226,72,152,1) 0%, rgba(229,108,172,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(226,72,152,1) 0%,rgba(229,108,172,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(226,72,152,1) 0%,rgba(229,108,172,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.onboarding-modal__page p span,
+.onboarding-modal__page h1 span {
+    color: #8b6d5d !important;
+}
+
+.onboarding-modal__page p span a {
+	color: #8e9956 !important;
+  text-decoration: none;
+}
+
+.onboarding-modal__page p span a:hover {
+  text-decoration: underline;
+  text-decoration-color: #ed649c;
+}
+
+.onboarding-modal__paginator a span {
+  color: #efcfcf;
+}
+
+.onboarding-modal__page .figure .pseudo-drawer {
+  background: none;
+}
+
+.onboarding-modal__page-four {
+  line-height: 17px;
+}
+
+.onboarding-modal__dot {
+  background: #6a4643;
+}
+
+.onboarding-modal__dot:hover {
+  background: #8b6461;
+}
+
+.onboarding-modal__dot.active {
+  background: #a07774;
+  box-shadow: #f5e33a 0px 0px 5px 0px;
 }
 
 /* Dropdown Menus */
