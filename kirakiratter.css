@@ -842,3 +842,8 @@ button.icon-button.active i.fa-retweet {
 .media-modal div button {
   z-index: 100;
 }
+
+/* Video player width hack */
+.status div[style*="width: 239px"] {
+  width: 100% !important;
+}
