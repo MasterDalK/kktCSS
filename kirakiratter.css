@@ -652,6 +652,11 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
   .drawer {
     width: 320px;
   }
+
+  .column:last-child,
+  .drawer:last-child {
+    padding-right: 0;
+  }
 }
 
 /* Tab Selection on Mobile */
