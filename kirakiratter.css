@@ -655,7 +655,7 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
 
   .column:last-child,
   .drawer:last-child {
-    padding-right: 0;
+    padding-right: 5px;
   }
 }
 
