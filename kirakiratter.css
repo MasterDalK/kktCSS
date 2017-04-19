@@ -537,6 +537,11 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
 	}
 }
 
+.compose-form__warning {
+  background-color: #f5b9c2;
+  border: 0;
+}
+
 /* Settings Dropdown */
 .react-toggle-track {
   background: rgba(0, 0, 0, 0.6);
