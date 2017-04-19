@@ -623,6 +623,23 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
   box-shadow: #f5e33a 0px 0px 5px 0px;
 }
 
+.onboarding-modal__page p strong {
+  color: #ed649c;
+  background: #f5b9c2;   
+}
+
+.onboarding-modal__page-two .non-interactive span {
+  color: #ffffff;
+}
+
+.onboarding-modal__page-four__columns .column-header {
+  color: #6a4643;
+}
+
+.onboarding-modal__page-six p span a[to] {
+  color: #ed649c !important;
+}
+
 /* Dropdown Menus */
 .dropdown--active .dropdown__content > ul > li > a {
   width: unset;
