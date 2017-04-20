@@ -46,7 +46,7 @@ body {
 /* Column Resizing On Desktop */
 @media screen and (min-width: 1350px) {
   .column {
-    width: 25.5%;
+    width: 26%;
   }
 }
 
