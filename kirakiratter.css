@@ -158,6 +158,10 @@ body {
   background: #f5b9c2;
 }
 
+.status__content__spoiler-link span {
+  color: #fff;
+}
+
 .muted a.status__content__spoiler-link:hover,
 .status__content .status__content__spoiler-link,
 .reply-indicator__content .status__content__spoiler-link,
@@ -483,6 +487,10 @@ div.drawer__inner div div div div span,
   color: #fff;
 }
 
+div.drawer__inner div div div div span[style*="color: rgb(255, 80, 80)"] {
+  color: #efcfcf !important; /* red character count */
+}
+
 div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth-child(n+1) {
   padding-top: 5px !important;
 }
@@ -574,6 +582,25 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
   justify-content: space-between;
 }
 
+.account__action-bar {
+  border-top: 1px solid rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+.account__action-bar__tab {
+  border-left: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+/* User Report */
+
+.status-check-box .status__content {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.status-check-box, .report__target {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+}
+
 /* Onboarding Modal */
 
 .onboarding-modal__paginator {
@@ -625,7 +652,7 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
 
 .onboarding-modal__page p strong {
   color: #ed649c;
-  background: #f5b9c2;   
+  background: #f5b9c2;
 }
 
 .onboarding-modal__page-two .non-interactive span {
@@ -634,6 +661,10 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
 
 .onboarding-modal__page-four__columns .column-header {
   color: #6a4643;
+}
+
+.onboarding-modal__page p span a span {
+  color: #8e9956 !important;
 }
 
 .onboarding-modal__page-six p span a[to] {
@@ -849,6 +880,10 @@ button.icon-button.active i.fa-retweet {
 }
 
 .activity-stream .detailed-status.light .detailed-status__meta a {
+  color: #8e9956;
+}
+
+.activity-stream .detailed-status light .detailed-status__meta .detailed-status__application {
   color: #8e9956;
 }
 
