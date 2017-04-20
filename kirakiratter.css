@@ -883,7 +883,7 @@ button.icon-button.active i.fa-retweet {
   color: #8e9956;
 }
 
-.activity-stream .detailed-status light .detailed-status__meta .detailed-status__application {
+.activity-stream .detailed-status.light .detailed-status__meta .detailed-status__application {
   color: #8e9956;
 }
 
