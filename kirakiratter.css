@@ -866,6 +866,17 @@ button.icon-button.active i.fa-retweet {
   color: rgb(202, 143, 4);
 }
 
+
+/* GIF plyer close button hack */
+.media-modal div button {
+  z-index: 100;
+}
+
+/* Video player width hack */
+.status div[style*="width: 239px"] {
+  width: 100% !important;
+}
+
 /* STANDALONE KKT PAGES */
 .activity-stream {
   padding-top: 10px;
@@ -929,23 +940,6 @@ button.icon-button.active i.fa-retweet {
   color: #8e9956;
 }
 
-/* Things Are Not O.K */
-.notification-bar.notification-bar-active {
-  background: black;
-  font-family: "Lucida Console";
-  font-size: 9rem;
-}
-
-/* GIF plyer close button hack */
-.media-modal div button {
-  z-index: 100;
-}
-
-/* Video player width hack */
-.status div[style*="width: 239px"] {
-  width: 100% !important;
-}
-
 /* --- admin / settings --- */
 
 /* background */
@@ -955,7 +949,15 @@ button.icon-button.active i.fa-retweet {
   background: rgba(173,186,121,0.5);
 }
 .content-wrapper {
-  background: rgba(201,216,141,0.8);
+  /* background: rgba(201,216,141,0.8); */
+  /* Old browsers */
+  background: rgb(252, 252, 225);
+  /* FF3.6-15 */
+  background: -moz-linear-gradient(top, rgba(252, 252, 225, 1) 0%, rgba(252, 252, 225, 1) 25%, rgba(252, 252, 225, 1) 65%, rgba(249, 240, 174, 1) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-linear-gradient(top, rgba(252, 252, 225, 1) 0%, rgba(252, 252, 225, 1) 25%, rgba(252, 252, 225, 1) 65%, rgba(249, 240, 174, 1) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: linear-gradient(to bottom, rgba(252, 252, 225, 1) 0%, rgba(252, 252, 225, 1) 25%, rgba(252, 252, 225, 1) 65%, rgba(249, 240, 174, 1) 100%);
 }
 
 /* sidebar */
@@ -974,7 +976,7 @@ button.icon-button.active i.fa-retweet {
 }
 
 .admin-wrapper .sidebar ul ul a.selected {
-  background: rgba(0,0,0,0.1);
+  background: rgba(255,255,255,0.3);
   color: #6a4643;
 }
 .admin-wrapper .sidebar ul ul a.selected:hover {
@@ -1046,15 +1048,19 @@ button.icon-button.active i.fa-retweet {
 
 .table > tbody > tr:nth-child(odd) > td,
 .table > tbody > tr:nth-child(odd) > th {
-  background: rgba(0,0,0,0.1);
+  background: rgba(255,255,255,0.5);
 }
 
 .table > thead > tr > th {
-  border-bottom: 2px solid rgba(0,0,0,0.5);
+  border-bottom: 2px solid rgba(0,0,0,0.6);
 }
 
 .table th, .table td {
   border: none;
+}
+
+.table a {
+    color: #ed649c;
 }
 
 a.table-action-link {
@@ -1067,11 +1073,20 @@ a.table-action-link:hover {
 
 /* --- about --- */
 
-.about-body .wrapper {
+.about-body .wrapper,
+.accounts-grid .account-grid-card {
   color: #8b6d5d;
-  /*background: rgba(201,216,141,0.8);*/
-  background: rgba(224,234,149, 0.7);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+  /* Old browsers */
+  background: rgb(252, 252, 225);
+  /* FF3.6-15 */
+  background: -moz-linear-gradient(top, rgba(252, 252, 225, 1) 0%, rgba(252, 252, 225, 1) 65%, rgba(252, 252, 225, 1) 65%, rgba(249, 240, 174, 1) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-linear-gradient(top, rgba(252, 252, 225, 1) 0%, rgba(252, 252, 225, 1) 65%, rgba(252, 252, 225, 1) 65%, rgba(249, 240, 174, 1) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: linear-gradient(to bottom, rgba(252, 252, 225, 1) 0%, rgba(252, 252, 225, 1) 65%, rgba(252, 252, 225, 1) 65%, rgba(249, 240, 174, 1) 100%);
+  /* IE6-9 */
+  border-radius: 8px;
+  border: solid 2px #e1c152;
   padding: 25px 20px;
   margin: 25px auto;
 }
@@ -1090,7 +1105,8 @@ a.table-action-link:hover {
   background-color: #f292b9; /* lighten(#ed649c, 10%) */
 }
 
-.screenshot-with-signup .simple_form, .screenshot-with-signup .closed-registrations-message {
+.screenshot-with-signup .simple_form,
+.screenshot-with-signup .closed-registrations-message {
   /* same as .status */
   
   /* Old browsers */
@@ -1111,7 +1127,8 @@ a.table-action-link:hover {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
 }
 
-.screenshot-with-signup .simple_form .info a, .screenshot-with-signup .closed-registrations-message .info a{
+.screenshot-with-signup .simple_form .info a,
+.screenshot-with-signup .closed-registrations-message .info a {
   color: #8b6d5d;
 }
 
@@ -1122,8 +1139,10 @@ a.table-action-link:hover {
 }
 
 .sidebar-layout .sidebar,
-.information-board {
+.information-board,
+.sidebar-layout hr {
   border-color: #C9D185;
+  border-top: none;
 }
 
 .sidebar-layout .panel .panel-list ul li a {
@@ -1143,6 +1162,30 @@ a.table-action-link:hover {
   color: inherit;
 }
 
+.about-body p a,
+.owner .name .username,
+.about-body .actions .info a,
+.screenshot-with-signup .simple_form .info a,
+.screenshot-with-signup .closed-registrations-message .info a,
+.container .form-footer ul.no-list a,
+.accounts-grid .account-grid-card .username {
+    color: #8e9956;
+	text-decoration: none; 
+}
+
+.about-body p a:hover,
+.about-body .actions .info a:hover,
+.screenshot-with-signup .simple_form .info a:hover,
+.screenshot-with-signup .closed-registrations-message .info a:hover,
+.container .form-footer ul.no-list a:hover {
+    text-decoration: underline;
+}
+
+.owner .name .display_name,
+.accounts-grid .account-grid-card .display_name {
+    color: #ed649c;
+    font-weight: bold;
+}
 /* --- user (/@hogehoge) --- */
 
 .landing-strip {
@@ -1155,8 +1198,7 @@ a.table-action-link:hover {
   background: rgba(0, 0, 0, 0.3);
 }
 
-.card span,
-.account__header__content {
+.card .name span {
   color: #d9e1e8;
 }
 
@@ -1165,6 +1207,56 @@ a.table-action-link:hover {
   background: rgba(0, 0, 0, 0.1);
 }
 
-.pagination .prev, .pagination .next {
+.pagination .prev,
+.pagination .next,
+.pagination .prev a,
+.pagination .next a,
+.pagination .page a,
+.pagination .page.gap {
   color: #8b6d5d;
+}
+
+.pagination .page.current {
+    color: #FFF;
+    background: #8b6d5d;
+}
+
+.card .counter,
+.card .counter::after {
+  border-color: #8b6d5d;
+}
+
+.card .counter.active:after {
+  border-color: #f5e33a;
+}
+
+/* Hashtag pages */
+.compact-header h1 a {
+  color: #ed649c;
+}
+
+.compact-header h1 small {
+  color: #f28db7;
+}
+
+/* Followers & Following */
+.accounts-grid {
+  background: rgba(0,0,0,0.1);
+  box-shadow: none;
+}
+
+.accounts-grid .account-grid-card {
+  padding: 0;
+  margin: 10px 0;
+}
+
+.accounts-grid .account-grid-card .note {
+    color: #8b6461
+}
+
+/* Things Are Not O.K */
+.notification-bar .notification-bar-active {
+  background: black;
+  font-family: "Lucida Console";
+  font-size: 9rem;
 }
