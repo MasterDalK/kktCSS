@@ -141,17 +141,24 @@ body /* user */,
 .muted a.status__content__spoiler-link,
 .status__content .status__content__spoiler-link:hover,
 .reply-indicator__content .status__content__spoiler-link:hover,
+.activity-stream .status.light .status__content a.status__content__spoiler-link:hover,
+.activity-stream .detailed-status.light .status__content a.status__content__spoiler-link:hover,
 .dropdown--active .dropdown__content > ul > li > a:hover {
   background: #f5b9c2;
 }
 
-.status__content__spoiler-link span {
-  color: #fff;
+.status__content__spoiler-link span,
+.activity-stream .status.light .status__content a.status__content__spoiler-link ,
+.activity-stream .detailed-status.light .status__content a.status__content__spoiler-link {
+  /* "!important" is need for a.status__content__spoiler-link to override ".status__content a { color: !important }" in our CSS */
+  color: #fff !important;
 }
 
 .muted a.status__content__spoiler-link:hover,
 .status__content .status__content__spoiler-link,
 .reply-indicator__content .status__content__spoiler-link,
+.activity-stream .status.light .status__content a.status__content__spoiler-link,
+.activity-stream .detailed-status.light .status__content a.status__content__spoiler-link,
 .dropdown--active .dropdown__content > ul,
 .dropdown--active .dropdown__content > ul > li > a {
   background: #e3a4ad;
