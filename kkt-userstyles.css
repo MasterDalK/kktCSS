@@ -10,6 +10,7 @@
 /*[[replyindicator]]*/
 /*[[thinwidth]]*/
 
+/* BACKGROUNDS */
 body /* user */,
 .about-body /* about */,
 .admin-wrapper /* settings */,
@@ -1023,7 +1024,6 @@ a.table-action-link:hover {
   background: -webkit-linear-gradient(top, rgba(252, 252, 225, 1) 0%, rgba(252, 252, 225, 1) 65%, rgba(252, 252, 225, 1) 65%, rgba(249, 240, 174, 1) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   background: linear-gradient(to bottom, rgba(252, 252, 225, 1) 0%, rgba(252, 252, 225, 1) 65%, rgba(252, 252, 225, 1) 65%, rgba(249, 240, 174, 1) 100%);
-  /* IE6-9 */
   border-radius: 8px;
   border: solid 2px #e1c152;
   padding: 25px 20px;
@@ -1047,7 +1047,7 @@ a.table-action-link:hover {
 .screenshot-with-signup .simple_form,
 .screenshot-with-signup .closed-registrations-message {
   /* same as .status */
-  
+
   /* Old browsers */
   background: rgb(252, 252, 225);
   /* FF3.6-15 */
@@ -1056,7 +1056,6 @@ a.table-action-link:hover {
   background: -webkit-linear-gradient(top, rgba(252, 252, 225, 1) 0%, rgba(252, 252, 225, 1) 65%, rgba(252, 252, 225, 1) 65%, rgba(249, 240, 174, 1) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   background: linear-gradient(to bottom, rgba(252, 252, 225, 1) 0%, rgba(252, 252, 225, 1) 65%, rgba(252, 252, 225, 1) 65%, rgba(249, 240, 174, 1) 100%);
-  /* IE6-9 */
   border-radius: 8px;
   margin-bottom: 8px;
   margin-left: 64px;
@@ -1109,7 +1108,7 @@ a.table-action-link:hover {
 .container .form-footer ul.no-list a,
 .accounts-grid .account-grid-card .username {
     color: #8e9956;
-	text-decoration: none; 
+	text-decoration: none;
 }
 
 .about-body p a:hover,
@@ -1163,10 +1162,10 @@ a.table-action-link:hover {
 .pagination .page a:hover,
 .pagination .prev a:hover,
 .pagination .next a:hover {
-   background-color: #fff;
-   border-radius: 100px;
- }
-	
+  background-color: #fff;
+  border-radius: 100px;
+}
+
 .card .counter,
 .card .counter::after {
   border-color: #8b6d5d;
@@ -1194,6 +1193,7 @@ a.table-action-link:hover {
 .accounts-grid .account-grid-card {
   padding: 0;
   margin: 10px 0;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
 }
 
 .accounts-grid .account-grid-card .note {
