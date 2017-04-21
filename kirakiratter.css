@@ -44,21 +44,9 @@ body {
 /* Meiryo UI -- END */
 
 /* Column Resizing On Desktop */
-@media screen and (min-width: 1350px) {
+@media screen and (min-width: 1025px) {
   .column {
-    width: 26%;
-  }
-}
-
-@media screen and (min-width: 1600px) {
-  .column {
-    width: 27%;
-  }
-}
-
-@media screen and (min-width: 1920px) {
-  .column {
-    width: 28%;
+    flex-grow: 1;
   }
 }
 /* Column Resizing -- END */
