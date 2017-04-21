@@ -1160,6 +1160,13 @@ a.table-action-link:hover {
     background: #8b6d5d;
 }
 
+.pagination .page a:hover,
+.pagination .prev a:hover,
+.pagination .next a:hover {
+   background-color: #fff;
+   border-radius: 100px;
+ }
+	
 .card .counter,
 .card .counter::after {
   border-color: #8b6d5d;
