@@ -883,7 +883,8 @@ button.icon-button.active i.fa-retweet {
 }
 
 .activity-stream .entry:first-child .status.light,
-.activity-stream .entry:last-child .status.light {
+.activity-stream .entry:last-child .status.light,
+.activity-stream .entry:last-child .detailed-status.light {
   border-radius: 8px;
   border: solid 2px #e1c152;
 }
