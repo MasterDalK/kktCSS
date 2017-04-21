@@ -1,7 +1,7 @@
 /*
-  Mastodon: Kirakiratter Custom CSS V7.6
+  Mastodon: Kirakiratter Custom CSS V8
   By Salil Gupta (@MasterDalK)
-  Other Contributors: @pomo, @sumire, @bitmap, @hisagi, @lae, @takenoko
+  Other Contributors: @pomo, @sumire, @bitmap, @hisagi, @lae, @takenoko, @unarist
 
   Instructions: https://github.com/MasterDalK/kktCSS#kktcss
 
@@ -60,11 +60,14 @@ body {
 
 
 /* BACKGROUNDS */
-
-.ui {
+body /* user */,
+.about-body /* about */,
+.admin-wrapper /* settings */,
+.ui /* timeline */ {
   background-color: #ecf5be;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6Y2M9Imh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL25zIyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiBoZWlnaHQ9IjExNCIgdmlld0JveD0iMCAwIDgwIDExNCIgd2lkdGg9IjgwIiB2ZXJzaW9uPSIxLjEiPgo8cmVjdCBoZWlnaHQ9IjExNCIgd2lkdGg9IjgwIiB5PSIwIiB4PSIwIiBmaWxsPSIjZWNmNWJlIi8+CjxwYXRoIGZpbGw9IiNlMGVhOTUiIGQ9Im0wIDU3IDQwLTU3IDQwIDU3LTQwIDU3eiIvPgo8L3N2Zz4=");
   background-repeat: repeat;
+  background-size: auto; /* for user page */
 }
 
 /* KKT Banner */
@@ -851,6 +854,17 @@ button.icon-button.active i.fa-retweet {
   color: rgb(202, 143, 4);
 }
 
+
+/* GIF plyer close button hack */
+.media-modal div button {
+  z-index: 100;
+}
+
+/* Video player width hack */
+.status div[style*="width: 239px"] {
+  width: 100% !important;
+}
+
 /* STANDALONE KKT PAGES */
 .activity-stream {
   padding-top: 10px;
@@ -915,19 +929,327 @@ button.icon-button.active i.fa-retweet {
   color: #8e9956;
 }
 
+/* --- admin / settings --- */
+
+/* background */
+/* We use colors darkened from #ecf5be with medium alpha values, to reduce contrast of background pattern. */
+
+.admin-wrapper .sidebar-wrapper {
+  background: rgba(173,186,121,0.5);
+}
+.content-wrapper {
+  /* background: rgba(201,216,141,0.8); */
+  /* Old browsers */
+  background: rgb(252, 252, 225);
+  /* FF3.6-15 */
+  background: -moz-linear-gradient(top, rgba(252, 252, 225, 1) 0%, rgba(252, 252, 225, 1) 25%, rgba(252, 252, 225, 1) 65%, rgba(249, 240, 174, 1) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-linear-gradient(top, rgba(252, 252, 225, 1) 0%, rgba(252, 252, 225, 1) 25%, rgba(252, 252, 225, 1) 65%, rgba(249, 240, 174, 1) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: linear-gradient(to bottom, rgba(252, 252, 225, 1) 0%, rgba(252, 252, 225, 1) 25%, rgba(252, 252, 225, 1) 65%, rgba(249, 240, 174, 1) 100%);
+}
+
+/* sidebar */
+
+.admin-wrapper .sidebar ul ul,
+.admin-wrapper .sidebar ul a.selected {
+  background: #d0e093;
+}
+
+.admin-wrapper .sidebar ul a {
+  color: #6a4643;
+}
+.admin-wrapper .sidebar ul a:hover {
+  background: rgba(255, 255, 255, 0.7);
+  color: #8b6461;
+}
+
+.admin-wrapper .sidebar ul ul a.selected {
+  background: rgba(255,255,255,0.3);
+  color: #6a4643;
+}
+.admin-wrapper .sidebar ul ul a.selected:hover {
+  background: rgba(64,64,64,0.1);
+  color: #6a4643;
+}
+
+.flash-message {
+    background: rgba(255,255,255,0.7);
+}
+
+/* content */
+
+.admin-wrapper .content > p{
+  color: #6a4643;
+}
+
+.admin-wrapper .content h2 {
+  color: #6a4643;
+}
+
+/* forms */
+
+.simple_form .input.file label,
+.simple_form .input.select label,
+.simple_form .input.radio_buttons label,
+.simple_form .input.radio_buttons .radio label,
+.simple_form .input.boolean label {
+	color: #8b6d5d;
+}
+
+.simple_form input[type=text],
+.simple_form input[type=number],
+.simple_form input[type=email],
+.simple_form input[type=password],
+.simple_form textarea {
+  color: #8b6d5d;
+  border-bottom: 2px solid rgba(0,0,0,0.3);
+}
+
+.simple_form input[type=file] {
+  color: #8b6d5d; /* default: inherit from body */
+}
+
+.simple_form input[type=text]:active, .simple_form input[type=text]:focus,
+.simple_form input[type=number]:active, .simple_form input[type=number]:focus,
+.simple_form input[type=email]:active, .simple_form input[type=email]:focus,
+.simple_form input[type=password]:active, .simple_form input[type=password]:focus,
+.simple_form textarea:active, .simple_form textarea:focus {
+  border-bottom: 2px solid rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.05);
+}
+
+.simple_form button,
+.simple_form .block-button {
+  background: #9bc430;
+}
+
+.simple_form button:hover,
+.simple_form .block-button:hover {
+  background: #85a13b;
+}
+
+.simple_form span.hint {
+  color: #8e9956;
+}
+
+/* tables (used in authorized_applications, export) */
+
+.admin-wrapper .table {
+  color: #8b6d5d; /* default: inherit from body */
+}
+
+.table > tbody > tr:nth-child(odd) > td,
+.table > tbody > tr:nth-child(odd) > th {
+  background: rgba(255,255,255,0.5);
+}
+
+.table > thead > tr > th {
+  border-bottom: 2px solid rgba(0,0,0,0.6);
+}
+
+.table th, .table td {
+  border: none;
+}
+
+.table a {
+    color: #ed649c;
+}
+
+a.table-action-link {
+  color: #8b6d5d;
+}
+
+a.table-action-link:hover {
+  color: #6c5549;
+}
+
+/* --- about --- */
+
+.about-body .wrapper,
+.accounts-grid .account-grid-card {
+  color: #8b6d5d;
+  /* Old browsers */
+  background: rgb(252, 252, 225);
+  /* FF3.6-15 */
+  background: -moz-linear-gradient(top, rgba(252, 252, 225, 1) 0%, rgba(252, 252, 225, 1) 65%, rgba(252, 252, 225, 1) 65%, rgba(249, 240, 174, 1) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-linear-gradient(top, rgba(252, 252, 225, 1) 0%, rgba(252, 252, 225, 1) 65%, rgba(252, 252, 225, 1) 65%, rgba(249, 240, 174, 1) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: linear-gradient(to bottom, rgba(252, 252, 225, 1) 0%, rgba(252, 252, 225, 1) 65%, rgba(252, 252, 225, 1) 65%, rgba(249, 240, 174, 1) 100%);
+  /* IE6-9 */
+  border-radius: 8px;
+  border: solid 2px #e1c152;
+  padding: 25px 20px;
+  margin: 25px auto;
+}
+
+.about-body h1 {
+  color: #ed649c;
+}
+
+.about-body h2,
+.about-body h3 {
+  color: #8b6461;
+}
+
+.about-body em {
+  color: #6d4e4c; /* darken(#8b6461, 10%) */
+  background-color: #f292b9; /* lighten(#ed649c, 10%) */
+}
+
+.screenshot-with-signup .simple_form,
+.screenshot-with-signup .closed-registrations-message {
+  /* same as .status */
+  
+  /* Old browsers */
+  background: rgb(252, 252, 225);
+  /* FF3.6-15 */
+  background: -moz-linear-gradient(top, rgba(252, 252, 225, 1) 0%, rgba(252, 252, 225, 1) 65%, rgba(252, 252, 225, 1) 65%, rgba(249, 240, 174, 1) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-linear-gradient(top, rgba(252, 252, 225, 1) 0%, rgba(252, 252, 225, 1) 65%, rgba(252, 252, 225, 1) 65%, rgba(249, 240, 174, 1) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: linear-gradient(to bottom, rgba(252, 252, 225, 1) 0%, rgba(252, 252, 225, 1) 65%, rgba(252, 252, 225, 1) 65%, rgba(249, 240, 174, 1) 100%);
+  /* IE6-9 */
+  border-radius: 8px;
+  margin-bottom: 8px;
+  margin-left: 64px;
+  margin-right: 2px;
+  padding-left: 8px;
+  border: solid 2px #e1c152;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.screenshot-with-signup .simple_form .info a,
+.screenshot-with-signup .closed-registrations-message .info a {
+  color: #8b6d5d;
+}
+
+/* /about/more */
+
+.sidebar-layout .panel .panel-header {
+  background: #C9D185;
+}
+
+.sidebar-layout .sidebar,
+.information-board,
+.sidebar-layout hr {
+  border-color: #C9D185;
+  border-top: none;
+}
+
+.sidebar-layout .panel .panel-list ul li a {
+  color: #6a4643;
+}
+
+.sidebar-layout .panel .panel-list ul li a:hover {
+  background: rgba(255, 255, 255, 0.7);
+  color: #8b6461;
+}
+
+.information-board .section span {
+  color: inherit;
+}
+
+.information-board .section span:last-child {
+  color: inherit;
+}
+
+.about-body p a,
+.owner .name .username,
+.about-body .actions .info a,
+.screenshot-with-signup .simple_form .info a,
+.screenshot-with-signup .closed-registrations-message .info a,
+.container .form-footer ul.no-list a,
+.accounts-grid .account-grid-card .username {
+    color: #8e9956;
+	text-decoration: none; 
+}
+
+.about-body p a:hover,
+.about-body .actions .info a:hover,
+.screenshot-with-signup .simple_form .info a:hover,
+.screenshot-with-signup .closed-registrations-message .info a:hover,
+.container .form-footer ul.no-list a:hover {
+    text-decoration: underline;
+}
+
+.owner .name .display_name,
+.accounts-grid .account-grid-card .display_name {
+    color: #ed649c;
+    font-weight: bold;
+}
+/* --- user (/@hogehoge) --- */
+
+.landing-strip {
+  color: #8b6d5d;
+  /* background: #D0E093; */
+  background: rgba(208,224,147,0.7);
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.card .name span {
+  color: #d9e1e8;
+}
+
+.activity-stream {
+  box-shadow: none;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.pagination .prev,
+.pagination .next,
+.pagination .prev a,
+.pagination .next a,
+.pagination .page a,
+.pagination .page.gap {
+  color: #8b6d5d;
+}
+
+.pagination .page.current {
+    color: #FFF;
+    background: #8b6d5d;
+}
+
+.card .counter,
+.card .counter::after {
+  border-color: #8b6d5d;
+}
+
+.card .counter.active:after {
+  border-color: #f5e33a;
+}
+
+/* Hashtag pages */
+.compact-header h1 a {
+  color: #ed649c;
+}
+
+.compact-header h1 small {
+  color: #f28db7;
+}
+
+/* Followers & Following */
+.accounts-grid {
+  background: rgba(0,0,0,0.1);
+  box-shadow: none;
+}
+
+.accounts-grid .account-grid-card {
+  padding: 0;
+  margin: 10px 0;
+}
+
+.accounts-grid .account-grid-card .note {
+    color: #8b6461
+}
+
 /* Things Are Not O.K */
-.notification-bar.notification-bar-active {
+.notification-bar .notification-bar-active {
   background: black;
   font-family: "Lucida Console";
   font-size: 9rem;
-}
-
-/* GIF plyer close button hack */
-.media-modal div button {
-  z-index: 100;
-}
-
-/* Video player width hack */
-.status div[style*="width: 239px"] {
-  width: 100% !important;
 }
