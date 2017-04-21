@@ -1,7 +1,7 @@
 /*
-  Mastodon: Kirakiratter Custom CSS V7.6
+  Mastodon: Kirakiratter Custom CSS V8
   By Salil Gupta (@MasterDalK)
-  Other Contributors: @pomo, @sumire, @bitmap, @hisagi, @lae, @takenoko
+  Other Contributors: @pomo, @sumire, @bitmap, @hisagi, @lae, @takenoko, @unarist
 
   Instructions: https://github.com/MasterDalK/kktCSS#kktcss
 
@@ -970,6 +970,10 @@ button.icon-button.active i.fa-retweet {
 .admin-wrapper .sidebar ul ul a.selected:hover {
   background: rgba(64,64,64,0.1);
   color: #6a4643;
+}
+
+.flash-message {
+    background: rgba(255,255,255,0.7);
 }
 
 /* content */
