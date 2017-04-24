@@ -1204,6 +1204,11 @@ a.table-action-link:hover {
   background: rgba(0, 0, 0, 0.1);
 }
 
+.activity-stream:first-child {
+  /* .activity-stream is also used in status page, without account header. */
+  background: none;
+}
+
 .pagination .prev,
 .pagination .next,
 .pagination .prev a,
