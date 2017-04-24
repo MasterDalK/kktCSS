@@ -1183,7 +1183,7 @@ a.table-action-link:hover {
     color: #ed649c;
     font-weight: bold;
 }
-/* --- user (/@hogehoge) --- */
+/* --- User (/@hogehoge) --- */
 
 .landing-strip {
   color: #8b6d5d;
@@ -1207,6 +1207,10 @@ a.table-action-link:hover {
 .activity-stream:first-child {
   /* .activity-stream is also used in status page, without account header. */
   background: none;
+}
+
+.nothing-here {
+  color: #8e9956;
 }
 
 .pagination .prev,
