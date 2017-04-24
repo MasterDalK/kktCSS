@@ -233,7 +233,8 @@ body /* user */,
 }
 
 .detailed-status,
-.activity-stream .entry .detailed-status.light {
+.activity-stream .entry .detailed-status.light,
+.status-card, .status-card:hover {
   /* Old browsers */
   background: rgb(252, 252, 225);
   /* FF3.6-15 */
@@ -354,6 +355,16 @@ span,
 .column-link {
   font-family: "Segoe UI", "Roboto";
   font-weight: bold;
+}
+
+/* Embed cards */
+
+.status-card:hover {
+  border: solid 2px #bc9c2b;
+}
+
+.status-card__image {
+  background: none;  
 }
 
 /* UI Elements */
