@@ -39,7 +39,6 @@ body {
   font-style: normal;
   font-weight: normal;
   letter-spacing: .1em;
-  padding: 1em;
 }
 /* Meiryo UI -- END */
 
@@ -1075,8 +1074,9 @@ a.table-action-link:hover {
 /* --- about --- */
 
 .about-body .wrapper,
-.accounts-grid .account-grid-card {
-  color: #8b6d5d;
+.accounts-grid .account-grid-card,
+.screenshot-with-signup .simple_form,
+.screenshot-with-signup .closed-registrations-message {
   /* Old browsers */
   background: rgb(252, 252, 225);
   /* FF3.6-15 */
@@ -1088,8 +1088,49 @@ a.table-action-link:hover {
   /* IE6-9 */
   border-radius: 8px;
   border: solid 2px #e1c152;
+}
+
+.about-body .wrapper,
+.accounts-grid .account-grid-card {
+  color: #8b6d5d;
+  border-radius: 8px;
+  border: solid 2px #e1c152;
+}
+
+.accounts-grid .account-grid-card,
+.screenshot-with-signup .simple_form,
+.screenshot-with-signup .closed-registrations-message {
   padding: 25px 20px;
   margin: 25px auto;
+}
+
+@media screen and (min-width: 320px) {
+  body .about-body {
+    padding: 0;
+  }
+
+  .about-body .wrapper {
+    margin: 0;
+  }
+
+  .wrapper h1 {
+    font-size: 39px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body .about-body {
+    padding: 1em;
+  }
+
+  .about-body .wrapper {
+    padding: 25px 20px;
+    margin: 25px auto;
+  }
+
+  .wrapper h1 {
+    font-size: 46px;
+  }
 }
 
 .about-body h1 {
@@ -1108,19 +1149,6 @@ a.table-action-link:hover {
 
 .screenshot-with-signup .simple_form,
 .screenshot-with-signup .closed-registrations-message {
-  /* same as .status */
-  
-  /* Old browsers */
-  background: rgb(252, 252, 225);
-  /* FF3.6-15 */
-  background: -moz-linear-gradient(top, rgba(252, 252, 225, 1) 0%, rgba(252, 252, 225, 1) 65%, rgba(252, 252, 225, 1) 65%, rgba(249, 240, 174, 1) 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: -webkit-linear-gradient(top, rgba(252, 252, 225, 1) 0%, rgba(252, 252, 225, 1) 65%, rgba(252, 252, 225, 1) 65%, rgba(249, 240, 174, 1) 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  background: linear-gradient(to bottom, rgba(252, 252, 225, 1) 0%, rgba(252, 252, 225, 1) 65%, rgba(252, 252, 225, 1) 65%, rgba(249, 240, 174, 1) 100%);
-  /* IE6-9 */
-  border-radius: 8px;
-  border: solid 2px #e1c152;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
 }
 
@@ -1167,7 +1195,7 @@ a.table-action-link:hover {
 .container .form-footer ul.no-list a,
 .accounts-grid .account-grid-card .username {
     color: #8e9956;
-	text-decoration: none; 
+	text-decoration: none;
 }
 
 .about-body p a:hover,
