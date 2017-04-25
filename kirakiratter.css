@@ -305,7 +305,8 @@ body /* user */,
 /* Tweet Text */
 
 p,
-.status__content {
+.status__content,
+.status-card__description {
   color: #8b6d5d;
 }
 
