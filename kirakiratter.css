@@ -141,17 +141,24 @@ body /* user */,
 .muted a.status__content__spoiler-link,
 .status__content .status__content__spoiler-link:hover,
 .reply-indicator__content .status__content__spoiler-link:hover,
+.activity-stream .status.light .status__content a.status__content__spoiler-link:hover,
+.activity-stream .detailed-status.light .status__content a.status__content__spoiler-link:hover,
 .dropdown--active .dropdown__content > ul > li > a:hover {
   background: #f5b9c2;
 }
 
-.status__content__spoiler-link span {
-  color: #fff;
+.status__content__spoiler-link span,
+.activity-stream .status.light .status__content a.status__content__spoiler-link ,
+.activity-stream .detailed-status.light .status__content a.status__content__spoiler-link {
+  /* "!important" is need for a.status__content__spoiler-link to override ".status__content a { color: !important }" in our CSS */
+  color: #fff !important;
 }
 
 .muted a.status__content__spoiler-link:hover,
 .status__content .status__content__spoiler-link,
 .reply-indicator__content .status__content__spoiler-link,
+.activity-stream .status.light .status__content a.status__content__spoiler-link,
+.activity-stream .detailed-status.light .status__content a.status__content__spoiler-link,
 .dropdown--active .dropdown__content > ul,
 .dropdown--active .dropdown__content > ul > li > a {
   background: #e3a4ad;
@@ -876,7 +883,8 @@ button.icon-button.active i.fa-retweet {
 }
 
 .activity-stream .entry:first-child .status.light,
-.activity-stream .entry:last-child .status.light {
+.activity-stream .entry:last-child .status.light,
+.activity-stream .entry:last-child .detailed-status.light {
   border-radius: 8px;
   border: solid 2px #e1c152;
 }
@@ -1112,10 +1120,6 @@ a.table-action-link:hover {
   background: linear-gradient(to bottom, rgba(252, 252, 225, 1) 0%, rgba(252, 252, 225, 1) 65%, rgba(252, 252, 225, 1) 65%, rgba(249, 240, 174, 1) 100%);
   /* IE6-9 */
   border-radius: 8px;
-  margin-bottom: 8px;
-  margin-left: 64px;
-  margin-right: 2px;
-  padding-left: 8px;
   border: solid 2px #e1c152;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
 }
@@ -1179,7 +1183,7 @@ a.table-action-link:hover {
     color: #ed649c;
     font-weight: bold;
 }
-/* --- user (/@hogehoge) --- */
+/* --- User (/@hogehoge) --- */
 
 .landing-strip {
   color: #8b6d5d;
@@ -1198,6 +1202,15 @@ a.table-action-link:hover {
 .activity-stream {
   box-shadow: none;
   background: rgba(0, 0, 0, 0.1);
+}
+
+.activity-stream:first-child {
+  /* .activity-stream is also used in status page, without account header. */
+  background: none;
+}
+
+.nothing-here {
+  color: #8e9956;
 }
 
 .pagination .prev,
