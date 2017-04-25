@@ -324,6 +324,8 @@ p,
 
 /* User @ Text & Links */
 
+/* a(pink underline) > span(green text) */
+/* username and hashtag have pink text */
 .muted .status__display-name strong,
 strong,
 .status__display-name strong,
@@ -337,6 +339,7 @@ a.mention span,
 a.mention.hashtag span,
 .account__header__content a {
   color: #ed649c !important;
+  text-decoration: none;
 }
 
 span,
@@ -344,10 +347,11 @@ span,
   color: #8e9956;
 }
 
-.account__header__content .h-card .a span {
-  color: #8e9956 !important;
+.account__header__content a:hover {
+  text-decoration: underline;
 }
 
+/* original: underline only applies to the inner span */
 .status__content a.mention:hover,
 .reply-indicator__content a.mention:hover {
   text-decoration: underline;
