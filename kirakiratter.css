@@ -341,7 +341,7 @@ a.mention.hashtag span,
   text-decoration: none;
 }
 
-span,
+a span,
 .notification__display-name:hover {
   color: #8e9956;
 }
@@ -357,7 +357,11 @@ span,
 }
 
 .status__relative-time:hover,
-.detailed-status__meta {
+.status__prepend,
+.getting-started p,
+.detailed-status__meta,
+.notification__message,
+.footer {
   color: #8e9956;
 }
 
@@ -902,6 +906,10 @@ button.icon-button.active i.fa-retweet {
 .activity-stream .entry:last-child .detailed-status.light {
   border-radius: 8px;
   border: solid 2px #e1c152;
+}
+
+.activity-stream .detailed-status.light .detailed-status__meta {
+  color: #8e9956;
 }
 
 .activity-stream .entry {
