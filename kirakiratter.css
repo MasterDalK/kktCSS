@@ -257,7 +257,7 @@ body /* user */,
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
 }
 
-/* status baloon tail */
+/* status balloon tail */
 
 .status::before,
 .notification::before {
@@ -284,7 +284,7 @@ body /* user */,
   border-style: solid;
   border-width: 10px;
   border-color: transparent #fcfce0 transparent transparent;
-  left: -20px;
+  left: -18px;
   top: 6px;
   transform: scaleY(0.66);
 }
