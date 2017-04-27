@@ -19,31 +19,38 @@
 
 /* MEIRYO UI -- Japanese Font Face */
 @font-face {
-  font-family: 'Meiryo UI';
+  font-family: 'Meiryo';
   font-style: normal;
   font-weight: normal;
-  letter-spacing: .1em;
-  padding: 1em;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
-    font-family: 'Meiryo UI';
-    letter-spacing: .1em;
-    padding: 1em;
+    font-family: 'Meiryo';
   }
 }
 
-body {
-  font-family: "Roboto", "Meiryo UI";
-  font-style: normal;
-  font-weight: normal;
-  letter-spacing: .1em;
+@media screen and (min-width: 320px){
+  body {
+    font-family: "Roboto", "Meiryo";
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: 0px;
+  }
+}
+
+@media screen and (min-width: 768px){
+  body {
+    font-family: "Roboto", "Meiryo";
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: 0.1px;
+  }
 }
 /* Meiryo UI -- END */
 
 /* Column Resizing On Desktop */
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1025px) and (max-width: 1920px) {
   .column {
     flex-grow: 1;
   }
