@@ -261,32 +261,13 @@ body /* user */,
 
 .status::before,
 .notification::before {
-  content: '';
+  content: "";
   display: block;
-  width: 0;
-  height: 0;
+  width: 12px;
+  height: 14px;
   position: absolute;
-  border-style: solid;
-  border-width: 10px;
-  border-color: transparent #e1c152 transparent transparent;
-  left: -22px;
-  top: 6px;
-  transform: scaleY(0.66);
-}
-
-.status::after,
-.notification::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 0;
-  position: absolute;
-  border-style: solid;
-  border-width: 10px;
-  border-color: transparent #fcfce0 transparent transparent;
-  left: -18px;
-  top: 6px;
-  transform: scaleY(0.66);
+  left: -11px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQogIDxsaW5lIGlkPSJzdmdfMSIgeTI9IjEyLjQxMiIgeDI9IjEwLjAzNTc1IiB5MT0iMC44MzMiIHgxPSIxMC4wMzU3NSIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZT0iI0ZDRkNFMSIgZmlsbD0ibm9uZSIvPg0KICA8cGF0aCBpZD0ic3ZnXzIiIGQ9Im05Ljc2LDFjMCwwIC00LjgyMzUsMC45MjY3NSAtOCw1LjgzM2M1LjQyNjc1LDEgOCw1LjMzNCA4LDUuMzM0IiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2U9IiNFMUMxNTIiIGZpbGw9IiNGQ0ZDRTEiLz4NCjwvc3ZnPg==);
 }
 
 /* avatar */
