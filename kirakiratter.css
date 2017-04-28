@@ -348,6 +348,8 @@ a span,
 .getting-started p,
 .detailed-status__meta,
 .notification__message,
+.media-spoiler,
+.empty-column-indicator,
 .footer {
   color: #8e9956;
 }
@@ -1326,6 +1328,26 @@ a.table-action-link:hover {
 
 .accounts-grid .account-grid-card .note {
     color: #8b6461
+}
+
+/* Admin */
+/* /admin/accounts, etc. */
+
+.filters .filter-subset strong {
+  color: #8b6d5d;
+}
+
+.filters .filter-subset a {
+  color: #8b6d5d;
+  border-bottom: #fcfce1;
+}
+.filters .filter-subset a:hover {
+  color: #6c5549;
+  border-color: rgba(0, 0, 0, 0.4);
+}
+.filters .filter-subset a.selected {
+  color: #ed649c;
+  border-color: #ed649c;
 }
 
 /* Things Are Not O.K */
