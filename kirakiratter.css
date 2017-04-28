@@ -730,11 +730,6 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
     padding-left: 90px;
   }
 
-  .tabs-bar:first-child {
-    width: calc(100% - 90px) !important;
-    margin-left: auto;
-  }
-
   .tabs-bar__link {
     padding: 17px 4px;
   }
@@ -746,8 +741,7 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
   }
 
   .tabs-bar:first-child {
-    width: calc(100% - 95px) !important;
-    margin-left: auto;
+    margin-left: 10px;
   }
 
   .tabs-bar__link {
@@ -772,11 +766,6 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
 
   .drawer__header {
     padding-left: 83px;
-  }
-
-  .drawer__header:first-child {
-    width: calc(100% - 83px) !important;
-    margin-left: auto;
   }
 
   .drawer__tab {
