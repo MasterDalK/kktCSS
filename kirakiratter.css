@@ -139,7 +139,11 @@ body /* user */,
 }
 
 .account__header > div {
-  background: rgba(0, 0, 0, 0.8);
+  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.7) 65%, rgba(0,0,0,0.8));
+}
+
+.card:after {
+  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.6) 75%, rgba(0,0,0,0.8));
 }
 
 .muted a.status__content__spoiler-link,
