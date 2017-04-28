@@ -1,5 +1,5 @@
 /*
-  Mastodon: Kirakiratter Custom CSS V8.1
+  Mastodon: Kirakiratter Custom CSS V8.2
   By Salil Gupta (@MasterDalK)
   Other Contributors: @pomo, @sumire, @bitmap, @hisagi, @lae, @takenoko, @unarist
 
@@ -130,7 +130,8 @@ body /* user */,
 .column-header,
 .column-icon,
 .column-back-button,
-.column-link {
+.column-link,
+.column-subheading {
   background: #d0e093;
 }
 
@@ -319,7 +320,8 @@ body /* user */,
 
 p,
 .status__content,
-.status-card__description {
+.status-card__description,
+.compose-form__warning span {
   color: #8b6d5d;
 }
 
@@ -333,7 +335,6 @@ p,
 /* a(pink underline) > span(green text) */
 /* username and hashtag have pink text */
 .muted .status__display-name strong,
-strong,
 .status__display-name strong,
 .detailed-status__display-name strong,
 .account__display-name strong,
@@ -343,7 +344,8 @@ a.h-card.u-url.p-nickname.mention,
 a.h-card.u-url.p-nickname.mention span,
 a.mention span,
 a.mention.hashtag span,
-.account__header__content a {
+.account__header__content a,
+.information-board .section strong {
   color: #ed649c !important;
   text-decoration: none;
 }
@@ -1015,6 +1017,11 @@ button.icon-button.active i.fa-retweet {
     background: rgba(255,255,255,0.7);
 }
 
+.flash-message strong,
+.recovery-codes {
+    color: #8b6d5d;
+}
+
 /* content */
 
 .admin-wrapper .content > p{
@@ -1092,14 +1099,21 @@ button.icon-button.active i.fa-retweet {
 
 .table a {
     color: #ed649c;
+    text-decoration: none;
+}
+
+.table a:hover {
+    text-decoration: underline;
 }
 
 a.table-action-link {
   color: #8b6d5d;
+  text-decoration: none;
 }
 
 a.table-action-link:hover {
   color: #6c5549;
+  text-decoration: underline;
 }
 
 /* --- about --- */
