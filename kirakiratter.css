@@ -603,6 +603,21 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
   border-bottom: 1px solid rgba(0, 0, 0, 0.6);
 }
 
+/* Drag and drop to upload */
+
+.upload-area {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.upload-area__background {
+  background: #E488B9;
+}
+
+.upload-area__content {
+  color: white;
+  border-color: #D84A9D;
+}
+
 /* Onboarding Modal */
 
 .onboarding-modal__paginator {
