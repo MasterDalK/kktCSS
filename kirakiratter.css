@@ -925,16 +925,6 @@ button.icon-button.active i.fa-retweet {
   padding: 8px 8px 8px 15px;
 }
 
-.entry .status::after,
-.entry .notification::after {
-  left: -18px;
-}
-
-.entry .status::before,
-.entry .notification::before {
-  left: -10px;
-}
-
 .activity-stream .entry .pre-header {
   margin-bottom: 0;
   padding: 0 0 0 76px;
