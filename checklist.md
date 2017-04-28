@@ -15,8 +15,8 @@
   * Content Warning
 
 ## Modals
-* Media Modal
-* Getting Started
+* Media
+* Onboarding
 * 
 
 ## Standalone Pages
