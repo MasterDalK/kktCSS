@@ -915,7 +915,7 @@ button.icon-button.active i.fa-retweet {
 
 .entry .status::before,
 .entry .notification::before {
-  left: -20px;
+  left: -10px;
 }
 
 .activity-stream .entry .pre-header {
