@@ -1346,6 +1346,10 @@ a.table-action-link:hover {
   color: #ed649c;
 }
 
+.form-container .flash-message code {
+    word-wrap: break-word;
+}
+
 /* Things Are Not O.K */
 .notification-bar .notification-bar-active {
   background: black;
