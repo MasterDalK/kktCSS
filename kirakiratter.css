@@ -280,12 +280,12 @@ body /* user */,
 .status .avatar,
 .notification .avatar {
   border: solid 2px #e1c152;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
 }
 
 .status__avatar {
   margin-left: -74px;
   top: 0 !important;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
 }
 
 .notification-follow .avatar {
@@ -931,6 +931,7 @@ button.icon-button.active i.fa-retweet {
 
 .activity-stream .entry .status.light .status__avatar img {
   border: solid 2px #e1c152;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
 }
 
 .activity-stream .detailed-status.light .detailed-status__meta a {
