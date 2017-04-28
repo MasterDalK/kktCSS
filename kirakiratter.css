@@ -139,7 +139,11 @@ body /* user */,
 }
 
 .account__header > div {
-  background: rgba(0, 0, 0, 0.8);
+  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.7) 65%, rgba(0,0,0,0.8));
+}
+
+.card:after {
+  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.6) 75%, rgba(0,0,0,0.8));
 }
 
 .muted a.status__content__spoiler-link,
@@ -348,6 +352,8 @@ a span,
 .getting-started p,
 .detailed-status__meta,
 .notification__message,
+.media-spoiler,
+.empty-column-indicator,
 .footer {
   color: #8e9956;
 }
@@ -405,9 +411,7 @@ a span,
 .column-header,
 .column-link,
 .column-back-button,
-.column-back-button span,
-.icon-button.disabled i.fa-envelope,
-.icon-button.disabled i.fa-lock {
+.column-back-button span {
   color: #6a4643;
 }
 
@@ -427,6 +431,15 @@ a span,
 button.icon-button i.fa-retweet:hover {
   text-shadow: -1px -1px 0 #f5e33a, 1px -1px 0 #f5e33a, -1px 1px 0 #f5e33a, 1px 1px 0 #f5e33a;
 }
+
+.icon-button.disabled {
+  color: #9c7a78;    
+}
+
+.icon-button.disabled:hover {
+  text-shadow: none;   
+}
+
 /* Katsu Drawer & Search */
 .navigation-bar {
   background: rgba(237, 42, 144, 0.6);
@@ -601,6 +614,21 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
   border-bottom: 1px solid rgba(0, 0, 0, 0.6);
 }
 
+/* Drag and drop to upload */
+
+.upload-area {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.upload-area__background {
+  background: #E488B9;
+}
+
+.upload-area__content {
+  color: white;
+  border-color: #D84A9D;
+}
+
 /* Onboarding Modal */
 
 .onboarding-modal__paginator {
@@ -709,11 +737,6 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
     padding-left: 90px;
   }
 
-  .tabs-bar:first-child {
-    width: calc(100% - 90px) !important;
-    margin-left: auto;
-  }
-
   .tabs-bar__link {
     padding: 17px 4px;
   }
@@ -725,8 +748,7 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
   }
 
   .tabs-bar:first-child {
-    width: calc(100% - 95px) !important;
-    margin-left: auto;
+    margin-left: 10px;
   }
 
   .tabs-bar__link {
@@ -751,11 +773,6 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
 
   .drawer__header {
     padding-left: 83px;
-  }
-
-  .drawer__header:first-child {
-    width: calc(100% - 83px) !important;
-    margin-left: auto;
   }
 
   .drawer__tab {
@@ -906,16 +923,6 @@ button.icon-button.active i.fa-retweet {
 
 .activity-stream .status.light {
   padding: 8px 8px 8px 15px;
-}
-
-.entry .status::after,
-.entry .notification::after {
-  left: -18px;
-}
-
-.entry .status::before,
-.entry .notification::before {
-  left: -10px;
 }
 
 .activity-stream .entry .pre-header {
@@ -1348,6 +1355,24 @@ a.table-action-link:hover {
 
 .form-container .flash-message code {
     word-wrap: break-word;
+/* Admin */
+/* /admin/accounts, etc. */
+
+.filters .filter-subset strong {
+  color: #8b6d5d;
+}
+
+.filters .filter-subset a {
+  color: #8b6d5d;
+  border-bottom: #fcfce1;
+}
+.filters .filter-subset a:hover {
+  color: #6c5549;
+  border-color: rgba(0, 0, 0, 0.4);
+}
+.filters .filter-subset a.selected {
+  color: #ed649c;
+  border-color: #ed649c;
 }
 
 /* Things Are Not O.K */
