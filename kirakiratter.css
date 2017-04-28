@@ -2,12 +2,9 @@
   Mastodon: Kirakiratter Custom CSS V8.2
   By Salil Gupta (@MasterDalK)
   Other Contributors: @pomo, @sumire, @bitmap, @hisagi, @lae, @takenoko, @unarist
-
   Instructions: https://github.com/MasterDalK/kktCSS#kktcss
-
   Feature Requests & Bug Reports: https://github.com/MasterDalK/kktCSS
   Feature Requests & Bug Reports: #kktCSS on https://kirakiratter.com
-
   There are some toggles at the top, if you would like to disable them just comment as needed.
   Toggles:
     Meiryo UI
@@ -1250,6 +1247,14 @@ a.table-action-link:hover {
 }
 
 .card .name span {
+  color: #d9e1e8;
+}
+
+.card .name small span {
+  color: #2b90d9;
+}
+
+.account__header__content {
   color: #d9e1e8;
 }
 
