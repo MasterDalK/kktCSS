@@ -348,6 +348,8 @@ a span,
 .getting-started p,
 .detailed-status__meta,
 .notification__message,
+.media-spoiler,
+.empty-column-indicator,
 .footer {
   color: #8e9956;
 }
@@ -599,6 +601,21 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
 
 .status-check-box, .report__target {
   border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+/* Drag and drop to upload */
+
+.upload-area {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.upload-area__background {
+  background: #E488B9;
+}
+
+.upload-area__content {
+  color: white;
+  border-color: #D84A9D;
 }
 
 /* Onboarding Modal */
@@ -1326,6 +1343,26 @@ a.table-action-link:hover {
 
 .accounts-grid .account-grid-card .note {
     color: #8b6461
+}
+
+/* Admin */
+/* /admin/accounts, etc. */
+
+.filters .filter-subset strong {
+  color: #8b6d5d;
+}
+
+.filters .filter-subset a {
+  color: #8b6d5d;
+  border-bottom: #fcfce1;
+}
+.filters .filter-subset a:hover {
+  color: #6c5549;
+  border-color: rgba(0, 0, 0, 0.4);
+}
+.filters .filter-subset a.selected {
+  color: #ed649c;
+  border-color: #ed649c;
 }
 
 /* Things Are Not O.K */
