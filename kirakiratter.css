@@ -411,9 +411,7 @@ a span,
 .column-header,
 .column-link,
 .column-back-button,
-.column-back-button span,
-.icon-button.disabled i.fa-envelope,
-.icon-button.disabled i.fa-lock {
+.column-back-button span {
   color: #6a4643;
 }
 
@@ -433,6 +431,15 @@ a span,
 button.icon-button i.fa-retweet:hover {
   text-shadow: -1px -1px 0 #f5e33a, 1px -1px 0 #f5e33a, -1px 1px 0 #f5e33a, 1px 1px 0 #f5e33a;
 }
+
+.icon-button.disabled {
+  color: #8b6461;    
+}
+
+.icon-button.disabled:hover {
+  text-shadow: none;   
+}
+
 /* Katsu Drawer & Search */
 .navigation-bar {
   background: rgba(237, 42, 144, 0.6);
