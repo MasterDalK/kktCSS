@@ -295,7 +295,8 @@ body /* user */,
   border: solid 2px #e1c152;
 }
 
-.status .avatar {
+.status .avatar,
+.status .account__avatar {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
 }
 
