@@ -120,10 +120,6 @@ body /* user */,
   background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6Y2M9Imh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL25zIyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiBoZWlnaHQ9IjI4IiB3aWR0aD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyOCI+DQo8cmVjdCBoZWlnaHQ9IjI4IiB3aWR0aD0iMjAiIHk9IjAiIHg9IjAiIGZpbGw9IiNlNTZjYWMiLz4NCjxwYXRoIGQ9Im0wIDE0IDEwLTE0IDEwIDE0LTEwIDE0eiIgZmlsbD0iI2Q4NGE5ZCIvPg0KPC9zdmc+');
 }
 
-.column > .scrollable {
-  background: none;
-}
-
 .column-header,
 .column-icon,
 .column-back-button,
@@ -132,11 +128,14 @@ body /* user */,
 }
 
 .column-subheading {
-  background: #a9bb67;
+  background: #dced91;
 }
 
 .column > .scrollable,
-.empty-column-indicator,
+.empty-column-indicator {
+  background: rgba(0, 0, 0, 0.05);
+}
+
 .media-spoiler {
   background: rgba(0, 0, 0, 0.1);
 }
@@ -156,13 +155,6 @@ body /* user */,
 .activity-stream .detailed-status.light .status__content a.status__content__spoiler-link:hover,
 .dropdown--active .dropdown__content > ul > li > a:hover {
   background: #f5b9c2;
-}
-
-.status__content__spoiler-link span,
-.activity-stream .status.light .status__content a.status__content__spoiler-link ,
-.activity-stream .detailed-status.light .status__content a.status__content__spoiler-link {
-  /* "!important" is need for a.status__content__spoiler-link to override ".status__content a { color: !important }" in our CSS */
-  color: #fff !important;
 }
 
 .muted a.status__content__spoiler-link:hover,
@@ -318,87 +310,119 @@ body /* user */,
   top: 0;
 }
 
-/* TEXT STYLING */
+/* COLOUR STYLING */
 /* Brown */
-p,
+p, /* Katswoots -- Posts, Tweets, Katsus, TOOTS, take your pick. */
 .status__content,
 .status-card__description,
 .compose-form__warning span,
-.confirmation-modal__container,
-.column-subheading {
+.column-subheading, /* Getting Started */
+.confirmation-modal__container, /* Modals */
+.onboarding-modal__page p span,
+.onboarding-modal__page h1 span,
+.simple_form .input.file label, /* Forms */
+.simple_form .input.select label,
+.simple_form .input.radio_buttons label,
+.simple_form .input.radio_buttons .radio label,
+.simple_form .input.boolean label,
+.simple_form input[type=text],
+.simple_form input[type=number],
+.simple_form input[type=email],
+.simple_form input[type=password],
+.simple_form textarea,
+.simple_form input[type=file],
+.flash-message strong, /* 2FA And Settings */
+.recovery-codes,
+.oauth-prompt,
+.follow-prompt,
+.admin-wrapper .table,
+.filters .filter-subset strong,
+.filters .filter-subset a,
+a.table-action-link,
+.accounts-grid .account-grid-card,
+.about-body .wrapper, /* Landing Page */
+.screenshot-with-signup .simple_form .info a,
+.screenshot-with-signup .closed-registrations-message .info a,
+.landing-strip, /* Profiles */
+.pagination .prev,
+.pagination .next,
+.pagination .prev a,
+.pagination .next a,
+.pagination .page a,
+.pagination .page.gap,
+.report__target strong, /* User Reports */
+.report__textarea {
   color: #8b6d5d;
 }
 
 /* Lighter Brown */
 .muted .status__content p,
 .muted .status__content a,
-.boost-modal__container p {
+.boost-modal__container p,
+.loading-indicator {
   color: #ad9588;
+}
+
+/* Darker Brown */
+.drawer__tab,
+.icon-button,
+.column-icon,
+.column-header,
+.column-link,
+.column-back-button,
+.column-back-button span {
+  color: #6a4643;
 }
 
 /* User @ Text & Links */
 
 /* a(pink underline) > span(green text) */
-/* username and hashtag have pink text */
-.status__display-name strong,
+/* Pink */
+.status__display-name strong, /* Katswoots -- Posts, Tweets, Katsus, TOOTS, take your pick. */
 .detailed-status__display-name strong,
 .account__display-name strong,
 .status__content a,
-.reply-indicator__content a,
-a.h-card.u-url.p-nickname.mention,
-a.h-card.u-url.p-nickname.mention span,
 .status__content .h-card span,
-a.mention span,
-a.mention.hashtag span,
-.account__header__content a,
-.information-board .section strong,
-a[href*='/tags/'] span,
-.confirmation-modal__container strong,
-.status__prepend .status__display-name strong,
-.activity-stream .detailed-status.light .detailed-status__display-name .display-name strong,
+.mention span,
+.mention.hashtag span,
+.reply-indicator__content a, /* Notifications */
+.h-card.u-url.p-nickname.mention,
+.h-card.u-url.p-nickname.mention span,
+.account__header__content a, /* Profile */
+.information-board .section strong, /* Landing Page */
+.about-body h1,
+.owner .name .display_name,
+a[href*='/tags/'] span, /* Hashtag Fix */
+.status__prepend .status__display-name strong, /* boost/favourited preprend */
+.activity-stream .detailed-status.light .detailed-status__display-name .display-name strong, /* Standalone Pages */
 .activity-stream .status.light .display-name strong,
 .activity-stream .status.light .status__content a,
 .activity-stream .pre-header .status__display-name.muted strong,
-.activity-stream .detailed-status.light .status__content a.hashtag {
+.activity-stream .detailed-status.light .status__content a.hashtag,
+.activity-stream .detailed-status.light .status__content a.mention,
+.accounts-grid .account-grid-card .display_name,
+.confirmation-modal__container strong, /* Modals */
+.onboarding-modal__page p strong,
+.table a, /* Settings */
+.compact-header h1 a,
+.oauth-prompt strong, /* 2FA */
+.follow-prompt strong,
+.filters .filter-subset a.selected {
   color: #ed649c;
   text-decoration: none;
 }
 
-/* Lighter Pink */
-.muted .status__display-name strong,
-.boost-modal__container .status.light .display-name strong {
-  color: #f086b1;
-}
-
-/* Green */
-a span,
-.notification__display-name:hover,
-.compose-form__warning span strong,
-.status__relative-time:hover,
-.status__prepend,
-.getting-started p,
-.detailed-status__meta,
-.notification__message,
-.media-spoiler,
-.empty-column-indicator,
-.footer,
-.boost-modal__action-bar>div,
-.confirmation-modal__action-bar>div,
-.status.light .display-name span,
-.activity-stream .pre-header {
-  color: #8e9956;
-}
-
+/* Link Underlines on Hover */
 .status__display-name strong:hover,
 .detailed-status__display-name strong:hover,
 .account__display-name strong:hover,
 .status__content a:hover,
 .reply-indicator__content a:hover,
-a.h-card.u-url.p-nickname.mention:hover,
-a.h-card.u-url.p-nickname.mention span:hover,
+.h-card.u-url.p-nickname.mention:hover,
+.h-card.u-url.p-nickname.mention span:hover,
 .status__content .h-card span:hover,
-a.mention span:hover,
-a.mention.hashtag span:hover,
+.mention span:hover,
+.mention.hashtag span:hover,
 .account__header__content a:hover,
 .information-board .section strong:hover,
 a[href*='/tags/'] span:hover,
@@ -410,6 +434,61 @@ a[href*='/tags/'] span:hover,
 .activity-stream .pre-header .status__display-name.muted strong:hover,
 .activity-stream .detailed-status.light .status__content a.hashtag:hover {
   text-decoration: underline;
+}
+
+/* Lighter Pink */
+.muted .status__display-name strong,
+.boost-modal__container .status.light .display-name strong,
+.compact-header h1 small {
+  color: #f086b1;
+}
+
+/* Green */
+a span, /* Toots */
+.notification__display-name:hover,
+.compose-form__warning span strong,
+.status__relative-time:hover,
+.notification__message,
+.detailed-status__meta,
+.getting-started p, /* Columns */
+.status__prepend,
+.empty-column-indicator,
+.media-spoiler,
+.nothing-here,
+.footer,
+.boost-modal__action-bar>div, /* Modals */
+.confirmation-modal__action-bar>div,
+.status.light .display-name span,
+.activity-stream .pre-header, /* Standalones */
+.activity-stream .detailed-status.light .detailed-status__meta,
+.activity-stream .detailed-status.light .detailed-status__meta a,
+.activity-stream .detailed-status.light .detailed-status__meta .detailed-status__application,
+.activity-stream .status.light .display-name span,
+.activity-stream .status.light .status__header .status__meta .status__relative-time,
+.activity-stream .detailed-status.light .detailed-status__display-name .display-name span,
+.simple_form span.hint, /* Settings */
+.report__target {
+  color: #8e9956;
+}
+
+/* Green - Links turned into not so important links */
+.about-body p a,
+.owner .name .username,
+.about-body .actions .info a,
+.screenshot-with-signup .simple_form .info a,
+.screenshot-with-signup .closed-registrations-message .info a,
+.container .form-footer ul.no-list a,
+.accounts-grid .account-grid-card .username {
+  color: #8e9956;
+	text-decoration: none;
+}
+
+/* White */
+.status__content__spoiler-link span,
+.activity-stream .status.light .status__content a.status__content__spoiler-link ,
+.activity-stream .detailed-status.light .status__content a.status__content__spoiler-link {
+  /* "!important" is need for a.status__content__spoiler-link to override ".status__content a { color: !important }" in our CSS */
+  color: #fff !important;
 }
 
 .column-header,
@@ -459,16 +538,6 @@ a[href*='/tags/'] span:hover,
 }
 
 /* Buttons & Tabs that aren't the KATSU! button */
-.drawer__tab,
-.icon-button,
-.column-icon,
-.column-header,
-.column-link,
-.column-back-button,
-.column-back-button span {
-  color: #6a4643;
-}
-
 .icon-button.active:hover,
 .drawer__tab:hover,
 .icon-button:hover,
@@ -660,12 +729,26 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
 
 /* User Report */
 
+.scrollable.report {
+  background: rgba(212, 220, 171, 0.5); /* transparentize(mix(#ecf5be, black, 90%), 0.5) */
+}
+
 .status-check-box .status__content {
   background: rgba(255, 255, 255, 0.7);
 }
 
 .status-check-box, .report__target {
   border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+.report__textarea {
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+.report__textarea:active,
+.report__textarea:focus {
+  border-color: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.05);
 }
 
 /* Drag and drop to upload */
@@ -679,7 +762,7 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
 }
 
 .upload-area__content {
-  color: white;
+  color: #FFF;
   border-color: #D84A9D;
 }
 
@@ -692,11 +775,6 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
   background: linear-gradient(to bottom, rgba(226,72,152,1) 0%,rgba(229,108,172,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
-.onboarding-modal__page p span,
-.onboarding-modal__page h1 span {
-    color: #8b6d5d !important;
-}
-
 .onboarding-modal__page p span a {
 	color: #8e9956 !important;
   text-decoration: none;
@@ -704,7 +782,6 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
 
 .onboarding-modal__page p span a:hover {
   text-decoration: underline;
-  text-decoration-color: #ed649c;
 }
 
 .onboarding-modal__paginator a span {
@@ -733,7 +810,6 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
 }
 
 .onboarding-modal__page p strong {
-  color: #ed649c;
   background: #f5b9c2;
 }
 
@@ -1003,15 +1079,6 @@ button.icon-button.active i.fa-retweet {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
 }
 
-.activity-stream .detailed-status.light .detailed-status__meta,
-.activity-stream .detailed-status.light .detailed-status__meta a,
-.activity-stream .detailed-status.light .detailed-status__meta .detailed-status__application,
-.activity-stream .status.light .display-name span,
-.activity-stream .status.light .status__header .status__meta .status__relative-time,
-.activity-stream .detailed-status.light .detailed-status__display-name .display-name span {
-  color: #8e9956;
-}
-
 /* --- admin / settings --- */
 
 /* background */
@@ -1064,11 +1131,6 @@ button.icon-button.active i.fa-retweet {
     background: rgba(255,255,255,0.7);
 }
 
-.flash-message strong,
-.recovery-codes {
-    color: #8b6d5d;
-}
-
 /* content */
 
 .admin-wrapper .content > p{
@@ -1080,26 +1142,12 @@ button.icon-button.active i.fa-retweet {
 }
 
 /* forms */
-
-.simple_form .input.file label,
-.simple_form .input.select label,
-.simple_form .input.radio_buttons label,
-.simple_form .input.radio_buttons .radio label,
-.simple_form .input.boolean label {
-	color: #8b6d5d;
-}
-
 .simple_form input[type=text],
 .simple_form input[type=number],
 .simple_form input[type=email],
 .simple_form input[type=password],
 .simple_form textarea {
-  color: #8b6d5d;
   border-bottom: 2px solid rgba(0,0,0,0.3);
-}
-
-.simple_form input[type=file] {
-  color: #8b6d5d; /* default: inherit from body */
 }
 
 .simple_form input[type=text]:active, .simple_form input[type=text]:focus,
@@ -1121,15 +1169,7 @@ button.icon-button.active i.fa-retweet {
   background: #85a13b;
 }
 
-.simple_form span.hint {
-  color: #8e9956;
-}
-
 /* tables (used in authorized_applications, export) */
-
-.admin-wrapper .table {
-  color: #8b6d5d; /* default: inherit from body */
-}
 
 .table > tbody > tr:nth-child(odd) > td,
 .table > tbody > tr:nth-child(odd) > th {
@@ -1144,17 +1184,11 @@ button.icon-button.active i.fa-retweet {
   border: none;
 }
 
-.table a {
-    color: #ed649c;
-    text-decoration: none;
-}
-
 .table a:hover {
     text-decoration: underline;
 }
 
 a.table-action-link {
-  color: #8b6d5d;
   text-decoration: none;
 }
 
@@ -1184,7 +1218,6 @@ a.table-action-link:hover {
 
 .about-body .wrapper,
 .accounts-grid .account-grid-card {
-  color: #8b6d5d;
   border-radius: 8px;
   border: solid 2px #e1c152;
 }
@@ -1225,10 +1258,6 @@ a.table-action-link:hover {
   }
 }
 
-.about-body h1 {
-  color: #ed649c;
-}
-
 .about-body h2,
 .about-body h3 {
   color: #8b6461;
@@ -1242,11 +1271,6 @@ a.table-action-link:hover {
 .screenshot-with-signup .simple_form,
 .screenshot-with-signup .closed-registrations-message {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
-}
-
-.screenshot-with-signup .simple_form .info a,
-.screenshot-with-signup .closed-registrations-message .info a {
-  color: #8b6d5d;
 }
 
 /* /about/more */
@@ -1279,17 +1303,6 @@ a.table-action-link:hover {
   color: inherit;
 }
 
-.about-body p a,
-.owner .name .username,
-.about-body .actions .info a,
-.screenshot-with-signup .simple_form .info a,
-.screenshot-with-signup .closed-registrations-message .info a,
-.container .form-footer ul.no-list a,
-.accounts-grid .account-grid-card .username {
-    color: #8e9956;
-	text-decoration: none;
-}
-
 .about-body p a:hover,
 .about-body .actions .info a:hover,
 .screenshot-with-signup .simple_form .info a:hover,
@@ -1300,14 +1313,11 @@ a.table-action-link:hover {
 
 .owner .name .display_name,
 .accounts-grid .account-grid-card .display_name {
-    color: #ed649c;
     font-weight: bold;
 }
 /* --- User (/@hogehoge) --- */
 
 .landing-strip {
-  color: #8b6d5d;
-  /* background: #D0E093; */
   background: rgba(208,224,147,0.7);
 }
 
@@ -1337,22 +1347,9 @@ a.table-action-link:hover {
   background: none;
 }
 
-.nothing-here {
-  color: #8e9956;
-}
-
-.pagination .prev,
-.pagination .next,
-.pagination .prev a,
-.pagination .next a,
-.pagination .page a,
-.pagination .page.gap {
-  color: #8b6d5d;
-}
-
 .pagination .page.current {
-    color: #FFF;
-    background: #8b6d5d;
+  color: #FFF;
+  background: #8b6d5d;
 }
 
 .pagination .page a:hover,
@@ -1369,15 +1366,6 @@ a.table-action-link:hover {
 
 .card .counter.active:after {
   border-color: #f5e33a;
-}
-
-/* Hashtag pages */
-.compact-header h1 a {
-  color: #ed649c;
-}
-
-.compact-header h1 small {
-  color: #f28db7;
 }
 
 /* Followers & Following */
@@ -1404,16 +1392,6 @@ a.table-action-link:hover {
   border: solid 2px #e1c152;
 }
 
-.oauth-prompt,
-.follow-prompt {
-  color: #8b6d5d;
-}
-
-.oauth-prompt strong,
-.follow-prompt strong {
-  color: #ed649c;
-}
-
 .form-container .flash-message code {
     word-wrap: break-word;
 }
@@ -1421,12 +1399,7 @@ a.table-action-link:hover {
 /* Admin */
 /* /admin/accounts, etc. */
 
-.filters .filter-subset strong {
-  color: #8b6d5d;
-}
-
 .filters .filter-subset a {
-  color: #8b6d5d;
   border-bottom: #fcfce1;
 }
 .filters .filter-subset a:hover {
@@ -1434,13 +1407,5 @@ a.table-action-link:hover {
   border-color: rgba(0, 0, 0, 0.4);
 }
 .filters .filter-subset a.selected {
-  color: #ed649c;
   border-color: #ed649c;
-}
-
-/* Things Are Not O.K */
-.notification-bar .notification-bar-active {
-  background: black;
-  font-family: "Lucida Console";
-  font-size: 9rem;
 }
