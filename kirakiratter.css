@@ -131,7 +131,7 @@ body /* user */,
 .column > .scrollable,
 .empty-column-indicator,
 .media-spoiler {
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(212, 220, 171, 0.5);
 }
 
 .account__header > div {
