@@ -529,19 +529,39 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
 
 .search__input {
   background: #d0e093;
-  color: #6a4643;
+  color: #7c8658;
 }
 
-.search__input::-webkit-input-placeholder,
-.search__input::-moz-placeholder,
-.search__input::-ms-input-placeholder,
+.search__input::-webkit-input-placeholder {
+  color: #7c8658;
+}
 .search__input::-moz-placeholder {
+  color: #7c8658;
+}
+.search__input:-ms-input-placeholder {
+  color: #7c8658;
+}
+.search__input:-moz-placeholder {
+  color: #7c8658;
+}
+
+.search__input:focus::-webkit-input-placeholder {
+  color: #fff;
+}
+.search__input:focus::-moz-placeholder {
+  color: #fff;
+}
+.search__input:focus:-ms-input-placeholder {
+  color: #fff;
+}
+.search__input:focus:-moz-placeholder {
   color: #fff;
 }
 
 .search__input:focus {
   background: #7c8658;
   color: #fff;
+} #fff;
 }
 
 .search__input, .autosuggest-textarea__textarea {
