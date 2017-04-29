@@ -561,7 +561,6 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
 .search__input:focus {
   background: #7c8658;
   color: #fff;
-} #fff;
 }
 
 .search__input, .autosuggest-textarea__textarea {
