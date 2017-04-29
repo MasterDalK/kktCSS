@@ -1,10 +1,12 @@
 /*
-  Mastodon: Kirakiratter Custom CSS V8.2
+  Mastodon: Kirakiratter Custom CSS V9.0
   By Salil Gupta (@MasterDalK)
   Other Contributors: @pomo, @sumire, @bitmap, @hisagi, @lae, @takenoko, @unarist
+
   Instructions: https://github.com/MasterDalK/kktCSS#kktcss
   Feature Requests & Bug Reports: https://github.com/MasterDalK/kktCSS
   Feature Requests & Bug Reports: #kktCSS on https://kirakiratter.com
+
   There are some toggles at the top, if you would like to disable them just comment as needed.
   Toggles:
     Meiryo UI
@@ -133,7 +135,7 @@ body /* user */,
 
 .column > .scrollable,
 .empty-column-indicator {
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(212, 220, 171, 0.5);
 }
 
 .media-spoiler {
@@ -284,6 +286,8 @@ body /* user */,
 
 /* avatar */
 
+.status .account__avatar,
+.notification .account__avatar,
 .status .avatar,
 .notification .avatar,
 .boost-modal__status-header .account__avatar,
@@ -351,7 +355,8 @@ a.table-action-link,
 .pagination .page a,
 .pagination .page.gap,
 .report__target strong, /* User Reports */
-.report__textarea {
+.report__textarea,
+.account-authorize .account__header__content /* Follow Requests */ {
   color: #8b6d5d;
 }
 
@@ -386,11 +391,12 @@ a.table-action-link,
 .mention span,
 .mention.hashtag span,
 .reply-indicator__content a, /* Notifications */
-.h-card.u-url.p-nickname.mention,
-.h-card.u-url.p-nickname.mention span,
+.h-card .u-url.mention,
+.h-card .u-url.mention span,
 .account__header__content a, /* Profile */
 .information-board .section strong, /* Landing Page */
 .about-body h1,
+.contact-email strong,
 .owner .name .display_name,
 a[href*='/tags/'] span, /* Hashtag Fix */
 .status__prepend .status__display-name strong, /* boost/favourited preprend */
@@ -424,9 +430,7 @@ a[href*='/tags/'] span, /* Hashtag Fix */
 .mention span:hover,
 .mention.hashtag span:hover,
 .account__header__content a:hover,
-.information-board .section strong:hover,
 a[href*='/tags/'] span:hover,
-.confirmation-modal__container strong:hover,
 .status__prepend .status__display-name strong:hover,
 .activity-stream .detailed-status.light .detailed-status__display-name .display-name strong:hover,
 .activity-stream .status.light .display-name strong:hover,
@@ -450,6 +454,7 @@ a span, /* Toots */
 .status__relative-time:hover,
 .notification__message,
 .detailed-status__meta,
+.status-card__title,
 .getting-started p, /* Columns */
 .status__prepend,
 .empty-column-indicator,
@@ -507,8 +512,6 @@ a span, /* Toots */
 .status-card__image {
   background: none;
 }
-
-/* UI Elements */
 
 /* ScrollBar -- WebKit only (Chrome/Opera/Vivaldi/Safari) */
 ::-webkit-scrollbar-track:active,
@@ -590,6 +593,7 @@ button.icon-button i.fa-retweet:hover {
 
 .tabs-bar__link.active,
 .column-settings--outer,
+.column-settings__outer,
 .account__action-bar,
 .column-link:hover,
 .collapsable:hover,
@@ -725,6 +729,16 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
 
 .account__action-bar__tab {
   border-left: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+/* Follow Requests */
+.account--panel {
+  background: rgba(255,255,255,0.4);
+  border-color: #8b6d5d;
+}
+
+.account-authorize {
+  background: rgba(212, 220, 171, 0.5);
 }
 
 /* User Report */
@@ -1044,10 +1058,7 @@ button.icon-button.active i.fa-retweet {
 .activity-stream .entry .status.light,
 .activity-stream .entry:first-child .status.light,
 .activity-stream .entry:last-child .status.light,
-.activity-stream .entry:last-child .detailed-status.light {
-  border: solid 2px #e1c152;
-}
-
+.activity-stream .entry:last-child .detailed-status.light,
 .activity-stream .entry:first-child .status.light,
 .activity-stream .entry:last-child .status.light,
 .activity-stream .entry:last-child .detailed-status.light {
@@ -1097,10 +1108,6 @@ button.icon-button.active i.fa-retweet {
   background: -webkit-linear-gradient(top, rgba(252, 252, 225, 1) 0%, rgba(252, 252, 225, 1) 25%, rgba(252, 252, 225, 1) 65%, rgba(249, 240, 174, 1) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   background: linear-gradient(to bottom, rgba(252, 252, 225, 1) 0%, rgba(252, 252, 225, 1) 25%, rgba(252, 252, 225, 1) 65%, rgba(249, 240, 174, 1) 100%);
-}
-
-.table-form .warning {
-  box-shadow: none;
 }
 
 /* sidebar */
@@ -1369,6 +1376,7 @@ a.table-action-link:hover {
 }
 
 /* Followers & Following */
+
 .accounts-grid {
   background: rgba(0,0,0,0.1);
   box-shadow: none;
@@ -1402,10 +1410,12 @@ a.table-action-link:hover {
 .filters .filter-subset a {
   border-bottom: #fcfce1;
 }
+
 .filters .filter-subset a:hover {
   color: #6c5549;
   border-color: rgba(0, 0, 0, 0.4);
 }
+
 .filters .filter-subset a.selected {
   border-color: #ed649c;
 }
