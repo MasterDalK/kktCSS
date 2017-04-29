@@ -722,15 +722,27 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
 /* Settings Dropdown */
 
 .react-toggle-track {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
   background: rgba(0, 0, 0, 0.3);
 }
 
+.react-toggle-thumb {
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+.react-toggle--checked .react-toggle-track {
+  background: #9bc530;
+}
+
 .react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
-  background: #56a7e1;
+  background: #b4d75b;
+}
+
+.react-toggle--checked .react-toggle-thumb {
+  border-color: #9bc530;
 }
 
 .setting-text {
