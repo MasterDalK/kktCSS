@@ -606,12 +606,35 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
 
 /* User Report */
 
+.scrollable.report {
+  background: rgba(212, 220, 171, 0.5); /* transparentize(mix(#ecf5be, black, 90%), 0.5) */
+}
+
+.report__target {
+  color: #8e9956;
+}
+
+.report__target strong {
+  color: #8b6d5d;
+}
+
 .status-check-box .status__content {
   background: rgba(255, 255, 255, 0.7);
 }
 
 .status-check-box, .report__target {
   border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+.report__textarea {
+  color: #8b6d5d;
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+.report__textarea:active,
+.report__textarea:focus {
+  border-color: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.05);
 }
 
 /* Drag and drop to upload */
