@@ -127,9 +127,12 @@ body /* user */,
 .column-header,
 .column-icon,
 .column-back-button,
-.column-link,
-.column-subheading {
+.column-link {
   background: #d0e093;
+}
+
+.column-subheading {
+  background: #a9bb67;
 }
 
 .column > .scrollable,
@@ -191,7 +194,9 @@ body /* user */,
 
 .status,
 .notification,
-.onboarding-modal__pager::before {
+.onboarding-modal__pager::before,
+.confirmation-modal,
+.boost-modal {
   /* Old browsers */
   background: rgb(252, 252, 225);
   /* FF3.6-15 */
@@ -203,12 +208,16 @@ body /* user */,
   /* IE6-9 */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfce1', endColorstr='#f9f0ae', GradientType=0);
   border-radius: 8px;
-  margin-bottom: 8px;
+  border: solid 2px #e1c152;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.status,
+.notification {
   margin-left: 64px;
   margin-right: 2px;
   padding-left: 8px;
-  border: solid 2px #e1c152;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+  margin-bottom: 8px;
 }
 
 .notification {
@@ -227,7 +236,9 @@ body /* user */,
   padding: 6px 0 6px 0;
 }
 
-.onboarding-modal {
+.onboarding-modal,
+.boost-modal__action-bar,
+.confirmation-modal__action-bar {
   background: none;
 }
 
@@ -282,9 +293,18 @@ body /* user */,
 /* avatar */
 
 .status .avatar,
-.notification .avatar {
+.notification .avatar,
+.boost-modal__status-header .account__avatar,
+.notification-follow .account__avatar {
   border: solid 2px #e1c152;
+}
+
+.status .avatar {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.boost-modal__status-header .account__avatar {
+  opacity: 0.65;
 }
 
 .status__avatar {
@@ -292,23 +312,27 @@ body /* user */,
   top: 0 !important;
 }
 
-.notification-follow .avatar {
+.notification-follow .avatar,
+.notification-follow .account__avatar {
   left: 0;
   top: 0;
 }
 
 /* TEXT STYLING */
-/* Tweet Text */
-
+/* Brown */
 p,
 .status__content,
 .status-card__description,
-.compose-form__warning span {
+.compose-form__warning span,
+.confirmation-modal__container,
+.column-subheading {
   color: #8b6d5d;
 }
 
+/* Lighter Brown */
 .muted .status__content p,
-.muted .status__content a {
+.muted .status__content a,
+.boost-modal__container p {
   color: #ad9588;
 }
 
@@ -316,7 +340,6 @@ p,
 
 /* a(pink underline) > span(green text) */
 /* username and hashtag have pink text */
-.muted .status__display-name strong,
 .status__display-name strong,
 .detailed-status__display-name strong,
 .account__display-name strong,
@@ -328,27 +351,29 @@ a.h-card.u-url.p-nickname.mention span,
 a.mention span,
 a.mention.hashtag span,
 .account__header__content a,
-.information-board .section strong {
-  color: #ed649c !important;
+.information-board .section strong,
+a[href*='/tags/'] span,
+.confirmation-modal__container strong,
+.status__prepend .status__display-name strong,
+.activity-stream .detailed-status.light .detailed-status__display-name .display-name strong,
+.activity-stream .status.light .display-name strong,
+.activity-stream .status.light .status__content a,
+.activity-stream .pre-header .status__display-name.muted strong,
+.activity-stream .detailed-status.light .status__content a.hashtag {
+  color: #ed649c;
   text-decoration: none;
 }
 
+/* Lighter Pink */
+.muted .status__display-name strong,
+.boost-modal__container .status.light .display-name strong {
+  color: #f086b1;
+}
+
+/* Green */
 a span,
 .notification__display-name:hover,
-.compose-form__warning span strong {
-  color: #8e9956;
-}
-
-.account__header__content a:hover {
-  text-decoration: underline;
-}
-
-/* original: underline only applies to the inner span */
-.status__content a.mention:hover,
-.reply-indicator__content a.mention:hover {
-  text-decoration: underline;
-}
-
+.compose-form__warning span strong,
 .status__relative-time:hover,
 .status__prepend,
 .getting-started p,
@@ -356,8 +381,35 @@ a span,
 .notification__message,
 .media-spoiler,
 .empty-column-indicator,
-.footer {
+.footer,
+.boost-modal__action-bar>div,
+.confirmation-modal__action-bar>div,
+.status.light .display-name span,
+.activity-stream .pre-header {
   color: #8e9956;
+}
+
+.status__display-name strong:hover,
+.detailed-status__display-name strong:hover,
+.account__display-name strong:hover,
+.status__content a:hover,
+.reply-indicator__content a:hover,
+a.h-card.u-url.p-nickname.mention:hover,
+a.h-card.u-url.p-nickname.mention span:hover,
+.status__content .h-card span:hover,
+a.mention span:hover,
+a.mention.hashtag span:hover,
+.account__header__content a:hover,
+.information-board .section strong:hover,
+a[href*='/tags/'] span:hover,
+.confirmation-modal__container strong:hover,
+.status__prepend .status__display-name strong:hover,
+.activity-stream .detailed-status.light .detailed-status__display-name .display-name strong:hover,
+.activity-stream .status.light .display-name strong:hover,
+.activity-stream .status.light .status__content a:hover,
+.activity-stream .pre-header .status__display-name.muted strong:hover,
+.activity-stream .detailed-status.light .status__content a.hashtag:hover {
+  text-decoration: underline;
 }
 
 .column-header,
@@ -701,6 +753,22 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
   color: #ed649c !important;
 }
 
+/* Confirmation Modals */
+
+.boost-modal__action-bar,
+.confirmation-modal__action-bar {
+  padding-top: 0px;
+}
+
+.confirmation-modal__container {
+  padding-bottom: 20px;
+}
+
+.boost-modal__container {
+  overflow-x: auto;
+}
+
+
 /* Dropdown Menus */
 .dropdown--active .dropdown__content > ul > li > a {
   width: unset;
@@ -897,19 +965,17 @@ button.icon-button.active i.fa-retweet {
 }
 
 .activity-stream .entry .detailed-status.light,
-.activity-stream .entry .status.light {
+.activity-stream .entry .status.light,
+.activity-stream .entry:first-child .status.light,
+.activity-stream .entry:last-child .status.light,
+.activity-stream .entry:last-child .detailed-status.light {
   border: solid 2px #e1c152;
 }
 
 .activity-stream .entry:first-child .status.light,
 .activity-stream .entry:last-child .status.light,
 .activity-stream .entry:last-child .detailed-status.light {
-  border-radius: 8px;
   border: solid 2px #e1c152;
-}
-
-.activity-stream .detailed-status.light .detailed-status__meta {
-  color: #8e9956;
 }
 
 .activity-stream .entry {
@@ -937,14 +1003,9 @@ button.icon-button.active i.fa-retweet {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
 }
 
-.activity-stream .detailed-status.light .detailed-status__meta a {
-  color: #8e9956;
-}
-
-.activity-stream .detailed-status.light .detailed-status__meta .detailed-status__application {
-  color: #8e9956;
-}
-
+.activity-stream .detailed-status.light .detailed-status__meta,
+.activity-stream .detailed-status.light .detailed-status__meta a,
+.activity-stream .detailed-status.light .detailed-status__meta .detailed-status__application,
 .activity-stream .status.light .display-name span,
 .activity-stream .status.light .status__header .status__meta .status__relative-time,
 .activity-stream .detailed-status.light .detailed-status__display-name .display-name span {
@@ -969,6 +1030,10 @@ button.icon-button.active i.fa-retweet {
   background: -webkit-linear-gradient(top, rgba(252, 252, 225, 1) 0%, rgba(252, 252, 225, 1) 25%, rgba(252, 252, 225, 1) 65%, rgba(249, 240, 174, 1) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   background: linear-gradient(to bottom, rgba(252, 252, 225, 1) 0%, rgba(252, 252, 225, 1) 25%, rgba(252, 252, 225, 1) 65%, rgba(249, 240, 174, 1) 100%);
+}
+
+.table-form .warning {
+  box-shadow: none;
 }
 
 /* sidebar */
