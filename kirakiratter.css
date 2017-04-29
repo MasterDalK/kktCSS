@@ -47,7 +47,7 @@
 /* Meiryo UI -- END */
 
 /* Column Resizing On Desktop */
-@media screen and (min-width: 1025px) and (max-width: 1920px) {
+@media screen and (min-width: 1025px) and (max-width: 2560px) {
   .column {
     flex-grow: 1;
   }
