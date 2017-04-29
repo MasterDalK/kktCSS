@@ -474,7 +474,8 @@ button.icon-button i.fa-retweet:hover {
   text-shadow: none;
 }
 
-.column-header:focus {
+.column-header:focus,
+.column-icon:focus {
   outline: none;
 }
 
