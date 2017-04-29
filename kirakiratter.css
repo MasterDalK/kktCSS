@@ -324,6 +324,7 @@ p,
 .reply-indicator__content a,
 a.h-card.u-url.p-nickname.mention,
 a.h-card.u-url.p-nickname.mention span,
+.status__content .h-card span,
 a.mention span,
 a.mention.hashtag span,
 .account__header__content a,
@@ -333,7 +334,8 @@ a.mention.hashtag span,
 }
 
 a span,
-.notification__display-name:hover {
+.notification__display-name:hover,
+.compose-form__warning span strong {
   color: #8e9956;
 }
 
@@ -433,11 +435,11 @@ button.icon-button i.fa-retweet:hover {
 }
 
 .icon-button.disabled {
-  color: #9c7a78;    
+  color: #9c7a78;
 }
 
 .icon-button.disabled:hover {
-  text-shadow: none;   
+  text-shadow: none;
 }
 
 /* Katsu Drawer & Search */
