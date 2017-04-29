@@ -186,6 +186,12 @@ body /* user */,
   border-color: transparent transparent #e3a4ad transparent;
 }
 
+.scrollable .status:first-child,
+.scrollable .notification:first-child,
+.account-timeline__header + .status {
+  margin-top: 6px;
+}
+
 .status,
 .notification,
 .onboarding-modal__pager::before,
@@ -462,6 +468,8 @@ a span, /* Toots */
 .media-spoiler,
 .nothing-here,
 .footer,
+.column-settings__section,
+.setting-toggle,
 .boost-modal__action-bar>div, /* Modals */
 .confirmation-modal__action-bar>div,
 .status.light .display-name span,
@@ -712,6 +720,7 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
 }
 
 /* Settings Dropdown */
+
 .react-toggle-track {
   background: rgba(0, 0, 0, 0.6);
 }
@@ -724,9 +733,18 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
   background: #56a7e1;
 }
 
+.setting-text {
+  color: #777;
+  outline: none;
+  border-color: rgba(0, 0, 0, 0.3);
+  padding: 7px 4px;
+}
+
 .setting-text:focus,
 .setting-text:active {
   color: #1a1a1a;
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.5);
 }
 
 /* Profile Column */
