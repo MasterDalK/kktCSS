@@ -361,6 +361,18 @@ a span,
   font-weight: bold;
 }
 
+/* Getting Started */
+/* span selector overrides `a > span { color: !important; }` */
+
+.getting-started a,
+.getting-started a span {
+  color: #707844; /* darken(#8e9956, 10%) */
+}
+.getting-started a:hover,
+.getting-started a:hover span {
+  color: #515831; /* darken(#8e9956, 20%) */
+}
+
 /* Embed cards */
 
 .status-card:hover {
@@ -456,6 +468,7 @@ button.icon-button i.fa-retweet:hover {
 }
 
 .navigation-bar a[href='/settings/profile']:hover:before {
+  color: #dfafaf;
   position: absolute; /* Prevent underline of arrow */
   margin-left: -0.5em; /* Add a little space between text and arrow */
   content: "\00bb"; /* Unicode hex for &raquo; */
@@ -1095,7 +1108,11 @@ button.icon-button.active i.fa-retweet {
 }
 
 .simple_form button:hover,
-.simple_form .block-button:hover {
+.simple_form button:active,
+.simple_form button:focus,
+.simple_form .block-button:hover
+.simple_form .block-button:active,
+.simple_form .block-button:focus {
   background: #85a13b;
 }
 
