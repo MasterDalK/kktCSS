@@ -326,7 +326,6 @@ body /* user */,
 p, /* Katswoots -- Posts, Tweets, Katsus, TOOTS, take your pick. */
 .status__content,
 .status-card__description,
-.compose-form__warning span,
 .column-subheading, /* Getting Started */
 .confirmation-modal__container, /* Modals */
 .onboarding-modal__page p span,
@@ -349,7 +348,7 @@ p, /* Katswoots -- Posts, Tweets, Katsus, TOOTS, take your pick. */
 .admin-wrapper .table,
 .filters .filter-subset strong,
 .filters .filter-subset a,
-a.table-action-link,
+.table a.table-action-link,
 .accounts-grid .account-grid-card,
 .about-body .wrapper, /* Landing Page */
 .screenshot-with-signup .simple_form .info a,
@@ -382,7 +381,8 @@ a.table-action-link,
 .column-header,
 .column-link,
 .column-back-button,
-.column-back-button span {
+.column-back-button span,
+.compose-form__warning span {
   color: #6a4643;
 }
 
@@ -398,8 +398,8 @@ a.table-action-link,
 .mention span,
 .mention.hashtag span,
 .reply-indicator__content a, /* Notifications */
-.h-card .u-url.mention,
-.h-card .u-url.mention span,
+.h-card,
+.h-card span,
 .account__header__content a, /* Profile */
 .information-board .section strong, /* Landing Page */
 .about-body h1,
@@ -719,7 +719,7 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
   border: 0;
 }
 
-/* Settings Dropdown */
+/* Column Settings */
 
 .react-toggle-track {
   background: rgba(0, 0, 0, 0.5);
