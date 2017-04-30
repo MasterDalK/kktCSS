@@ -1,6 +1,5 @@
 /*
   Mastodon: Kirakiratter Custom CSS V9.0
-
   By Salil Gupta (@MasterDalK)
   Other Contributors: @pomo, @sumire, @bitmap, @hisagi, @lae, @takenoko, @unarist
 
@@ -140,7 +139,7 @@ body /* user */,
 }
 
 .media-spoiler {
-  background: rgba(212, 220, 171, 0.5);
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .account__header > div {
@@ -379,7 +378,6 @@ p, /* Katswoots -- Posts, Tweets, Katsus, TOOTS, take your pick. */
 .h-card span,
 .h-card .u-url.mention,
 .h-card .u-url.mention span,
-.account__header__content a, /* Profile */
 .information-board .section strong, /* Landing Page */
 .about-body h1,
 .contact-email strong,
@@ -392,6 +390,7 @@ a[href*='/tags/'] span, /* Hashtag Fix */
 .activity-stream .pre-header .status__display-name.muted strong,
 .activity-stream .detailed-status.light .status__content a.hashtag,
 .activity-stream .detailed-status.light .status__content a.mention,
+.account__header__content a, /* Profile */
 .accounts-grid .account-grid-card .display_name,
 .confirmation-modal__container strong, /* Modals */
 .onboarding-modal__page p strong,
@@ -459,6 +458,7 @@ a span, /* Toots */
 .activity-stream .status.light .display-name span,
 .activity-stream .status.light .status__header .status__meta .status__relative-time,
 .activity-stream .detailed-status.light .detailed-status__display-name .display-name span,
+.account__header__content a span,
 .simple_form span.hint, /* Settings */
 .report__target {
   color: #8e9956;
