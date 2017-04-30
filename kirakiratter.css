@@ -344,7 +344,6 @@ p, /* Katswoots -- Posts, Tweets, Katsus, TOOTS, take your pick. */
 
 /* Lighter Brown */
 .muted .status__content p,
-.muted .status__content a,
 .boost-modal__container p,
 .loading-indicator {
   color: #ad9588;
@@ -353,12 +352,15 @@ p, /* Katswoots -- Posts, Tweets, Katsus, TOOTS, take your pick. */
 /* Darker Brown */
 .drawer__tab,
 .icon-button,
+.icon-button.active,
 .column-icon,
 .column-header,
 .column-link,
 .column-back-button,
 .column-back-button span,
-.compose-form__warning span {
+.compose-form__warning span,
+.icon-button:active,
+.icon-button:focus {
   color: #6a4643;
 }
 
@@ -428,7 +430,12 @@ a[href*='/tags/'] span:hover,
 /* Lighter Pink */
 .muted .status__display-name strong,
 .boost-modal__container .status.light .display-name strong,
-.compact-header h1 small {
+.compact-header h1 small,
+.muted .status__content a,
+.muted .status__content .u-url,
+.muted .status__content .u-url span,
+.muted .status__content .permalink.mention span,
+.permalink.mention {
   color: #f086b1;
 }
 
