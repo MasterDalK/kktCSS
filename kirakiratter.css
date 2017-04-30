@@ -1103,7 +1103,7 @@ button.icon-button.active i.fa-retweet {
 .simple_form button:hover,
 .simple_form button:active,
 .simple_form button:focus,
-.simple_form .block-button:hover
+.simple_form .block-button:hover,
 .simple_form .block-button:active,
 .simple_form .block-button:focus {
   background: #85a13b;
