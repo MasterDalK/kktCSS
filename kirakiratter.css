@@ -146,6 +146,7 @@ body /* user */,
 .activity-stream .media-spoiler:hover {
   background: rgb(212, 220, 171);
   color: black;
+  margin-top: 0px;
 }
 
 .account__header > div {
