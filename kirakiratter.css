@@ -325,11 +325,11 @@ p, /* Katswoots -- Posts, Tweets, Katsus, TOOTS, take your pick. */
 .filters .filter-subset strong,
 .filters .filter-subset a,
 .table a.table-action-link,
-.accounts-grid .account-grid-card,
 .about-body .wrapper, /* Landing Page */
 .screenshot-with-signup .simple_form .info a,
 .screenshot-with-signup .closed-registrations-message .info a,
 .landing-strip, /* Profiles */
+.accounts-grid .account-grid-card,
 .pagination .prev,
 .pagination .next,
 .pagination .prev a,
@@ -490,6 +490,18 @@ a span, /* Toots */
   font-weight: bold;
 }
 
+/* Getting Started */
+/* span selector overrides `a > span { color: !important; }` */
+
+.getting-started a,
+.getting-started a span {
+  color: #707844; /* darken(#8e9956, 10%) */
+}
+.getting-started a:hover,
+.getting-started a:hover span {
+  color: #515831; /* darken(#8e9956, 20%) */
+}
+
 /* Embed cards */
 
 .status-card:hover {
@@ -555,7 +567,29 @@ button.icon-button i.fa-retweet:hover {
 
 /* Katsu Drawer & Search */
 .navigation-bar {
-  background: rgba(237, 42, 144, 0.6);
+  background: hsla(325, 58%, 48%, 0.6);
+}
+
+.privacy-dropdown__option__content strong,
+.privacy-dropdown__option {
+  color: hsl(77, 25%, 20%);
+}
+
+.privacy-dropdown__option__content {
+  color: hsl(77, 25%, 45%);
+}
+
+.icon-button.inverted.active,
+.text-icon-button.active {
+  color: #96b34c; /* green */
+}
+
+.privacy-dropdown__option:hover,
+.privacy-dropdown__option.active {
+  background: hsla(77, 40%, 50%, 1); /* green */
+}
+.privacy-dropdown__option.active:hover {
+  background: hsla(77, 40%, 55%, 1); /* green */
 }
 
 .navigation-bar strong {
@@ -568,14 +602,8 @@ button.icon-button i.fa-retweet:hover {
   font-weight: 900;
 }
 
-.navigation-bar a[href='/settings/profile']:hover {
-  padding-left: 0.5em;
-}
-
-.navigation-bar a[href='/settings/profile']:hover:before {
-  position: absolute; /* Prevent underline of arrow */
-  margin-left: -0.5em; /* Add a little space between text and arrow */
-  content: "\00bb"; /* Unicode hex for &raquo; */
+.navigation-bar a[href='/settings/profile'] span:hover {
+  text-decoration: underline;
 }
 
 .tabs-bar__link.active,
@@ -918,7 +946,7 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
   border-bottom: 2px solid #f5e33a;
 }
 
-@media screen and (min-width: 360px) {
+@media screen and (min-width: 320px) {
   .tabs-bar {
     padding-left: 90px;
   }
@@ -1192,7 +1220,11 @@ button.icon-button.active i.fa-retweet {
 }
 
 .simple_form button:hover,
-.simple_form .block-button:hover {
+.simple_form button:active,
+.simple_form button:focus,
+.simple_form .block-button:hover
+.simple_form .block-button:active,
+.simple_form .block-button:focus {
   background: #85a13b;
 }
 
