@@ -142,6 +142,12 @@ body /* user */,
   background: rgba(0, 0, 0, 0.1);
 }
 
+.activity-stream .media-spoiler,
+.activity-stream .media-spoiler:hover {
+  background: rgb(212, 220, 171);
+  color: black;
+}
+
 .account__header > div {
   background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.7) 65%, rgba(0,0,0,0.8));
 }
@@ -150,23 +156,26 @@ body /* user */,
   background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.6) 75%, rgba(0,0,0,0.8));
 }
 
+.status__content .status__content__spoiler-link,
+.reply-indicator__content .status__content__spoiler-link,
+.activity-stream .status.light .status__content a.status__content__spoiler-link,
+.activity-stream .detailed-status.light .status__content a.status__content__spoiler-link {
+  background: rgba(237, 42, 144, 0.6);
+}
+
 .muted a.status__content__spoiler-link,
+.dropdown--active .dropdown__content > ul,
+.dropdown--active .dropdown__content > ul > li > a {
+  background: #e3a4ad;
+}
+
+.muted a.status__content__spoiler-link:hover,
 .status__content .status__content__spoiler-link:hover,
 .reply-indicator__content .status__content__spoiler-link:hover,
 .activity-stream .status.light .status__content a.status__content__spoiler-link:hover,
 .activity-stream .detailed-status.light .status__content a.status__content__spoiler-link:hover,
 .dropdown--active .dropdown__content > ul > li > a:hover {
   background: #f5b9c2;
-}
-
-.muted a.status__content__spoiler-link:hover,
-.status__content .status__content__spoiler-link,
-.reply-indicator__content .status__content__spoiler-link,
-.activity-stream .status.light .status__content a.status__content__spoiler-link,
-.activity-stream .detailed-status.light .status__content a.status__content__spoiler-link,
-.dropdown--active .dropdown__content > ul,
-.dropdown--active .dropdown__content > ul > li > a {
-  background: #e3a4ad;
 }
 
 .dropdown-active .dropdown__content.dropdown__left > ul {
