@@ -1089,6 +1089,7 @@ button.icon-button.active i.fa-retweet {
 .activity-stream .entry:last-child .status.light,
 .activity-stream .entry:last-child .detailed-status.light {
   border: solid 2px #e1c152;
+  border-radius: 8px
 }
 
 .activity-stream .entry {
@@ -1397,6 +1398,10 @@ a.table-action-link:hover {
   padding: 0;
   margin: 10px 0;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.accounts-grid .account-grid-card .account-grid-card__header {
+  border-bottom: 1px solid #e3a4ad;
 }
 
 .accounts-grid .account-grid-card .note {
