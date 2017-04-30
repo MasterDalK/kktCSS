@@ -463,15 +463,8 @@ button.icon-button i.fa-retweet:hover {
   font-weight: 900;
 }
 
-.navigation-bar a[href='/settings/profile']:hover {
-  padding-left: 0.5em;
-}
-
-.navigation-bar a[href='/settings/profile']:hover:before {
-  color: #dfafaf;
-  position: absolute; /* Prevent underline of arrow */
-  margin-left: -0.5em; /* Add a little space between text and arrow */
-  content: "\00bb"; /* Unicode hex for &raquo; */
+.navigation-bar a[href='/settings/profile'] span:hover {
+  text-decoration: underline;
 }
 
 .tabs-bar__link.active,
