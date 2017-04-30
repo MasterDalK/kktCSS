@@ -139,7 +139,7 @@ body /* user */,
 }
 
 .media-spoiler {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(212, 220, 171, 0.5);
 }
 
 .account__header > div {
@@ -620,7 +620,8 @@ button.icon-button i.fa-retweet:hover {
   text-shadow: none;
 }
 
-.column-header:focus {
+.column-header:focus,
+.column-icon:focus {
   outline: none;
 }
 
@@ -1028,7 +1029,7 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
   text-shadow: none;
 }
 
-@media screen and (min-width: 360px) {
+@media screen and (min-width: 320px) {
   .columns-area {
     padding: 0;
   }
