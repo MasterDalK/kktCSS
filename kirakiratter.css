@@ -397,9 +397,11 @@ p, /* Katswoots -- Posts, Tweets, Katsus, TOOTS, take your pick. */
 .status__content .h-card span,
 .mention span,
 .mention.hashtag span,
-.reply-indicator__content a, /* Notifications */
+.reply-indicator__content a, /* Notifications & Reply Indicator */
 .h-card,
 .h-card span,
+.h-card .u-url.mention,
+.h-card .u-url.mention span,
 .account__header__content a, /* Profile */
 .information-board .section strong, /* Landing Page */
 .about-body h1,
