@@ -149,8 +149,7 @@ body /* user */,
 
 .activity-stream .media-spoiler,
 .activity-stream .media-spoiler:hover {
-  background: rgb(212, 220, 171);
-  color: black;
+  background: #e2e2c9;
   margin-top: 0px;
 }
 
@@ -493,6 +492,8 @@ a span, /* Toots */
 .status__prepend,
 .empty-column-indicator,
 .media-spoiler,
+.activity-stream .media-spoiler,
+.activity-stream .media-spoiler:hover,
 .nothing-here,
 .footer,
 .column-settings__section,
