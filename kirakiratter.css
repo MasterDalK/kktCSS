@@ -693,6 +693,10 @@ button.icon-button i.fa-retweet:hover {
   flex-shrink: 0;
 }
 
+.column-collapsable div:nth-child(2) {
+  overflow: auto !important;
+}
+
 .search-results__header {
   background: rgba(237, 42, 144, 0.6);
   border-bottom: solid 1px #e3a4ad;
