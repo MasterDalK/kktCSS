@@ -130,10 +130,10 @@ body /* user */,
     .column-subheading {
       padding: 4px 20px;
   }
-    
+
   .confirmation-modal {
     max-width: 300px;
- }
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -143,7 +143,7 @@ body /* user */,
 
   .confirmation-modal {
     max-width: 380px;
- }
+  }
 }
 
 .column > .scrollable,
@@ -221,7 +221,8 @@ body /* user */,
 .notification,
 .onboarding-modal__pager,
 .confirmation-modal,
-.boost-modal {
+.boost-modal,
+.boost-modal__container .status {
   background: linear-gradient(to bottom, rgba(252, 252, 225, 1) 0%, rgba(252, 252, 225, 1) 65%, rgba(252, 252, 225, 1) 65%, rgba(249, 240, 174, 1) 100%);
   border-radius: 8px;
   border: solid 2px #e1c152;
@@ -293,12 +294,14 @@ body /* user */,
   background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQogIDxsaW5lIGlkPSJzdmdfMSIgeTI9IjEyLjQxMiIgeDI9IjEwLjAzNTc1IiB5MT0iMC44MzMiIHgxPSIxMC4wMzU3NSIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZT0iI0ZDRkNFMSIgZmlsbD0ibm9uZSIvPg0KICA8cGF0aCBpZD0ic3ZnXzIiIGQ9Im05Ljc2LDFjMCwwIC00LjgyMzUsMC45MjY3NSAtOCw1LjgzM2M1LjQyNjc1LDEgOCw1LjMzNCA4LDUuMzM0IiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2U9IiNFMUMxNTIiIGZpbGw9IiNGQ0ZDRTEiLz4NCjwvc3ZnPg==);
 }
 
-.status.muted::before {
+.status.muted::before,
+.boost-modal__container .status::before {
   background:
   url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQogIDxsaW5lIGlkPSJzdmdfMSIgeTI9IjEyLjQxMiIgeDI9IjEwLjAzNTc1IiB5MT0iMC44MzMiIHgxPSIxMC4wMzU3NSIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZT0iI0ZDRkNFMSIgZmlsbD0ibm9uZSIvPg0KICA8cGF0aCBpZD0ic3ZnXzIiIGQ9Im05Ljc2LDFjMCwwIC00LjgyMzUsMC45MjY3NSAtOCw1LjgzM2M1LjQyNjc1LDEgOCw1LjMzNCA4LDUuMzM0IiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2U9IiNlYmRjOTMiIGZpbGw9IiNGQ0ZDRTEiLz4NCjwvc3ZnPg==);
 }
 
-.status.muted {
+.status.muted,
+.boost-modal__container .status {
   box-shadow: none;
   border: solid 2px #ebdc93;
 }
@@ -814,7 +817,7 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
   flex-shrink: 0;
 }
 
-.mastodon-column-container[aria-hidden="true"] { 
+.mastodon-column-container[aria-hidden="true"] {
  display: none;
 }
 
