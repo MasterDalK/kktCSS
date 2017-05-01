@@ -688,7 +688,8 @@ button.icon-button i.fa-retweet:hover {
 }
 
 .column-header:focus,
-.column-icon:focus {
+.column-icon:focus,
+.status__content__spoiler-link {
   outline: none;
 }
 
