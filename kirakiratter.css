@@ -169,7 +169,10 @@ body /* user */,
   background: rgba(237, 42, 144, 0.6);
 }
 
-.muted a.status__content__spoiler-link,
+.muted a.status__content__spoiler-link {
+  background: #eda1c8;
+}
+
 .dropdown--active .dropdown__content > ul,
 .dropdown--active .dropdown__content > ul > li > a {
   background: #e3a4ad;
