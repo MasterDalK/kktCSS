@@ -833,6 +833,7 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
   color: #777;
   outline: none;
   border-color: rgba(0, 0, 0, 0.3);
+  border-radius: 2px 2px 0 0;
   padding: 7px 4px;
 }
 
