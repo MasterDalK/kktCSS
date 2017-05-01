@@ -204,7 +204,7 @@ body /* user */,
 
 .status,
 .notification,
-.onboarding-modal__pager::before,
+.onboarding-modal__pager,
 .confirmation-modal,
 .boost-modal {
   background: linear-gradient(to bottom, rgba(252, 252, 225, 1) 0%, rgba(252, 252, 225, 1) 65%, rgba(252, 252, 225, 1) 65%, rgba(249, 240, 174, 1) 100%);
@@ -231,22 +231,24 @@ body /* user */,
   padding: 6px 0 6px 0;
 }
 
+.onboarding-modal__pager {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border: none;
+}
+
+@media screen and (max-width: 550px) {
+  .onboarding-modal__pager {
+    border-radius: 0;
+    border: none;
+    margin-bottom: -1px;
+  }
+}
+
 .onboarding-modal,
 .boost-modal__action-bar,
 .confirmation-modal__action-bar {
   background: none;
-}
-
-.onboarding-modal__pager::before {
-  display: block;
-  width: 100%;
-  height: 100%;
-  content: "";
-  border-radius: 0px;
-  margin: 0px;
-  padding-left: 0px;
-  border: none;
-  box-shadow: none;
 }
 
 .account {
@@ -386,6 +388,7 @@ p, /* Katswoots -- Posts, Tweets, Katsus, TOOTS, take your pick. */
 .mention span,
 .mention.hashtag span,
 .reply-indicator__content a, /* Notifications & Reply Indicator */
+.compose-form__warning a,
 .h-card,
 .h-card span,
 .h-card .u-url.mention,
@@ -400,6 +403,7 @@ a[href*='/tags/'] span, /* Hashtag Fix */
 .activity-stream .status.light .display-name strong,
 .activity-stream .status.light .status__content a,
 .activity-stream .pre-header .status__display-name.muted strong,
+.activity-stream .detailed-status.light .status__content a,
 .activity-stream .detailed-status.light .status__content a.hashtag,
 .activity-stream .detailed-status.light .status__content a.mention,
 .account__header__content a, /* Profile */
@@ -413,6 +417,10 @@ a[href*='/tags/'] span, /* Hashtag Fix */
 .filters .filter-subset a.selected {
   color: #ed649c;
   text-decoration: none;
+}
+
+.loading-bar {
+  background-color: #ed649c;
 }
 
 /* Link Underlines on Hover */
@@ -432,8 +440,10 @@ a[href*='/tags/'] span:hover,
 .activity-stream .detailed-status.light .detailed-status__display-name .display-name strong:hover,
 .activity-stream .status.light .display-name strong:hover,
 .activity-stream .status.light .status__content a:hover,
+.activity-stream .detailed-status.light .status__content a:hover,
 .activity-stream .pre-header .status__display-name.muted strong:hover,
-.activity-stream .detailed-status.light .status__content a.hashtag:hover {
+.activity-stream .detailed-status.light .status__content a.hashtag:hover,
+.compose-form__warning a:hover {
   text-decoration: underline;
 }
 
@@ -488,7 +498,8 @@ a span, /* Toots */
 .screenshot-with-signup .simple_form .info a,
 .screenshot-with-signup .closed-registrations-message .info a,
 .container .form-footer ul.no-list a,
-.accounts-grid .account-grid-card .username {
+.accounts-grid .account-grid-card .username,
+.compose-form__warning a span {
   color: #8e9956;
 	text-decoration: none;
 }
@@ -583,6 +594,16 @@ button.icon-button i.fa-retweet:hover {
   text-shadow: none;
 }
 
+/* Column Update Colours */
+.column-header.active {
+  box-shadow: 0 1px 0 #ed649c;
+}
+
+.column-header.active .fa {
+  color: #ed649c;
+  text-shadow: 0 0 10px #ed649c;
+}
+
 /* Katsu Drawer & Search */
 .navigation-bar {
   background: hsla(325, 58%, 48%, 0.6);
@@ -656,12 +677,12 @@ button.icon-button i.fa-retweet:hover {
   text-shadow: none;
 }
 
-div.drawer__inner div div div div span,
 .dropdown--active .dropdown__content > ul > li > a:hover {
   color: #fff;
 }
 
-div.drawer__inner div div div div span[style*="color: rgb(255, 80, 80)"] {
+div.drawer__inner div div div div span[style*="color: rgb(255, 80, 80)"],
+.character-counter--over {
   color: #efcfcf !important; /* red character count */
 }
 
