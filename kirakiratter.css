@@ -126,6 +126,17 @@ body /* user */,
   background: #dced91;
 }
 
+@media screen and (min-width: 320px) {
+    .column-subheading {
+      padding: 4px 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+    .column-subheading {
+  }
+}
+
 .column > .scrollable,
 .empty-column-indicator {
   background: rgba(212, 220, 171, 0.5);
@@ -660,6 +671,11 @@ button.icon-button i.fa-retweet:hover {
 .column-header:focus,
 .column-icon:focus {
   outline: none;
+}
+
+.column-collapsable,
+.getting-started__wrapper {
+  flex-shrink: 0;
 }
 
 .search-results__header {
