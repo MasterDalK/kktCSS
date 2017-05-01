@@ -312,7 +312,7 @@ body /* user */,
 }
 
 .muted .status__action-bar .fa {
-  opacity: 0.6;
+  opacity: 0.75;
   transition: opacity 300ms;
 }
 
