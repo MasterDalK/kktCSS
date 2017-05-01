@@ -76,7 +76,7 @@ body /* user */,
 }
 
 /* KKT Banner */
-.ui::after {
+.ui::before {
   position: absolute;
   z-index: 100;
   display: inline;
@@ -90,22 +90,15 @@ body /* user */,
   background-size: contain;
 }
 
-@media screen and (min-width: 360px) {
-  .ui::after {
-    top: 0px;
-    left: 0px;
-  }
-}
-
 @media screen and (min-width: 768px) {
-  .ui::after {
+  .ui::before {
     top: 9px;
     left: 6px;
   }
 }
 
 @media screen and (min-width: 1025px) {
-  .ui::after {
+  .ui::before {
     top: 10px;
     left: 6px;
   }
