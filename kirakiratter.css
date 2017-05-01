@@ -134,6 +134,7 @@ body /* user */,
 
 @media screen and (min-width: 768px) {
     .column-subheading {
+      padding: 7px 20px;
   }
 }
 
