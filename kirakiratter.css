@@ -594,6 +594,10 @@ a span, /* Toots */
   background: #85a13b;
 }
 
+.button:disabled {
+  background: hsla(77, 20%, 60%, 1);
+}
+
 .button span {
   white-space: nowrap;
   overflow: hidden;
