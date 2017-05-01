@@ -604,6 +604,11 @@ button.icon-button i.fa-retweet:hover {
   text-shadow: 0 0 10px #ed649c;
 }
 
+.status-list__unread-indicator,
+.notifications__unread-indicator {
+  background: radial-gradient(ellipse, rgba(237, 100, 156,0.23) 0%, rgba(43,144,217,0) 60%);
+}
+
 /* Katsu Drawer & Search */
 .navigation-bar {
   background: hsla(325, 58%, 48%, 0.6);
