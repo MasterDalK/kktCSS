@@ -306,6 +306,16 @@ body /* user */,
   border: solid 2px #ebdc93;
 }
 
+.muted .status__action-bar .fa {
+  opacity: 0.6;
+  transition: opacity 300ms;
+}
+
+.muted .status__action-bar .fa:hover {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
 /* avatar */
 
 .status .account__avatar,
