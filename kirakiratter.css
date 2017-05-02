@@ -711,12 +711,12 @@ button.icon-button i.fa-retweet:hover {
 }
 
 .search-results__header {
-  background: rgba(237, 42, 144, 0.6);
+  background: hsla(325, 58%, 48%, 0.6);
   border-bottom: solid 1px #e3a4ad;
 }
 
 .search-results__section {
-  background: rgba(237, 42, 144, 0.6);
+  background: hsla(325, 58%, 48%, 0.6);
 }
 
 .compose-form__buttons .icon-button:hover {
