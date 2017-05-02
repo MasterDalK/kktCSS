@@ -56,17 +56,15 @@
 }
 
 @media screen and (min-width: 2560px) {
-  .column {
-    width: 15%;
-  }
-
-  .column:last-child {
-    width: 25.3835%;
-  }
-
   .column, .drawer {
     height: auto;
     margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 2561px) {
+  .column {
+    min-width: 736px;
   }
 }
 /* Column Resizing -- END */
