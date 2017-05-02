@@ -247,20 +247,6 @@ body /* user */,
   padding: 6px 0 6px 0;
 }
 
-.onboarding-modal__pager {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  border: none;
-}
-
-@media screen and (max-width: 550px) {
-  .onboarding-modal__pager {
-    border-radius: 0;
-    border: none;
-    margin-bottom: -1px;
-  }
-}
-
 .onboarding-modal,
 .boost-modal__action-bar,
 .confirmation-modal__action-bar {
@@ -956,12 +942,22 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
 
 /* Onboarding Modal */
 
-.onboarding-modal__paginator {
-  background: linear-gradient(to bottom, rgba(226,72,152,1) 0%,rgba(229,108,172,1) 100%);
+.onboarding-modal__pager {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border: none;
+}
+
+@media screen and (max-width: 550px) {
+  .onboarding-modal__pager {
+    border-radius: 0;
+    border: none;
+    margin-bottom: -1px;
+  }
 }
 
 .onboarding-modal__page p span a {
-	color: #8e9956 !important;
+  color: #8e9956 !important;
   text-decoration: none;
 }
 
@@ -969,16 +965,20 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
   text-decoration: underline;
 }
 
-.onboarding-modal__paginator a span {
-  color: #efcfcf;
+.onboarding-modal__page p strong {
+  background: #f5b9c2;
 }
 
 .onboarding-modal__page .figure .pseudo-drawer {
   background: none;
 }
 
-.onboarding-modal__page-four {
-  line-height: 17px;
+.onboarding-modal__paginator {
+  background: linear-gradient(to bottom, rgba(226,72,152,1) 0%,rgba(229,108,172,1) 100%);
+}
+
+.onboarding-modal__paginator a span {
+  color: #efcfcf;
 }
 
 .onboarding-modal__dot {
@@ -994,10 +994,6 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
   box-shadow: #f5e33a 0px 0px 5px 0px;
 }
 
-.onboarding-modal__page p strong {
-  background: #f5b9c2;
-}
-
 .onboarding-modal__page-two .non-interactive span {
   color: #ffffff;
 }
@@ -1006,8 +1002,8 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
   color: #6a4643;
 }
 
-.onboarding-modal__page p span a span {
-  color: #8e9956 !important;
+.onboarding-modal__page-four {
+  line-height: 17px;
 }
 
 .onboarding-modal__page-six p span a[to] {
