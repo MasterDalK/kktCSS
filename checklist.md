@@ -17,7 +17,8 @@
 ## Modals
 * Media
 * Onboarding
-* 
+* Confirmation
+* Boost Confirmation
 
 ## Standalone Pages
 * Katsus
