@@ -33,9 +33,10 @@ You'll need to do this every time you access Kirakiratter via mobile. If you hav
 ## Installation Instructions (Japanese):
 
 氷上スミレ( https://kirakiratter.com/@sumire )です。
-みなさんはキラキラッター( https://kirakiratter.com )、してますか？
 
-キラキラッターがもっと魅力的になる、DalKちゃんの素敵なCSSコーデ(ィング)の使いかたを、解説するよ。  
+キラキラッターは、このkktCSSがテーマとして使われることになって、いつでも素敵なCSSコーデ(ィング)が楽しめるようになったよ。
+
+他のインスタンスでもkktCSSを使いたい人もいるかもしれないから、使い方を解説するね。
 
 ### Desktop
 
