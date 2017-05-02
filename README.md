@@ -9,6 +9,9 @@ Join the Kirakiratter community: https://kirakiratter.com
 キラキラッターへのアクセスはこちら。 https://kirakiratter.com
 
 ## Installation Instructions:
+
+Kirakiratter users will have this theme by default, but if you would like to use it on another Mastodon instance, read the following.
+
 ### Desktop
 
 Install the "Stylish" extension:
