@@ -54,6 +54,21 @@
     flex-grow: 1;
   }
 }
+
+@media screen and (min-width: 2560px) {
+  .column {
+    width: 15%;
+  }
+
+  .column:last-child {
+    width: 25.3835%;
+  }
+
+  .column, .drawer {
+    height: auto;
+    margin-top: 0;
+  }
+}
 /* Column Resizing -- END */
 
 /* Reply Indicator Toggle */
