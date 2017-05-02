@@ -21,7 +21,7 @@ Install the "Stylish" extension:
 
 Then visit [Userstyles.org](https://userstyles.org/styles/141350/kirakiratter), hit "Install with Stylish" and you're done!
 
-Or you can create a new style, configure it to take effect on https://kirakiratter.com, and copy/paste the contents of [kirakiratter.css](https://raw.githubusercontent.com/MasterDalK/kktCSS/master/kirakiratter.css) into the stylesheet editor.
+Or you can create a new style, configure it to take effect on the instance of your choice, and copy/paste the contents of [kirakiratter.css](https://raw.githubusercontent.com/MasterDalK/kktCSS/master/kirakiratter.css) into the stylesheet editor.
 
 ### Mobile
 
