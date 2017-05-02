@@ -4,11 +4,9 @@ CSS stylesheet for Mastodon to look like Kirakiratter (キラキラッター) fr
 
 Join the Kirakiratter community: https://kirakiratter.com
 
-## 日本語で解説するね
-氷上スミレ( https://kirakiratter.com/@sumire )です。
-みなさんはキラキラッター( https://kirakiratter.com )、してますか？
+マストドンをTVアニメ「アイカツ！」に登場するSNS、キラキラッター風のカラーテーマに変更するCSSです。
 
-キラキラッターがもっと魅力的になる、DalKちゃんの素敵なCSSコーデ(ィング)の使いかたを、解説するよ。  
+キラキラッターへのアクセスはこちら。 https://kirakiratter.com
 
 ## Installation Instructions:
 ### Desktop
@@ -32,7 +30,12 @@ Visit [Kirakiratter](https://kirakiratter.com) (or another Mastodon instance of 
 
 You'll need to do this every time you access Kirakiratter via mobile. If you have a better method for using a custom stylesheet on mobile, please feel free to suggest in GitHub Issues or on Kirakiratter!
 
-## 素敵なキラキラッターのはじめかた
+## Installation Instructions (Japanese):
+
+氷上スミレ( https://kirakiratter.com/@sumire )です。
+みなさんはキラキラッター( https://kirakiratter.com )、してますか？
+
+キラキラッターがもっと魅力的になる、DalKちゃんの素敵なCSSコーデ(ィング)の使いかたを、解説するよ。  
 
 ### Desktop
 
