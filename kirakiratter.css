@@ -172,12 +172,9 @@ body /* user */,
   margin-top: 0px;
 }
 
-.account__header > div {
-  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.7) 65%, rgba(0,0,0,0.8));
-}
-
+.account__header > div,
 .card:after {
-  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.6) 75%, rgba(0,0,0,0.8));
+  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.7) 65%, rgba(0,0,0,0.8));
 }
 
 .status__content .status__content__spoiler-link,
@@ -450,7 +447,6 @@ a[href*='/tags/'] span, /* Hashtag Fix */
 .activity-stream .detailed-status.light .status__content a,
 .activity-stream .detailed-status.light .status__content a.hashtag,
 .activity-stream .detailed-status.light .status__content a.mention,
-.account__header__content a, /* Profile */
 .icon-button.active,
 .accounts-grid .account-grid-card .display_name,
 .confirmation-modal__container strong, /* Modals */
@@ -531,7 +527,6 @@ a span, /* Toots */
 .activity-stream .status.light .display-name span,
 .activity-stream .status.light .status__header .status__meta .status__relative-time,
 .activity-stream .detailed-status.light .detailed-status__display-name .display-name span,
-.account__header__content a span,
 .simple_form span.hint, /* Settings */
 .report__target {
   color: #8e9956;
@@ -901,6 +896,20 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
 
 .account__action-bar__tab {
   border-left: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+.account__header__content a span {
+  color: hsl(70, 40%, 55%);
+}
+
+.account__header__content p {
+  color: hsla(53, 40%, 60%, 1);
+}
+
+.account__header__content .mention.hashtag span,
+.account__header__content .h-card .u-url.mention,
+.account__header__content .h-card .u-url.mention span{
+  color: hsl(335, 65%, 66%);
 }
 
 /* Follow Requests */
@@ -1524,10 +1533,6 @@ a.table-action-link:hover {
 
 .landing-strip {
   background: rgba(208,224,147,0.7);
-}
-
-.card {
-  background: rgba(0, 0, 0, 0.3);
 }
 
 .card .name span {
