@@ -409,7 +409,6 @@ p, /* Katswoots -- Posts, Tweets, Katsus, TOOTS, take your pick. */
 /* Darker Brown */
 .drawer__tab,
 .icon-button,
-.icon-button.active,
 .column-icon,
 .column-header,
 .column-link,
@@ -452,6 +451,7 @@ a[href*='/tags/'] span, /* Hashtag Fix */
 .activity-stream .detailed-status.light .status__content a.hashtag,
 .activity-stream .detailed-status.light .status__content a.mention,
 .account__header__content a, /* Profile */
+.icon-button.active,
 .accounts-grid .account-grid-card .display_name,
 .confirmation-modal__container strong, /* Modals */
 .onboarding-modal__page p strong,
@@ -657,7 +657,7 @@ button.icon-button i.fa-retweet:hover {
 .status-list__unread-indicator,
 .notifications__unread-indicator {
   background: radial-gradient(ellipse, rgba(237, 100, 156,0.23) 0%, rgba(237, 100, 156,0) 60%);
-  transform: translate(0,0);
+  transform: translate3d(0,0,0);
 }
 
 /* Katsu Drawer & Search */
