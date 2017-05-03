@@ -412,6 +412,8 @@ p, /* Katswoots -- Posts, Tweets, Katsus, TOOTS, take your pick. */
 .column-back-button,
 .column-back-button span,
 .compose-form__warning span,
+.notification__message .fa-user-plus,
+.fa-user-plus,
 .icon-button:active,
 .icon-button:focus {
   color: #6a4643;
@@ -429,6 +431,8 @@ p, /* Katswoots -- Posts, Tweets, Katsus, TOOTS, take your pick. */
 .mention span,
 .mention.hashtag span,
 .reply-indicator__content a, /* Notifications & Reply Indicator */
+.notification__message .fa-user-times,
+.fa-user-times,
 .compose-form__warning a,
 .h-card,
 .h-card span,
@@ -447,7 +451,6 @@ a[href*='/tags/'] span, /* Hashtag Fix */
 .activity-stream .detailed-status.light .status__content a,
 .activity-stream .detailed-status.light .status__content a.hashtag,
 .activity-stream .detailed-status.light .status__content a.mention,
-.icon-button.active,
 .accounts-grid .account-grid-card .display_name,
 .confirmation-modal__container strong, /* Modals */
 .onboarding-modal__page p strong,
