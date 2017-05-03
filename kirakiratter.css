@@ -60,9 +60,7 @@
     height: auto;
     margin-top: 0;
   }
-}
 
-@media screen and (min-width: 2561px) {
   .column {
     min-width: 736px;
   }
