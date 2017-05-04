@@ -823,7 +823,11 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
   border: 0;
 }
 
-/* iOS9 Fixes */
+/* Apple Device Fixes */
+
+.mastodon-column-container {
+  height: auto !important;
+}
 
 .column-collapsable,
 .getting-started__wrapper {
