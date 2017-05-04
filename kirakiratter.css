@@ -172,9 +172,12 @@ body /* user */,
   margin-top: 0px;
 }
 
-.account__header > div,
-.card:after {
+.account__header > div {
   background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.7) 65%, rgba(0,0,0,0.8));
+}
+
+.card:after {
+  background:  linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.65) 65%, rgba(0,0,0,0.8));
 }
 
 .status__content .status__content__spoiler-link,
@@ -805,7 +808,6 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
   color: #fff;
 }
 
-
 .search__input, .autosuggest-textarea__textarea {
 	font-size: 16px;
 }
@@ -820,7 +822,6 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
   background-color: #f5b9c2;
   border: 0;
 }
-
 
 /* iOS9 Fixes */
 
