@@ -655,7 +655,7 @@ button.icon-button i.fa-retweet:hover {
   text-shadow: none;
 }
 
-.icon-button > i {
+.status__action-bar .icon-button > i {
   vertical-align: bottom;
 }
 
