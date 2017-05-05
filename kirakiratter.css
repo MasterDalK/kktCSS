@@ -1302,11 +1302,6 @@ button.icon-button i.fa-retweet:hover {
   transition: background-position 0.9s steps(10), background-image 100ms ease-in, opacity 300ms;
 }
 
-.muted .status__action-bar .fa-retweet:hover {
-  -webkit-transition: background-position 0.9s steps(10), background-image 100ms ease-in, opacity 300ms;
-  transition: background-position 0.9s steps(10), background-image 100ms ease-in, opacity 300ms;
-}
-
 button.icon-button.active i.fa-retweet {
   background-position: 0 100%;
   -webkit-transition-duration: 0.9s, 100ms;
