@@ -29,9 +29,9 @@ Create a new bookmark using the following as the URL:
 
 `javascript:(function(){var s=document.createElement('link');s.setAttribute('href','https://masterdalk.github.io/kktCSS/kirakiratter.css');s.setAttribute('rel','stylesheet');s.setAttribute('type','text/css');document.getElementsByTagName('head')[0].appendChild(s);})()`
 
-Visit [Kirakiratter](https://kirakiratter.com) (or another Mastodon instance of your choice) and _then_ go to the bookmark you just created to load the stylesheet.
+Visit your instance of choice and _then_ go to the bookmark you just created to load the stylesheet.
 
-You'll need to do this every time you access Kirakiratter via mobile. If you have a better method for using a custom stylesheet on mobile, please feel free to suggest in GitHub Issues or on Kirakiratter!
+You'll need to do this every time you access the instance via mobile. If you have a better method for using a custom stylesheet on mobile, please feel free to suggest in GitHub Issues or on Kirakiratter!
 
 ## Installation Instructions (Japanese):
 
