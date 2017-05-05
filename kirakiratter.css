@@ -682,17 +682,15 @@ button.icon-button i.fa-retweet:hover {
   background: hsla(325, 58%, 48%, 0.6);
 }
 
-@media screen and (min-width: 320px) and (max-width: 1024px) {
-  .privacy-dropdown.active .privacy-dropdown__value {
-    border-radius: 4px 0 0 4px;
-    box-shadow: -4px 0 4px rgba(0,0,0,0.1);
-  }
+.privacy-dropdown.active .privacy-dropdown__value {
+  border-radius: 4px 0 0 4px;
+  box-shadow: -4px 0 4px rgba(0,0,0,0.1);
+}
 
-  .privacy-dropdown__dropdown {
-    bottom: -25px;
-    left: 27px;
-    top: auto;
-  }
+.privacy-dropdown__dropdown {
+  bottom: -25px;
+  left: 27px;
+  top: auto;
 }
 
 .privacy-dropdown__option__content strong,
