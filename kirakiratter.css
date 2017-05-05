@@ -298,12 +298,6 @@ body /* user */,
   /*url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQogIDxsaW5lIGlkPSJzdmdfMSIgeTI9IjEyLjQxMiIgeDI9IjEwLjAzNTc1IiB5MT0iMC44MzMiIHgxPSIxMC4wMzU3NSIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZT0iI0ZDRkNFMSIgZmlsbD0ibm9uZSIvPg0KICA8cGF0aCBpZD0ic3ZnXzIiIGQ9Im05Ljc2LDFjMCwwIC00LjgyMzUsMC45MjY3NSAtOCw1LjgzM2M1LjQyNjc1LDEgOCw1LjMzNCA4LDUuMzM0IiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2U9IiNlYmRjOTMiIGZpbGw9IiNGQ0ZDRTEiLz4NCjwvc3ZnPg==);*/
 }
 
-.status.muted,
-.boost-modal__container .status {
-  box-shadow: none;
-  border: solid 2px #e8d17f;
-}
-
 .status.muted {
   left: -4px;
 }
@@ -324,7 +318,6 @@ body /* user */,
 .notification .account__avatar,
 .status .avatar,
 .notification .avatar,
-.boost-modal__status-header .account__avatar,
 .notification-follow .account__avatar {
   border: solid 2px #e1c152;
 }
@@ -334,13 +327,30 @@ body /* user */,
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
 }
 
-.status.muted .avatar,
-.status.muted .account__avatar {
+.status.muted,
+.boost-modal__container .status,
+.status.muted .status__avatar,
+.boost-modal__status-header .status__avatar {
   box-shadow: none;
+  border: solid 2px #e8d17f;
 }
 
+.status.muted .avatar,
+.status.muted .account__avatar,
 .boost-modal__status-header .account__avatar {
-  opacity: 0.65;
+  box-shadow: none;
+  opacity: 0.5;
+  border: none;
+}
+
+.status.muted .status__avatar,
+.boost-modal__status-header .status__avatar {
+  opacity: 1;
+  border-radius: 4px;
+}
+
+.boost-modal__status-header .status__avatar {
+  height: auto;
 }
 
 .status__avatar {
@@ -1048,11 +1058,11 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
     padding: 5px;
     margin-bottom: 10px;
   }
-  
+
   .onboarding-modal__page-four__columns .row {
     margin-bottom: 10px;
   }
-  
+
   .onboarding-modal__page-four__columns .column-header {
     padding: 5px;
     font-size: 12px;
