@@ -444,6 +444,7 @@ p, /* Katswoots -- Posts, Tweets, Katsus, TOOTS, take your pick. */
 .status__content .h-card span,
 .mention span,
 .mention.hashtag span,
+.account__header__content a, /* Profile */
 .reply-indicator__content a, /* Notifications & Reply Indicator */
 .notification__message .fa-user-times,
 .fa-user-times,
