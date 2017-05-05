@@ -655,6 +655,10 @@ button.icon-button i.fa-retweet:hover {
   text-shadow: none;
 }
 
+.icon-button > i {
+  vertical-align: bottom;
+}
+
 /* Column Update Colours */
 .column-header.active {
   box-shadow: 0 1px 0 #ed649c;
