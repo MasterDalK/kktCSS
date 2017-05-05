@@ -852,7 +852,7 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
  display: none;
 }
 
-.column-collapsable div:nth-child(2) {
+.column-collapsable > div:nth-child(2) {
   overflow: auto !important;
 }
 
