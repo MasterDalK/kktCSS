@@ -405,7 +405,8 @@ p, /* Katswoots -- Posts, Tweets, Katsus, TOOTS, take your pick. */
 .pagination .page.gap,
 .report__target strong, /* User Reports */
 .report__textarea,
-.account-authorize .account__header__content /* Follow Requests */ {
+.account-authorize .account__header__content, /* Follow Requests */
+.account-card .account__header__content p /* Remote Follow */ {
   color: #7b5d4d;
 }
 
@@ -474,7 +475,9 @@ a[href*='/tags/'] span, /* Hashtag Fix */
 .compact-header h1 a,
 .oauth-prompt strong, /* 2FA */
 .follow-prompt strong,
-.filters .filter-subset a.selected {
+.filters .filter-subset a.selected,
+.account-card .detailed-status__display-name .display-name strong, /* Remote Follow */
+.account-card .account__header__content a span {
   color: #ed649c;
   text-decoration: none;
 }
@@ -548,7 +551,8 @@ a span, /* Toots */
 .activity-stream .status.light .status__header .status__meta .status__relative-time,
 .activity-stream .detailed-status.light .detailed-status__display-name .display-name span,
 .simple_form span.hint, /* Settings */
-.report__target {
+.report__target,
+.account-card .detailed-status__display-name .display-name span /* Remote Follow */ {
   color: #8e9956;
 }
 
@@ -1660,10 +1664,13 @@ a.table-action-link:hover {
 
 /* OAuth, Remote follow */
 
-.form-container {
-  background: linear-gradient(to bottom, rgba(252, 252, 225, 1) 0%, rgba(252, 252, 225, 1) 65%, rgba(252, 252, 225, 1) 65%, rgba(249, 240, 174, 1) 100%);
+.form-container,
+.account-card {
+  background: -webkit-linear-gradient(top, #fcfce1 0%, #fcfce1 65%, #fcfce1 65%, #f9f0ae 100%);
+  background: linear-gradient(to bottom, #fcfce1 0%, #fcfce1 65%, #fcfce1 65%, #f9f0ae 100%);
   border-radius: 8px;
   border: solid 2px #e1c152;
+  box-shadow: none;
 }
 
 .form-container .flash-message code {
