@@ -912,17 +912,12 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
 }
 
 /* Profile Column */
-.dropdown {
+
+.account__action-bar-dropdown {
+  -webkit-box-flex: none;
+  -ms-flex: none;
+  flex: none;
   width: 32px;
-}
-
-.account__action-bar div:first-child {
-  max-width: 32px;
-}
-
-.account__action-bar div:last-child {
-  max-width: calc(86% - 32px);
-  justify-content: space-between;
 }
 
 .account__action-bar {
@@ -931,6 +926,9 @@ div.drawer__inner div:not(.navigation-bar) div:last-child div:last-child div:nth
 }
 
 .account__action-bar__tab {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   border-left: 1px solid rgba(0, 0, 0, 0.6);
 }
 
