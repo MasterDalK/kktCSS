@@ -507,7 +507,8 @@ a[href*='/tags/'] span:hover,
 .activity-stream .detailed-status.light .status__content a:hover,
 .activity-stream .pre-header .status__display-name.muted strong:hover,
 .activity-stream .detailed-status.light .status__content a.hashtag:hover,
-.compose-form__warning a:hover {
+.compose-form__warning a:hover,
+.account-card .detailed-status__display-name .display-name strong:hover {
   text-decoration: underline;
 }
 
