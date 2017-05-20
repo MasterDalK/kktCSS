@@ -1611,9 +1611,12 @@ a.table-action-link:hover {
   color: #d9e1e8;
 }
 
+.p-name .activity-stream {
+  background: rgba(0, 0, 0, 0.1);
+}
+
 .activity-stream {
   box-shadow: none;
-  background: rgba(0, 0, 0, 0.1);
 }
 
 .activity-stream:first-child {
