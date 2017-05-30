@@ -130,7 +130,7 @@ body /* user */,
 .column-icon,
 .column-back-button,
 .column-link {
-  background: #d0e093;
+  background: #d0e093 !important;
 }
 
 .column-subheading {
@@ -367,6 +367,7 @@ body /* user */,
 /* COLOUR STYLING */
 /* Brown */
 p, /* Katswoots -- Posts, Tweets, Katsus, TOOTS, take your pick. */
+label, /* Texts -- languages (settings/profile) */
 .status__content,
 .status-card__description,
 .column-subheading, /* Getting Started */
@@ -407,7 +408,7 @@ p, /* Katswoots -- Posts, Tweets, Katsus, TOOTS, take your pick. */
 .report__textarea,
 .account-authorize .account__header__content, /* Follow Requests */
 .account-card .account__header__content p /* Remote Follow */ {
-  color: #7b5d4d;
+  color: #7b5d4d !important;
 }
 
 /* Lighter Brown */
@@ -431,7 +432,7 @@ p, /* Katswoots -- Posts, Tweets, Katsus, TOOTS, take your pick. */
 .column-back-button,
 .column-back-button span,
 .compose-form__warning span {
-  color: #6a4643;
+  color: #6a4643 !important;
 }
 
 /* User @ Text & Links */
