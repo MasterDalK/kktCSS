@@ -1,8 +1,102 @@
-$color1: #282c37 !default; // darkest
-$color2: #ed649c !default; // lightest
-$color3: #9baec8 !default; // lighter
-$color4: #2b90d9 !default; // vibrant
-$color5: #ffffff !default; // white
-$color6: #df405a !default; // error red
-$color7: #79bd9a !default; // succ green
-$color8: #000000 !default; // black
+// Commonly used web colors
+$black: #000000;            // Black
+$white: #ffffff;            // White
+$success-green: #79bd9a;    // Padua
+$error-red: #df405a;        // Cerise
+$warning-red: #ff5050;      // Sunset Orange
+$gold-star: #ca8f04;        // Dark Goldenrod
+
+// Values from the classic Mastodon UI
+$classic-base-color: #282c37;         // Midnight Express
+$classic-primary-color: #9bc430;      // Button BG Green
+$classic-secondary-color: #d9e1e8;    // Pattens Blue
+$classic-highlight-color: #2b90d9;    // Summer Sky
+
+// Variables for defaults in UI
+$base-shadow-color: $black !default;
+$base-overlay-background: $black !default;
+$base-border-color: $white !default;
+$simple-background-color: $white !default;
+$primary-text-color: $white !default;
+$valid-value-color: $success-green !default;
+$error-value-color: $error-red !default;
+
+// Tell UI to use selected colors
+$ui-base-color: $classic-base-color !default;                  // Darkest
+$ui-base-lighter-color: lighten($ui-base-color, 26%) !default; // Lighter darkest
+$ui-primary-color: $classic-primary-color !default;            // Lighter
+$ui-secondary-color: $classic-secondary-color !default;        // Lightest
+$ui-highlight-color: $classic-highlight-color !default;        // Vibrant
+
+//kktCSS START
+
+// Greens
+$reply-indicator-bg-green: #d7e5a3;
+$body-bg-green: #ecf5be;
+$column-header-bg-green: #d0e093; // rgba(208,224,147,0.7)
+$column-subheading-bg-green: #dced91;
+$column-scrollable-bg-green: #d4dcab; // rgba(212, 220, 171, 0.5), transparentize(mix(#ecf5be, black, 90%), 0.5)
+$media-spoiler-bg-green: #e2e2c9;
+$status-username-green: #8e9956;
+$getting-started-url-green: #707844; // darken(#8e9956, 10%)
+$getting-started-url-hover-green: #515831; // darken(#8e9956, 20%)
+$button-bg-green: #9bc430;
+$button-hover-bg-green: #85a13b;
+$button-disabled-bg-green: #a2ad85; // hsla(77, 20%, 60%, 1)
+$privacy-dropdown-strong-green: #394026; // hsl(77, 25%, 20%)
+$privacy-dropdown-green: #7f8f56; // hsl(77, 25%, 45%)
+$icon-button-inverted-active-green: #96b34c;
+$privacy-dropdown-active-bg-green: #96b34d; // hsla(77, 40%, 50%, 1)
+$privacy-dropdown-active-hover-bg-green: #a0ba5e; // hsla(77, 40%, 55%, 1)
+$search-input-green: #7c8658;
+$react-toggle-checked-green: #9bc530;
+$react-toggle-checked-hover-green: #b4d75b;
+$account-header-content-url-green: #abba5e; // hsl(70, 40%, 55%)
+$admin-sidebar-bg-green: #adba79; // rgba(173,186,121,0.5)
+$sidebar-layout-bg-green: #c9d185;
+
+// Pinks
+$drawer-bg-pink: #e46bac;
+$spoiler-link-bg-pink: #ed2a90; // rgba(237, 42, 144, 0.6)
+$spoiler-link-muted-bg-pink: #eda1c8;
+$dropdown-content-bg-pink: #e3a4ad;
+$spoiler-link-hover-bg-pink: #f5b9c2;
+$dropdown-separator-border-pink: #e57cb1;
+$status-display-name-pink: #ed649c; // also rgba(237, 100, 156, 0.23)
+$status-display-name-muted-pink: #f086b1;
+$navigation-bar-bg-pink: #c13386; // hsla(325, 58%, 48%, 0.6)
+$navigation-bar-strong-pink: #efcfcf;
+$navigation-bar-profile-pink: #dfafaf;
+$account-header-content-hashtag-pink: #e1709f; // hsl(335, 65%, 66%)
+$upload-area-bg-pink: #e488b9;
+$upload-area-border-pink: #d84a9d;
+$onboarding-paginator-bg-pink-1: #e24898; // rgba(226,72,152,1)
+$onboarding-paginator-bg-pink-2: #e56cac; // rgba(229,108,172,1)
+$about-body-em-bg-pink: #f292b9; // lighten(#ed649c, 10%)
+
+// Yellows
+$status-bg-yellow-1: #fcfce1; // rgba(252, 252, 225, 1)
+$status-bg-yellow-2: #f9f0ae; // rgba(249, 240, 174, 1)
+$status-border-yellow: #e1c152;
+$status-muted-border-yellow: #e8d17f;
+$status-card-hover-border-yellow: #bc9c2b;
+$icon-button-shadow-yellow: #f5e33a;
+$account-header-content-text-yellow: #c2b870; // hsla(53, 40%, 60%, 1)
+$icon-button-active-star-yellow: #ca8f04; // rgb(202, 143, 4), $gold-star
+
+// Browns
+$status-content-brown: #7b5d4d;
+$status-content-muted-brown: #ad9588;
+$column-icon-brown: #6a4643; // used as darker brown on hover
+$icon-button-brown: #8b6461;
+$icon-button-disabled-brown: #9c7a78;
+$follow-request-border-brown: #8b6d5d;
+$onboarding-dot-active-bg-brown: #a07774;
+$table-action-hover-brown: #6c5549;
+$about-body-em-brown: #6d4e4c; // darken(#8b6461, 10%)
+
+
+// Others
+$setting-text-gray: #777;
+$setting-text-focus-gray: #1a1a1a;
+$account-header-content-blue: #d9e1e8;

@@ -6,7 +6,7 @@
   .sidebar-wrapper {
     flex: 1;
     height: 100%;
-    background: $color1;
+    background: $ui-base-color;
     display: flex;
     justify-content: flex-end;
   }
@@ -16,7 +16,7 @@
     height: 100%;
     padding: 0;
     overflow-y: auto;
-    
+
     .logo {
       display: block;
       margin: 40px auto;
@@ -33,7 +33,7 @@
       a {
         display: block;
         padding: 15px 25px;
-        color: rgba($color5, 0.7);
+        color: rgba($primary-text-color, 0.7);
         text-decoration: none;
         transition: all 200ms linear;
         border-radius: 4px 0 0 4px;
@@ -43,19 +43,19 @@
         }
 
         &:hover {
-          color: $color5;
-          background-color: darken($color1, 5%);
+          color: $primary-text-color;
+          background-color: darken($ui-base-color, 5%);
           transition: all 100ms linear;
         }
 
         &.selected {
-          background: darken($color1, 2%);
-          border-radius: 4px 0 0 0;
+          background: darken($ui-base-color, 2%);
+          border-radius: 4px 0 0;
         }
       }
 
       ul {
-        background: darken($color1, 4%);
+        background: darken($ui-base-color, 4%);
         border-radius: 0 0 0 4px;
         margin: 0;
 
@@ -63,13 +63,13 @@
           border: 0;
 
           &.selected {
-            color: $color5;
-            background-color: $color4;
+            color: $primary-text-color;
+            background-color: $ui-highlight-color;
             border-bottom: 0;
             border-radius: 0;
 
             &:hover {
-              background-color: lighten($color4, 5%);
+              background-color: lighten($ui-highlight-color, 5%);
             }
           }
         }
@@ -89,21 +89,28 @@
     padding-left: 25px;
 
     h2 {
-      color: $color2;
+      color: $ui-secondary-color;
       font-size: 24px;
       line-height: 28px;
       font-weight: 400;
       margin-bottom: 40px;
     }
 
+    h6 {
+      font-size: 16px;
+      color: $ui-primary-color;
+      line-height: 28px;
+      font-weight: 400;
+    }
+
     & > p {
       font-size: 14px;
       line-height: 18px;
-      color: $color2;
+      color: $ui-secondary-color;
       margin-bottom: 20px;
 
       strong {
-        color: $color5;
+        color: $primary-text-color;
         font-weight: 500;
       }
     }
@@ -112,16 +119,31 @@
       margin: 20px 0;
       border: 0;
       background: transparent;
-      border-bottom: 1px solid $color1;
+      border-bottom: 1px solid $ui-base-color;
+    }
+
+    .muted-hint {
+      color: lighten($ui-base-color, 27%);
+
+      a {
+        color: $ui-primary-color;
+      }
+    }
+
+    .positive-hint {
+      color: $valid-value-color;
+      font-weight: 500;
     }
   }
 
   .simple_form {
     max-width: 400px;
+
     .label_input {
       label.select {
         width: 50%;
       }
+
       select {
         width: 50%;
         float: right;
@@ -134,7 +156,8 @@
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
 
-    .sidebar-wrapper, .content-wrapper {
+    .sidebar-wrapper,
+    .content-wrapper {
       flex: 0 0 auto;
       height: auto;
       overflow: initial;
@@ -182,21 +205,21 @@
 
     a {
       display: inline-block;
-      color: rgba($color5, 0.7);
+      color: rgba($primary-text-color, 0.7);
       text-decoration: none;
       text-transform: uppercase;
       font-size: 12px;
       font-weight: 500;
-      border-bottom: 2px solid $color1;
+      border-bottom: 2px solid $ui-base-color;
 
       &:hover {
-        color: $color5;
-        border-bottom: 2px solid lighten($color1, 5%);
+        color: $primary-text-color;
+        border-bottom: 2px solid lighten($ui-base-color, 5%);
       }
 
       &.selected {
-        color: $color4;
-        border-bottom: 2px solid $color4;
+        color: $ui-highlight-color;
+        border-bottom: 2px solid $ui-highlight-color;
       }
     }
   }
@@ -218,7 +241,7 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 18px;
-    color: $color2;
+    color: $ui-secondary-color;
   }
 
   &:first-child {
@@ -230,7 +253,8 @@
   }
 }
 
-.report-status {
+.report-status,
+.account-status {
   display: flex;
   margin-bottom: 10px;
 
@@ -240,6 +264,55 @@
   }
 }
 
-.report-status__actions {
+.report-status__actions,
+.account-status__actions {
   flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  .icon-button {
+    font-size: 24px;
+    width: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+.batch-form-box {
+  display: flex;
+  margin-bottom: 10px;
+
+  #form_status_batch_action {
+    margin-right: 5px;
+    font-size: 14px;
+  }
+
+  .media-spoiler-toggle-buttons {
+    margin-left: auto;
+
+    .button {
+      overflow: visible;
+    }
+  }
+}
+
+.batch-checkbox,
+.batch-checkbox-all {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.back-link {
+  margin-bottom: 10px;
+  font-size: 14px;
+
+  a {
+    color: $classic-highlight-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
