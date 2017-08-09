@@ -3395,6 +3395,10 @@ button.icon-button.active i.fa-retweet {
     color: $green-text;
     text-decoration: none;
 
+    &.permalink {
+      color: $pink-text;
+    }
+
     &:hover,
     &:focus,
     &:active {
