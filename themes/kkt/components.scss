@@ -1282,6 +1282,7 @@
 .navigation-bar__profile {
   flex: 1 1 auto;
   margin-left: 8px;
+  padding-top: 4px;
 }
 
 .navigation-bar__profile-account {
@@ -1663,10 +1664,8 @@
   &:hover,
   &:focus,
   &:active {
-    @media screen and (min-width: 1025px) {
-      background: transparentize($white, 0.7);
-      transition: all 100ms linear;
-    }
+    background: transparentize($white, 0.7);
+    transition: all 100ms linear;
   }
 
   span {
@@ -1948,7 +1947,7 @@
   width: 100%;
   z-index: 99;
   box-shadow: 0 0 15px rgba($base-shadow-color, 0.4);
-  background: $ui-secondary-color;
+  background: $green-ui;
   color: darken($gray, 33%);
   font-size: 14px;
 
@@ -1962,12 +1961,12 @@
   cursor: pointer;
 
   &:hover {
-    background: darken($ui-secondary-color, 10%);
+    background: darken($green-ui, 10%);
   }
 
   &.selected {
-    background: $green-ui;
-    color: $base-border-color;
+    background: darken($green-ui, 15%);
+    color: darken($gray, 40%);
   }
 }
 
@@ -2541,7 +2540,7 @@ button.icon-button.active i.fa-retweet {
   color: $white;
   position: absolute;
   top: 10px;
-  right: 10px;
+  left: 10px;
   opacity: 0.7;
   display: inline-block;
   vertical-align: top;
@@ -2556,7 +2555,7 @@ button.icon-button.active i.fa-retweet {
 .account--action-button {
   position: absolute;
   top: 10px;
-  left: 20px;
+  right: 10px;
 }
 
 .setting-toggle {
