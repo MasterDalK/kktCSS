@@ -3,10 +3,26 @@
   background: transparent no-repeat;
   background-position: 50%;
   background-clip: padding-box;
+  border: solid 2px #e1c152;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
 }
 
 @mixin avatar-size($size:48px) {
   width: $size;
   height: $size;
   background-size: $size $size;
+}
+
+@mixin status-format($opacity:1) {
+  background: linear-gradient(to bottom, rgba(252, 252, 225, $opacity) 0%, rgba(252, 252, 225, $opacity) 65%, rgba(252, 252, 225, $opacity) 65%, rgba(249, 240, 174, $opacity) 100%);
+  border-radius: 8px;
+  border: solid 2px $yellow-ui;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+@mixin status-position() {
+  margin-left: 64px;
+  margin-right: 2px;
+  padding-left: 8px;
+  margin-bottom: 8px;
 }

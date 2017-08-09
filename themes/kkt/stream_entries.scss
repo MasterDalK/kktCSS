@@ -1,55 +1,17 @@
 .activity-stream {
   clear: both;
+  background: $base-overlay-background;
   box-shadow: 0 0 15px rgba($base-shadow-color, 0.2);
-
-  .entry {
-    background: $simple-background-color;
-
-    .detailed-status.light,
-    .status.light {
-      border-bottom: 1px solid $ui-secondary-color;
-    }
-
-    &:last-child {
-      &,
-      .detailed-status.light,
-      .status.light {
-        border-bottom: 0;
-        border-radius: 0 0 4px 4px;
-      }
-    }
-
-    &:first-child {
-      &,
-      .detailed-status.light,
-      .status.light {
-        border-radius: 4px 4px 0 0;
-      }
-
-      &:last-child {
-        &,
-        .detailed-status.light,
-        .status.light {
-          border-radius: 4px;
-        }
-      }
-    }
-  }
 
   &.with-header {
     .entry {
       &:first-child {
-        &,
-        .detailed-status.light,
-        .status.light {
-          border-radius: 0;
-        }
+        padding-top: 10px;
       }
     }
   }
-
   .status.light {
-    padding: 14px 14px 14px (48px + 14px * 2);
+    padding: 8px 14px 14px 14px;
     position: relative;
     min-height: 48px;
     cursor: default;
@@ -62,7 +24,7 @@
         font-size: 14px;
 
         .status__relative-time {
-          color: $ui-primary-color;
+          color: $green-text;
         }
       }
     }
@@ -71,13 +33,18 @@
       display: block;
       max-width: 100%;
       padding-right: 25px;
-      color: $ui-base-color;
+      color: $green-text;
+
+      & strong {
+        color: $pink-text;
+      }
     }
 
     .status__avatar {
+      @include avatar-radius();
       position: absolute;
-      left: 14px;
-      top: 14px;
+      left: 10px;
+      top: 0;
       width: 48px;
       height: 48px;
 
@@ -101,28 +68,33 @@
 
       strong {
         font-weight: 500;
-        color: $ui-base-color;
+        color: $pink-text;
       }
 
       span {
         font-size: 14px;
-        color: $ui-primary-color;
+        color: $green-text;
       }
     }
 
     .status__content {
-      color: $ui-base-color;
+      color: $brown-text;
 
       a {
-        color: $ui-highlight-color;
+        color: $green-text;
+
+        &.mention {
+          color: $pink-text;
+        }
       }
 
       a.status__content__spoiler-link {
-        color: $primary-text-color;
-        background: $ui-primary-color;
+        background: darken(saturate($pink-ui, 15%), 5%);
+        color: $white;
 
         &:hover {
-          background: lighten($ui-primary-color, 8%);
+          background: lighten(saturate($pink-ui, 15%), 5%);
+          text-decoration: none;
         }
       }
     }
@@ -143,7 +115,7 @@
 
   .detailed-status.light {
     padding: 14px;
-    background: $simple-background-color;
+    @include status-format();
     cursor: default;
 
     .detailed-status__display-name {
@@ -165,12 +137,12 @@
 
         strong {
           font-weight: 500;
-          color: $ui-base-color;
+          color: $pink-text;
         }
 
         span {
           font-size: 14px;
-          color: $ui-primary-color;
+          color: $green-text;
         }
       }
     }
@@ -186,25 +158,26 @@
     }
 
     .status__content {
-      color: $ui-base-color;
+      color: $brown-text;
 
       a {
-        color: $ui-highlight-color;
+        color: $green-text;
       }
 
       a.status__content__spoiler-link {
-        color: $primary-text-color;
-        background: $ui-primary-color;
+        background: darken(saturate($pink-ui, 15%), 5%);
+        color: $white;
 
         &:hover {
-          background: lighten($ui-primary-color, 8%);
+          background: lighten(saturate($pink-ui, 15%), 5%);
+          text-decoration: none;
         }
       }
     }
 
     .detailed-status__meta {
       margin-top: 15px;
-      color: $ui-primary-color;
+      color: $green-text;
       font-size: 14px;
       line-height: 18px;
 
@@ -311,7 +284,8 @@
   }
 
   .media-spoiler {
-    background: $ui-primary-color;
+    background: #e2e2c9;
+    color: $green-text;
     width: 100%;
     height: 100%;
     cursor: pointer;
@@ -325,10 +299,6 @@
     text-align: center;
     transition: all 100ms linear;
     z-index: 2;
-
-    &:hover {
-      background: darken($ui-primary-color, 5%);
-    }
 
     span {
       display: block;
@@ -371,7 +341,7 @@
     }
 
     .status__display-name.muted strong {
-      color: $ui-primary-color;
+      color: $pink-text;
     }
   }
 

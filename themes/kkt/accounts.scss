@@ -15,7 +15,7 @@
   }
 
   &::after {
-    background: linear-gradient(rgba($base-shadow-color, 0.5), rgba($base-shadow-color, 0.8));
+    background: $black-background;
     display: block;
     content: "";
     position: absolute;
@@ -43,7 +43,7 @@
     display: block;
     font-size: 20px;
     line-height: 18px * 1.5;
-    color: $primary-text-color;
+    color: $white;
     font-weight: 500;
     text-align: center;
     position: relative;
@@ -53,7 +53,7 @@
     small {
       display: block;
       font-size: 14px;
-      color: $ui-highlight-color;
+      color: $pink-text;
       font-weight: 400;
     }
   }
@@ -96,10 +96,10 @@
 
   .counter {
     width: 80px;
-    color: $ui-primary-color;
+    color: $pink-text;
     padding: 5px 10px 0;
     margin-bottom: 10px;
-    border-right: 1px solid $ui-primary-color;
+    border-right: 1px solid $brown-ui;
     cursor: default;
     position: relative;
 
@@ -114,14 +114,14 @@
       bottom: -10px;
       left: 0;
       width: 100%;
-      border-bottom: 4px solid $ui-primary-color;
+      border-bottom: 4px solid $brown-ui;
       opacity: 0.5;
       transition: all 0.8s ease;
     }
 
     &.active {
       &::after {
-        border-bottom: 4px solid $ui-highlight-color;
+        border-bottom: 4px solid $yellow-shadow;
         opacity: 1;
       }
     }
@@ -149,7 +149,7 @@
     .counter-number {
       font-weight: 500;
       font-size: 18px;
-      color: $primary-text-color;
+      color: $white;
     }
   }
 
@@ -194,7 +194,7 @@
   .page,
   .gap {
     font-size: 14px;
-    color: $primary-text-color;
+    color: $brown-ui;
     font-weight: 500;
     display: inline-block;
     padding: 6px 10px;
@@ -204,7 +204,7 @@
   .current {
     background: $simple-background-color;
     border-radius: 100px;
-    color: $ui-base-color;
+    color: $brown-ui;
     cursor: default;
     margin: 0 10px;
   }
@@ -216,7 +216,7 @@
   .prev,
   .next {
     text-transform: uppercase;
-    color: $ui-secondary-color;
+    color: $brown-text;
   }
 
   .prev {
@@ -241,7 +241,7 @@
 
   .disabled {
     cursor: default;
-    color: lighten($ui-base-color, 10%);
+    color: lighten($brown-ui, 10%);
   }
 
   @media screen and (max-width: 360px) {
@@ -264,7 +264,7 @@
 
 .accounts-grid {
   box-shadow: 0 0 15px rgba($base-shadow-color, 0.2);
-  background: $simple-background-color;
+  background: $base-overlay-background;
   border-radius: 0 0 4px 4px;
   padding: 20px 10px;
   padding-bottom: 10px;
@@ -278,21 +278,25 @@
   }
 
   .account-grid-card {
+    @include status-format();
     box-sizing: border-box;
     width: 335px;
-    border: 1px solid $ui-secondary-color;
-    border-radius: 4px;
-    color: $ui-base-color;
+    color: $brown-text;
     margin-bottom: 10px;
 
     &:nth-child(odd) {
       margin-right: 10px;
     }
 
+    @media screen and (max-width: 675px) {
+      &:nth-child(odd) {
+        margin-right: 0;
+      }
+    }
+
     .account-grid-card__header {
       overflow: hidden;
       padding: 10px;
-      border-bottom: 1px solid $ui-secondary-color;
     }
 
     .avatar {
@@ -314,7 +318,7 @@
 
       a {
         display: block;
-        color: $ui-base-color;
+        color: $green-text;
         text-decoration: none;
         text-overflow: ellipsis;
         overflow: hidden;
@@ -330,23 +334,25 @@
     .display_name {
       font-size: 14px;
       display: block;
+      color: $pink-text;
+      font-weight: 500;
     }
 
     .username {
-      color: $ui-highlight-color;
+      color: $green-text;
     }
 
     .note {
       padding: 10px;
-      padding-top: 15px;
-      color: $ui-primary-color;
+      padding-top: 0;
+      color: $brown-text;
       word-wrap: break-word;
     }
   }
 }
 
 .nothing-here {
-  color: $ui-primary-color;
+  color: $brown-text;
   font-size: 14px;
   font-weight: 500;
   text-align: center;
@@ -393,12 +399,12 @@
 
       strong {
         font-weight: 500;
-        color: $ui-base-color;
+        color: $pink-text;
       }
 
       span {
         font-size: 14px;
-        color: $ui-primary-color;
+        color: $green-text;
       }
     }
 

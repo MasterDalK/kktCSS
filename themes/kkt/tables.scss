@@ -10,13 +10,12 @@
     padding: 8px;
     line-height: 18px;
     vertical-align: top;
-    border-top: 1px solid $ui-base-color;
     text-align: left;
   }
 
   & > thead > tr > th {
     vertical-align: bottom;
-    border-bottom: 2px solid $ui-base-color;
+    border-bottom: 2px solid rgba($black,0.6);
     border-top: 0;
     font-weight: 500;
   }
@@ -27,15 +26,15 @@
 
   & > tbody > tr:nth-child(odd) > td,
   & > tbody > tr:nth-child(odd) > th {
-    background: $ui-base-color;
+    background: rgba($white,0.5);
   }
 
   a {
-    color: $ui-highlight-color;
-    text-decoration: underline;
+    color: $pink-text;
+    text-decoration: none;
 
     &:hover {
-      text-decoration: none;
+      text-decoration: underline;
     }
   }
 
@@ -65,11 +64,11 @@ a.table-action-link {
   display: inline-block;
   margin-right: 5px;
   padding: 0 10px;
-  color: rgba($primary-text-color, 0.7);
+  color: $brown-text;
   font-weight: 500;
 
   &:hover {
-    color: $primary-text-color;
+    color: rgba($brown-text, 0.7);
   }
 
   i.fa {

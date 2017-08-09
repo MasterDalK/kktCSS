@@ -6,6 +6,7 @@
   @media screen and (max-width: 700px) {
     width: 100%;
     margin: 0;
+    border: none;
   }
 }
 
@@ -32,7 +33,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      color: $primary-text-color;
+      color: $green-text;
       text-decoration: none;
       outline: 0;
       padding: 12px 16px;

@@ -2,7 +2,7 @@
   .wrapper {
     max-width: 600px;
     margin: 0 auto;
-    color: $ui-primary-color;
+    color: $brown-text;
     padding-top: 50px;
     padding-bottom: 50px;
 
@@ -15,7 +15,7 @@
     font: 46px/52px 'mastodon-font-sans-serif', sans-serif;
     font-weight: 600;
     margin-bottom: 20px;
-    color: $ui-highlight-color;
+    color: $pink-text;
     padding: 20px 0;
 
     img {
@@ -32,7 +32,7 @@
     line-height: 28px;
     font-weight: 400;
     margin-bottom: 20px;
-    color: $primary-text-color;
+    color: $brown-text;
   }
 
   h3 {
@@ -41,7 +41,7 @@
     line-height: 28px;
     font-weight: 400;
     margin-bottom: 20px;
-    color: $ui-secondary-color;
+    color: $brown-text;
   }
 
   ul,
@@ -70,7 +70,7 @@
     margin-bottom: 12px;
 
     a {
-      color: $ui-highlight-color;
+      color: $green-text;
       text-decoration: underline;
     }
   }
@@ -127,10 +127,8 @@
     position: absolute;
     width: 280px;
     box-sizing: border-box;
-    background: darken($ui-base-color, 8%);
+    @include status-format();
     padding: 20px;
-    padding-top: 10px;
-    border-radius: 4px 4px 0 0;
     right: 0;
     bottom: -40px;
 
@@ -139,7 +137,7 @@
       font-size: 14px;
       line-height: 24px;
       font-weight: 500;
-      color: $ui-base-lighter-color;
+      color: $pink-text;
       padding-bottom: 5px;
       margin-bottom: 15px;
       border-bottom: 1px solid lighten($ui-base-color, 4%);
@@ -150,7 +148,7 @@
       a,
       span {
         font-weight: 400;
-        color: lighten($ui-base-color, 34%);
+        color: $brown-text;
       }
 
       a {
@@ -183,17 +181,14 @@
 
     span {
       font-size: 16px;
-
-      &:last-child {
-        color: $ui-secondary-color;
-      }
+      color: $brown-text;
     }
 
     strong {
       font-weight: 500;
       font-size: 32px;
       line-height: 48px;
-      color: $primary-text-color;
+      color: $pink-text;
     }
   }
 }
@@ -211,7 +206,7 @@
       display: block;
       width: 80px;
       height: 80px;
-      border-radius: 48px;
+      border-radius: 8px;
     }
   }
 
@@ -220,7 +215,7 @@
 
     a {
       display: block;
-      color: $primary-text-color;
+      color: $pink-text;
       text-decoration: none;
 
       &:hover {
@@ -232,7 +227,7 @@
 
     .username {
       display: block;
-      color: $ui-primary-color;
+      color: $green-text;
     }
   }
 }
@@ -262,11 +257,11 @@
   .text {
     font-size: 16px;
     line-height: 30px;
-    color: $ui-base-lighter-color;
+    color: $brown-text;
 
     h6 {
       font-weight: 500;
-      color: $ui-primary-color;
+      color: $pink-text;
     }
   }
 }
@@ -274,12 +269,10 @@
 .landing-page {
   .header-wrapper {
     padding-top: 15px;
-    background: $ui-base-color;
     background: linear-gradient(150deg, lighten($ui-base-color, 8%), $ui-base-color);
     position: relative;
 
     &.compact {
-      background: $ui-base-color;
       padding-bottom: 15px;
 
       .hero .heading {
@@ -315,7 +308,7 @@
   }
 
   hr {
-    border-color: rgba($ui-base-lighter-color, .6);
+    border-color: rgba($brown-ui, .6);
   }
 
   .header {
@@ -381,10 +374,9 @@
 
       .simple_form,
       .closed-registrations-message {
-        background: darken($ui-base-color, 4%);
+        @include status-format();
         width: 280px;
         padding: 15px 20px;
-        border-radius: 4px 4px 0 0;
         line-height: initial;
         position: relative;
         z-index: 4;
@@ -441,7 +433,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        color: $ui-primary-color;
+        color: $pink-text;
         text-decoration: none;
         padding: 12px 16px;
         line-height: 32px;
@@ -450,7 +442,7 @@
         font-size: 14px;
 
         &:hover {
-          color: $ui-secondary-color;
+          text-decoration: underline;
         }
       }
 
@@ -492,6 +484,11 @@
   .extended-description {
     padding: 50px 0;
 
+    .container {
+      @include status-format();
+      padding: 10px;
+    }
+
     ul,
     ol {
       list-style: inherit;
@@ -516,11 +513,15 @@
       font: 16px/28px 'mastodon-font-sans-serif', sans-serif;
       font-weight: 400;
       margin-bottom: 12px;
-      color: $ui-base-lighter-color;
+      color: $brown-text;
 
       a {
-        color: $ui-highlight-color;
-        text-decoration: underline;
+        color: $green-text;
+        text-decoration: none;
+
+        &.hover {
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -531,13 +532,13 @@
     line-height: 24px;
     font-weight: 500;
     margin-bottom: 20px;
-    color: $ui-primary-color;
+    color: $pink-text;
   }
 
   p {
     font-size: 16px;
     line-height: 30px;
-    color: $ui-base-lighter-color;
+    color: $brown-text;
   }
 
   .features {
@@ -569,7 +570,7 @@
       font-family: inherit;
       font-size: 16px;
       line-height: inherit;
-      font-weight: inherit;
+      font-weight: 500;
       margin: 0;
       padding: 15px;
     }
@@ -603,6 +604,8 @@
   }
 
   .about-mastodon {
+    @include status-format();
+    padding: 10px;
     max-width: 675px;
 
     p {
@@ -632,29 +635,34 @@
     line-height: 30px;
     margin-bottom: 0;
     font-weight: 500;
-    color: $ui-secondary-color;
+    color: $pink-text;
 
     small {
       font-family: 'mastodon-font-sans-serif', sans-serif;
       display: block;
       font-size: 18px;
       font-weight: 400;
-      color: $ui-base-lighter-color;
+      color: $green-text;
     }
   }
 
   .footer-links {
     padding-bottom: 50px;
     text-align: right;
-    color: $ui-base-lighter-color;
+    color: $green-text;
 
     p {
       font-size: 14px;
+      color: $green-text;
     }
 
     a {
-      color: inherit;
-      text-decoration: underline;
+      color: $green-text;
+      text-decoration: none;
+
+      &.hover {
+        text-decoration: underline;
+      }
     }
   }
 
@@ -754,7 +762,6 @@
       .hero {
         .simple_form,
         .closed-registrations-message {
-          background: darken($ui-base-color, 8%);
           width: 100%;
           border-radius: 0;
           box-sizing: border-box;
