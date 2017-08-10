@@ -1909,7 +1909,7 @@
 
 .column-link {
   background: desaturate(darken($green-ui, 12%),18%);
-  color: $brown-text;
+  color: $brown-ui;
   font-weight: bold;
   display: block;
   font-size: 16px;
@@ -1928,7 +1928,7 @@
 
 .column-subheading {
   background: darken($green-ui, 10%);
-  color: $brown-text;
+  color: $brown-ui;
   padding: 8px 20px;
   font-size: 12px;
   font-weight: 500;
@@ -2336,7 +2336,7 @@ button.icon-button.active i.fa-retweet {
   font-family: "Segoe UI", "Roboto";
   font-weight: bold;
   background: desaturate(darken($green-ui, 12%),18%);
-  color: $brown-text;
+  color: $brown-ui;
   padding: 15px;
   font-size: 16px;
   flex: 0 0 auto;
@@ -3659,7 +3659,7 @@ button.icon-button.active i.fa-retweet {
   }
 
   .column-header {
-    color: $primary-text-color;
+    color: $brown-ui;
     font-weight: 500;
   }
 }
