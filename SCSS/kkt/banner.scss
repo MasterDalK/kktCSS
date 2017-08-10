@@ -5,8 +5,10 @@
   @return '%23' + unquote($color)
 }
 
-.ui::before {
+.drawer__header::before,
+.tabs-bar::before {
   position: absolute;
+  left: 0px;
   z-index: 100;
   display: inline;
   content: "";
@@ -20,15 +22,8 @@
 }
 
 @media screen and (min-width: 768px) {
-  .ui::before {
-    top: 9px;
-    left: 6px;
-  }
-}
-
-@media screen and (min-width: 1025px) {
-  .ui::before {
-    top: 10px;
-    left: 6px;
+  .tabs-bar::before,
+  .drawer__header::before {
+    left: 9px;
   }
 }
