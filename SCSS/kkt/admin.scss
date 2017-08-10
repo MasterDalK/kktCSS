@@ -214,16 +214,16 @@
       text-transform: uppercase;
       font-size: 12px;
       font-weight: 500;
-      border-bottom: 2px solid $ui-base-color;
+      border-bottom: 2px solid $brown-ui;
 
       &:hover {
         color: rgba($brown-text, 0.7);
-        border-bottom: 2px solid lighten($ui-base-color, 5%);
+        border-bottom: 2px solid lighten($brown-ui, 15%);
       }
 
       &.selected {
         color: $brown-text;
-        border-bottom: 2px solid $ui-highlight-color;
+        border-bottom: 2px solid $yellow-shadow;
       }
     }
   }

@@ -329,6 +329,10 @@ code {
   strong {
     font-weight: 500;
   }
+
+  code {
+    word-wrap: break-word;
+  }
 }
 
 .form-footer {

@@ -362,15 +362,13 @@
 }
 
 .account-card {
+  @include status-format();
   padding: 14px 10px;
-  background: $simple-background-color;
-  border-radius: 4px;
   text-align: left;
-  box-shadow: 0 0 15px rgba($base-shadow-color, 0.2);
 
   .detailed-status__display-name {
     display: block;
-    overflow: hidden;
+    overflow: visible;
     margin-bottom: 15px;
 
     &:last-child {
@@ -385,8 +383,8 @@
     }
 
     .avatar {
+      @include avatar-radius();
       display: block;
-      border-radius: 4px;
     }
 
     .display-name {

@@ -15,7 +15,7 @@ $brown-text: #7b5d4d;
   $primary-text-color: $brown-text !default;
 $green-text: #8e9956;    // Main green -  That weird muted shit that is on footers and stuff uses this
   $classic-secondary-color: $green-text;
-$green-hue-77: #869956;
+  $green-hue-77: adjust-hue($green-text, 7deg);
 $pink-text: #ed649c;    // Main Pink (usernames etc)
   $classic-highlight-color: $pink-text;
 $pink-ui: #e46bac;      // Pink Diamonds Fill
