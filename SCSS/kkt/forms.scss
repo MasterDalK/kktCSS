@@ -406,9 +406,8 @@ code {
   .warning {
     max-width: 400px;
     box-sizing: border-box;
-    background: rgba($error-value-color, 0.5);
+    background: lighten($pink-ui, 30%);
     color: $primary-text-color;
-    text-shadow: 1px 1px 0 rgba($base-shadow-color, 0.3);
     box-shadow: 0 2px 6px rgba($base-shadow-color, 0.4);
     border-radius: 4px;
     padding: 10px;

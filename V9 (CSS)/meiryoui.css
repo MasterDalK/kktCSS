@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Meiryo UI';
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: .1em;
+  padding: 1em;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'Meiryo UI';
+    letter-spacing: .1em;
+    padding: 1em;
+  }
+}
+
+body {
+  font-family: "Meiryo UI";
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: .1em;
+  padding: 1em;
+}

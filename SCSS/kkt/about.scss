@@ -510,7 +510,7 @@
 
     p,
     li {
-      font: 16px/28px 'mastodon-font-sans-serif', sans-serif;
+      font-size: 16px/28px;
       font-weight: 400;
       margin-bottom: 12px;
       color: $brown-text;
@@ -527,7 +527,6 @@
   }
 
   h3 {
-    font-family: 'mastodon-font-display', sans-serif;
     font-size: 16px;
     line-height: 24px;
     font-weight: 500;
@@ -553,7 +552,6 @@
     display: flex;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
-    font-family: 'mastodon-font-sans-serif', sans-serif;
     font-size: 13px;
     line-height: 18px;
     font-weight: 400;
@@ -561,7 +559,6 @@
     width: 330px;
     margin-right: 30px;
     flex: 0 0 auto;
-    background: $ui-base-color;
     overflow: hidden;
     box-shadow: 0 0 6px rgba($black, 0.1);
 
@@ -570,7 +567,6 @@
       font-family: inherit;
       font-size: 16px;
       line-height: inherit;
-      font-weight: 500;
       margin: 0;
       padding: 15px;
     }
@@ -597,9 +593,17 @@
       }
 
       a {
-        color: $ui-secondary-color;
+        color: $green-text;
         text-decoration: none;
+
+        &.mention {
+          color: $pink-text;
+        }
       }
+    }
+
+    .status__action-bar {
+      display: none;
     }
   }
 

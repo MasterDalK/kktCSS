@@ -33,12 +33,17 @@
   &:active,
   &:focus,
   &:hover {
-    background-color: darken($green-text, 5%);
+    background-color: lighten(saturate($green-text, 33%), 10%);
     transition: all 200ms ease-out;
+    box-shadow: $yellow-border;
+  }
+
+  &:focus {
+    box-shadow: none;
   }
 
   &:disabled {
-    background-color: lighten($green-text, 10%);
+    background-color: darken($green-text, 5%);
     cursor: default;
   }
 
@@ -52,7 +57,7 @@
     &:active,
     &:focus,
     &:hover {
-      background-color: darken($green-text, 5%);
+      background-color: lighten(saturate($green-text, 33%), 5%);
     }
   }
 
@@ -155,27 +160,27 @@
     }
 
     &.disabled {
-      color: $ui-primary-color;
+      color: lighten($gray, 7%);
     }
 
     &.active {
       color: saturate($green-text, 33%);
 
       &.disabled {
-        color: lighten($green-ui, 10%);
+        color: lighten($gray, 7%);
       }
     }
   }
 
   &.overlayed {
     box-sizing: content-box;
-    background: rgba($base-overlay-background, 0.6);
-    color: rgba($primary-text-color, 0.7);
+    background: rgba($base-overlay-background, 0.2);
+    color: $primary-text-color;
     border-radius: 4px;
     padding: 2px;
 
     &:hover {
-      background: rgba($base-overlay-background, 0.9);
+      color: $primary-text-color;
     }
   }
 }
@@ -234,7 +239,7 @@
     border-width: 0 4.5px 7.8px;
     border-color: transparent transparent $pink-ui;
     bottom: 8px;
-    right: 104px;
+    right: 93px;
   }
 }
 
@@ -415,6 +420,13 @@
 .compose-form__publish-button-wrapper {
   overflow: hidden;
   padding-top: 10px;
+
+  button {
+    &:hover,
+    &.active {
+      box-shadow: none;
+    }
+  }
 }
 
 .emojione {
@@ -574,6 +586,13 @@
 
   opacity: 1;
   animation: fade 150ms linear;
+
+  &.muted {
+    box-shadow: none;
+    border-color: lighten($yellow-ui, 10%);
+    margin-left: 60px;
+    margin-right: 4px;
+  }
 
   &.status-direct {
     .icon-button.disabled {
@@ -751,6 +770,14 @@
     .emojione {
       width: 22px;
       height: 22px;
+    }
+  }
+}
+
+.detailed-status__wrapper {
+  .status__action-bar-dropdown {
+    .dropdown--active::after {
+      right: 88px;
     }
   }
 }
@@ -977,7 +1004,7 @@
 
     &::after {
       bottom: initial;
-      margin-left: 11px;
+      margin-left: 5px;
       margin-top: -7px;
       right: initial;
     }
@@ -1105,6 +1132,10 @@
 .detailed-status__display-avatar {
   float: left;
   margin-right: 10px;
+
+  .account__avatar {
+    box-shadow: none;
+  }
 }
 
 .status__avatar {
@@ -1131,15 +1162,22 @@
   }
 
   .status__avatar {
-    opacity: 0.5;
+    opacity: 0.65;
+
+    .account__avatar,
+    .account__avatar-overlay,
+    .account__avatar-overlay-overlay,
+    .account__avatar-overlay-base, {
+      box-shadow: none;
+    }
   }
 
-  a.status__content__spoiler-link {
-    background: darken(saturate($pink-ui, 15%), 5%);
+  .status__content__spoiler-link {
+    background: lighten(saturate($pink-ui, 5%), 10%);
     color: $white;
 
     &:hover {
-      background: lighten(saturate($pink-ui, 15%), 5%);
+      background: lighten(saturate($pink-ui, 5%), 20%);
       text-decoration: none;
     }
   }
@@ -1152,6 +1190,10 @@
     &:hover {
       opacity: 1;
     }
+  }
+
+  .dropdown--active::after {
+    right: 78px;
   }
 }
 
@@ -1360,7 +1402,7 @@
     }
 
     &:hover {
-      background: desaturate(lighten($pink-ui, 10%), 5%);
+      background: desaturate(lighten($pink-ui, 20%), 5%);
       color: $white;
     }
   }
@@ -1868,7 +1910,7 @@
 .column-link {
   background: desaturate(darken($green-ui, 12%),18%);
   color: $brown-text;
-  font-weight: 500;
+  font-weight: bold;
   display: block;
   font-size: 16px;
   padding: 15px;
@@ -1905,7 +1947,7 @@
   box-sizing: border-box;
   width: 100%;
   margin: 0;
-  color: #282c37;
+  color: darken($gray, 33%);
   background: $simple-background-color;
   padding: 10px;
   font-family: inherit;
@@ -1947,12 +1989,17 @@
   width: 100%;
   z-index: 99;
   box-shadow: 0 0 15px rgba($base-shadow-color, 0.4);
-  background: $green-ui;
-  color: darken($gray, 33%);
+  background: lighten($green-ui, 5%);
+  color: desaturate(darken($green-hue-77, 27%), 3%);
   font-size: 14px;
 
   &.autosuggest-textarea__suggestions--visible {
     display: block;
+  }
+
+  .account__avatar {
+    box-shadow: none;
+    border-width: 0;
   }
 }
 
@@ -1961,12 +2008,13 @@
   cursor: pointer;
 
   &:hover {
-    background: darken($green-ui, 10%);
+    background: lighten(saturate($green-hue-77, 10%), 10%);
+    color: $white;
   }
 
   &.selected {
-    background: darken($green-ui, 15%);
-    color: darken($gray, 40%);
+    background: saturate($green-hue-77, 10%);
+    color: $white;
   }
 }
 
@@ -2002,7 +2050,7 @@
 }
 
 .character-counter--over {
-  color: $gray;
+  color: lighten(desaturate($pink-ui, 10%), 25%);
 }
 
 .getting-started__wrapper {
@@ -2034,7 +2082,7 @@
   color: $brown-text;
   background: transparent;
   border: none;
-  border-bottom: 2px solid $green-ui;
+  border-bottom: 2px solid desaturate(darken($green-ui, 12%),18%);
   box-sizing: border-box;
   display: block;
   font-family: inherit;
@@ -2042,10 +2090,44 @@
   padding: 7px 0;
   width: 100%;
 
+  &::-webkit-input-placeholder {
+    color: $brown-text;
+  }
+
+  &::-moz-placeholder {
+    color: $brown-text;
+  }
+
+  &:-ms-input-placeholder {
+    color: $brown-text;
+  }
+
+  &:-moz-placeholder {
+    color: $brown-text;
+  }
+
+
   &:focus,
   &:active {
     color: $brown-text;
     border-bottom-color: $green-ui;
+    background: rgba($black, 0.1);
+
+    &::-webkit-input-placeholder {
+      color: $brown-text;
+    }
+
+    &::-moz-placeholder {
+      color: $brown-text;
+    }
+
+    &:-ms-input-placeholder {
+      color: $brown-text;
+    }
+
+    &:-moz-placeholder {
+      color: $brown-text;
+    }
   }
 
   @media screen and (max-width: 600px) {
@@ -2054,7 +2136,7 @@
 
   &.light {
     color: $brown-text;
-    border-bottom: 2px solid lighten($green-ui, 27%);
+    border-bottom: 2px solid desaturate(darken($green-ui, 12%),18%);
 
     &:focus,
     &:active {
@@ -2069,8 +2151,7 @@
 button.icon-button i.fa-retweet {
   background-position: 0 0;
   height: 19px;
-  transition: background-position 0.9s steps(10);
-  transition-duration: 0s;
+  transition: background-position 0.9s steps(10), background-image 100ms ease-in;
   vertical-align: middle;
   width: 22px;
 
@@ -2080,8 +2161,12 @@ button.icon-button i.fa-retweet {
 }
 
 button.icon-button.active i.fa-retweet {
-  transition-duration: 0.9s;
+  transition-duration: 0.9s, 100ms;
   background-position: 0 100%;
+}
+
+.muted .status__action-bar .fa.fa-retweet {
+  transition: background-position 0.9s steps(10), background-image 100ms ease-in, opacity 300ms;
 }
 
 .status-card {
@@ -2158,6 +2243,11 @@ button.icon-button.active i.fa-retweet {
   flex: 1 1 auto;
   overflow: hidden;
   padding: 14px 14px 14px 8px;
+  border: 2px solid lighten($yellow-ui, 10%);
+
+  &:hover {
+    border-color: $yellow-ui;
+  }
 }
 
 .status-card__description {
@@ -2246,6 +2336,7 @@ button.icon-button.active i.fa-retweet {
   font-family: "Segoe UI", "Roboto";
   font-weight: bold;
   background: desaturate(darken($green-ui, 12%),18%);
+  color: $brown-text;
   padding: 15px;
   font-size: 16px;
   flex: 0 0 auto;
@@ -2286,9 +2377,17 @@ button.icon-button.active i.fa-retweet {
   font-size: 16px;
   padding: 0 15px;
 
+  &.active,
+  &:active,
+  &:hover {
+    background: transparentize($white, 0.2);
+    color: lighten($brown-ui, 10%);
+  }
+
   &.active {
     &:hover {
-      background: transparentize($white, 0.2);
+      background: transparentize($white, 0.3);
+      color: $brown-ui;
     }
   }
 }
@@ -2443,7 +2542,7 @@ button.icon-button.active i.fa-retweet {
   display: flex;
   flex-direction: column;
   border: 0;
-  width: 100%;
+  width: 100% !important;
   height: 100%;
   justify-content: center;
   position: relative;
@@ -2523,7 +2622,7 @@ button.icon-button.active i.fa-retweet {
   display: flex;
   font-size: 24px;
   height: 100%;
-  padding: 30px 15px;
+  padding: 30px 15px 54px 15px;
   position: absolute;
   top: 0;
 }
@@ -2579,7 +2678,7 @@ button.icon-button.active i.fa-retweet {
 
 .empty-column-indicator,
 .error-column {
-  color: $white;
+  color: $green-text;
   background: transparentize(mix($ui-base-color, black, 90%), 0.5);
   text-align: center;
   padding: 20px;
@@ -2853,7 +2952,7 @@ button.icon-button.active i.fa-retweet {
   left: 0;
   z-index: -1;
   border-radius: 4px;
-  background: $ui-base-color;
+  background: $pink-ui;
   box-shadow: 0 0 5px rgba($base-shadow-color, 0.2);
 }
 
@@ -2862,16 +2961,16 @@ button.icon-button.active i.fa-retweet {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: $ui-secondary-color;
+  color: $white;
   font-size: 18px;
   font-weight: 500;
-  border: 2px dashed $ui-base-lighter-color;
+  border: 2px dashed darken($pink-text, 5%);
   border-radius: 4px;
 }
 
 .upload-progress {
   padding: 10px;
-  color: $ui-base-lighter-color;
+  color: lighten($black, 20%);
   overflow: hidden;
   display: flex;
 
@@ -2906,7 +3005,7 @@ button.icon-button.active i.fa-retweet {
   left: 0;
   top: 0;
   height: 6px;
-  background: $green-ui;
+  background: $brown-ui;
   border-radius: 6px;
 }
 
@@ -3040,9 +3139,18 @@ button.icon-button.active i.fa-retweet {
   font-size: 14px;
   margin: 0;
 
-  &::-webkit-input-placeholder,
-  &::-moz-placeholder,
-  &:-ms-input-placeholder,
+  &::-webkit-input-placeholder {
+    color: darken($green-text, 25%);
+  }
+
+  &::-moz-placeholder {
+    color: darken($green-text, 25%);
+  }
+
+  &:-ms-input-placeholder {
+    color: darken($green-text, 25%);
+  }
+
   &:-moz-placeholder {
     color: darken($green-text, 25%);
   }
@@ -3058,15 +3166,24 @@ button.icon-button.active i.fa-retweet {
   }
 
   &:focus {
-    background: darken($green-text, 25%);
+    background: darken($green-text, 15%);
     color: $white;
-  }
 
-  &:focus::-webkit-input-placeholder,
-  &:focus::-moz-placeholder,
-  &:focus:-ms-input-placeholder,
-  &:focus:-moz-placeholder {
-    color: $white;
+    &::-webkit-input-placeholder {
+      color: $white;
+    }
+
+    &::-moz-placeholder {
+      color: $white;
+    }
+
+    &:-ms-input-placeholder {
+      color: $white;
+    }
+
+    &:-moz-placeholder {
+      color: $white;
+    }
   }
 }
 
@@ -3125,16 +3242,27 @@ button.icon-button.active i.fa-retweet {
   font-weight: 500;
 }
 
-.search-results__hashtag {
-  display: block;
-  padding: 10px;
-  color: lighten(desaturate(adjust-hue($pink-ui, -328deg), 19%), 21%);
-  text-decoration: none;
+.search-results__section {
+  strong {
+    color: lighten(desaturate(adjust-hue($pink-ui, -328deg), 19%), 21%);
+    padding-top: 3px;
+  }
 
-  &:hover,
-  &:active,
-  &:focus {
-    text-decoration: underline;
+  span {
+    color: lighten(desaturate(adjust-hue($pink-ui, -328deg), 26%), 12%);
+  }
+
+  .search-results__hashtag {
+    display: block;
+    padding: 10px;
+    color: lighten(desaturate(adjust-hue($pink-ui, -328deg), 19%), 21%);
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -3604,7 +3732,16 @@ button.icon-button.active i.fa-retweet {
   }
 
   .dropdown__sep {
-    border-bottom-color: $brown-ui;
+    border-bottom-color: lighten($brown-ui, 10%);
+  }
+
+  .status {
+    opacity: 0.75;
+    box-shadow: none;
+
+    .account__avatar {
+      box-shadow: none;
+    }
   }
 }
 
@@ -3623,7 +3760,6 @@ button.icon-button.active i.fa-retweet {
 
   .status {
     user-select: text;
-    opacity: 0.75;
   }
 }
 
@@ -3746,6 +3882,7 @@ button.icon-button.active i.fa-retweet {
 
   strong {
     font-weight: 500;
+    color: $pink-text;
   }
 }
 
@@ -3903,6 +4040,7 @@ button.icon-button.active i.fa-retweet {
   margin-top: 8px;
   overflow: hidden;
   position: relative;
+  width: 100% !important;
 }
 
 .status__video-player-video {
@@ -3955,6 +4093,7 @@ button.icon-button.active i.fa-retweet {
   cursor: pointer;
   margin-top: 8px;
   position: relative;
+  width: 100% !important;
 }
 
 .media-spoiler-video-play-icon {
@@ -4019,10 +4158,6 @@ button.icon-button.active i.fa-retweet {
     bottom: -1px;
     border-color: transparent transparent $ui-base-color;
   }
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 0;
 }
 
 noscript {
