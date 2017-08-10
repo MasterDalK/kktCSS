@@ -3252,6 +3252,10 @@ button.icon-button.active i.fa-retweet {
     color: lighten(desaturate(adjust-hue($pink-ui, -328deg), 26%), 12%);
   }
 
+  .account__avatar {
+    box-shadow: none;
+  }
+
   .search-results__hashtag {
     display: block;
     padding: 10px;
