@@ -280,6 +280,17 @@
       }
     }
 
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -10px;
+      height: 10px;
+      width: 100%;
+      box-shadow: 0 -2px 2px rgba(0,0,0,0.1);
+      z-index: 4;
+    }
+
     .mascot-container {
       max-width: 800px;
       margin: 0 auto;
@@ -296,7 +307,7 @@
       width: auto;
       height: auto;
       left: 60px;
-      z-index: 3;
+      z-index: 5;
     }
   }
 
