@@ -160,6 +160,10 @@
   .container {
     position: relative;
     padding-right: 280px + 15px;
+
+    .panel {
+      z-index: 6;
+    }
   }
 
   .information-board-sections {
