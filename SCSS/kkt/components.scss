@@ -2105,12 +2105,11 @@
     color: $brown-text;
   }
 
-
   &:focus,
   &:active {
     color: $brown-text;
-    border-bottom-color: $green-ui;
-    background: rgba($black, 0.1);
+    border-bottom-color: desaturate(darken($green-ui, 18%),18%);
+    background: rgba($black, 0.05);
     outline: none;
 
     &::-webkit-input-placeholder {
