@@ -453,17 +453,16 @@
           color: darken($pink-text, 15%);
         }
 
-        &[href^="https://joinmastodon"] {
-          margin-right: 20px;
-        }
-
         .fa {
-          position: absolute;
-          right: 0;
-          top: 0;
-          bottom: 0;
-          margin: auto;
+          position: relative;
+          width: 14px;
           height: 14px;
+
+          &::before {
+            position: absolute;
+            top: 0;
+            right: 0;
+          }
         }
       }
 
