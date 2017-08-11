@@ -78,6 +78,7 @@
       border-color: lighten($ui-primary-color, 4%);
       color: lighten($brown-text, 10%);
       background-color: darken($green-ui, 10%);
+      box-shadow: none;
     }
   }
 
@@ -174,13 +175,13 @@
 
   &.overlayed {
     box-sizing: content-box;
-    background: rgba($white, 0.4);
-    color: $primary-text-color;
+    background: rgba($black, 0.4);
+    color: $white;
     border-radius: 4px;
     padding: 2px;
 
     &:hover {
-      color: $primary-text-color;
+      color: $white;
     }
   }
 }

@@ -37,6 +37,11 @@ code {
 
       a {
         color: $green-text;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
