@@ -417,6 +417,6 @@
 
   .account__header__content {
     font-size: 14px;
-    color: $ui-base-color;
+    color: lighten(saturate(adjust-hue($green-text, -17deg), 12%), 13%);
   }
 }

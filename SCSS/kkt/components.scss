@@ -1,5 +1,3 @@
-@import 'variables';
-
 .app-body {
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -1303,11 +1301,11 @@
   display: flex;
   flex-shrink: 0;
   cursor: default;
-  color: lighten(desaturate(adjust-hue($pink-ui, -328deg), 26%), 12%);
+  color: lighten(desaturate($pink-ui, 26%), 12%);
   font-weight: 500;
 
   strong {
-    color: lighten(desaturate(adjust-hue($pink-ui, -328deg), 19%), 21%);
+    color: lighten(desaturate($pink-ui, 19%), 21%);
   }
 
   .permalink {
@@ -3234,8 +3232,8 @@ button.icon-button.active i.fa-retweet {
 }
 
 .search-results__header {
-  color: lighten(desaturate(adjust-hue($pink-ui, -328deg), 19%), 21%);
-  border-bottom: solid 1px lighten(desaturate(adjust-hue($pink-ui, -328deg), 26%), 12%);
+  color: lighten(desaturate($pink-ui, 19%), 21%);
+  border-bottom: solid 1px lighten(desaturate($pink-ui, 26%), 12%);
   padding: 15px 10px;
   font-size: 14px;
   font-weight: 500;
@@ -3243,12 +3241,12 @@ button.icon-button.active i.fa-retweet {
 
 .search-results__section {
   strong {
-    color: lighten(desaturate(adjust-hue($pink-ui, -328deg), 19%), 21%);
+    color: lighten(desaturate($pink-ui, 19%), 21%);
     padding-top: 3px;
   }
 
   span {
-    color: lighten(desaturate(adjust-hue($pink-ui, -328deg), 26%), 12%);
+    color: lighten(desaturate($pink-ui, 26%), 12%);
   }
 
   .account__avatar {
@@ -3258,7 +3256,7 @@ button.icon-button.active i.fa-retweet {
   .search-results__hashtag {
     display: block;
     padding: 10px;
-    color: lighten(desaturate(adjust-hue($pink-ui, -328deg), 19%), 21%);
+    color: lighten(desaturate($pink-ui, 19%), 21%);
     text-decoration: none;
 
     &:hover,
@@ -3577,8 +3575,6 @@ button.icon-button.active i.fa-retweet {
   }
 
   .onboarding-modal__page-one__elephant-friend {
-    width: 100%;
-    height: 30vh;
     max-height: 160px;
     margin-bottom: 5vh;
   }
@@ -3626,7 +3622,7 @@ button.icon-button.active i.fa-retweet {
         background: none;
 
         .navigation-bar__profile-edit {
-          color: lighten(desaturate(adjust-hue($pink-ui, -328deg), 26%), 12%);
+          color: lighten(desaturate($pink-ui, 26%), 12%);
           font-weight: 500;
         }
       }
