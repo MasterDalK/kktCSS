@@ -454,10 +454,10 @@
         }
 
         .fa {
-          position: absolute;
+          position: relative;
           width: 14px;
           height: 14px;
-          
+
           &::before {
             position: absolute;
             top: 0;
