@@ -987,11 +987,7 @@
 .account__action-bar-dropdown {
   flex: 1 1 auto;
   padding: 10px;
-  width: 32px;
-
-  .dropdown__trigger {
-    margin-left: -6px;
-  }
+  width: 22px;
 
   .dropdown--active {
     .dropdown__content.dropdown__right {
@@ -1016,8 +1012,7 @@
 
 .account__action-bar__tab {
   text-decoration: none;
-  overflow: hidden;
-  width: 80px;
+  width: 50px;
   border-left: 1px solid rgba($black, 0.6);
   padding: 10px 5px;
 
