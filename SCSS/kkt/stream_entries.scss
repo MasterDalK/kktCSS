@@ -245,7 +245,7 @@
       display: block;
       width: 100%;
       height: 100%;
-      background: no-repeat scroll center center / cover;
+      background: no-repeat scroll center center / contain;
       text-decoration: none;
       cursor: zoom-in;
     }
@@ -255,9 +255,7 @@
       z-index: 1;
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      top: 50%;
-      transform: translateY(-50%);
+      object-fit: contain;
     }
   }
 
