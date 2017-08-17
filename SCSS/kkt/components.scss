@@ -477,6 +477,10 @@
 .reply-indicator__display-avatar {
   float: left;
   margin-right: 5px;
+
+  .account__avatar {
+    box-shadow: none;
+  }
 }
 
 .status__content--with-action {
@@ -832,6 +836,10 @@
     overflow: hidden;
     text-decoration: none;
     font-size: 14px;
+
+    .account__avatar {
+      box-shadow: none;
+    }
   }
 }
 
