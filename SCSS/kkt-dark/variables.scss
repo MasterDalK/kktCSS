@@ -1,0 +1,66 @@
+// Commonly used web colors
+$black: #000000;                     // Black
+$white: #3a3a3a;                     // All-new GRAY edition
+$success-green: #79bd9a !default;    // Padua
+$error-red: #671160 !default;        // Cerise
+$warning-red: #671160 !default;      // Sunset Orange
+$gold-star: #ca8f04 !default;        // Dark Goldenrod
+
+// Variables for defaults in UI
+$base-shadow-color: $black !default;
+$base-overlay-background: transparentize($black, 0.7) !default;
+$base-border-color: $white !default;
+$simple-background-color: $white !default;
+$valid-value-color: $success-green !default;
+$error-value-color: #671160 !default; //Changed to purple
+
+// Tell UI to use selected colors
+$ui-base-color: #313543 !default;                                 // Dark
+$ui-base-lighter-color: lighten($ui-base-color, 30%) !default;    // Lighter dark
+$ui-primary-color: #2588D0 !default;                              // Strong Blue
+$ui-secondary-color: darken($ui-base-color, 10%) !default;        // Darkest
+$ui-highlight-color: #443ae4 !default;                            // Bit purple-y
+
+// Variables for texts
+$primary-text-color: #FFF !default;
+$darker-text-color: darken(#FFF, 15%) !default;
+$dark-text-color: #B7E1E8 !default;
+$secondary-text-color: #2588D0 !default;
+$highlight-text-color: #B7E1E8 !default;
+$action-button-color: lighten(desaturate($darker-text-color, 5%), 12%) !default;
+
+// For texts on inverted backgrounds
+$inverted-text-color: #FFF !default;
+$lighter-text-color: $primary-text-color !default;
+$light-text-color: $darker-text-color !default;
+
+// Custom
+$scrollbar-color: #7c8ca3;
+$panel-border: #393f4f;
+$panel-shadow: #1f242f;
+
+$banner-color: #f5e33a;
+$banner-shadow: #7c8ca3;
+
+$panel-background: $panel-shadow;
+
+$panel-box-shadow: -1px -1px 0 $panel-shadow, 1px -1px 0 $panel-shadow, -1px 1px 0 $panel-shadow, 1px 1px 0 $panel-shadow;
+
+// Background Variables
+@function hex-color($color) {
+  @if type-of($color) == 'color' {
+    $color: str-slice(ie-hex-str($color), 4);
+  }
+  @return '%23' + unquote($color)
+}
+
+$base-color-diamonds: url("data:image/svg+xml,%3Csvg xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns%23' xmlns='http://www.w3.org/2000/svg' xmlns:cc='http://creativecommons.org/ns%23' xmlns:dc='http://purl.org/dc/elements/1.1/' height='114' viewBox='0 0 80 114' width='80' version='1.1'%3E %3Crect height='114' width='80' y='0' x='0' fill='#{hex-color($ui-base-color)}'/%3E %3Cpath fill='#{hex-color(desaturate(darken($ui-base-color, 10%), 5%))}' d='m0 57 40-57 40 57-40 57z'/%3E %3C/svg%3E");
+
+$highlight-color-diamonds: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='28' width='20'%3E%3Crect height='28' width='20' y='0' x='0' fill='#{hex-color(darken($ui-base-color,10%))}'/%3E%3Cpath d='m0 14 10-14 10 14-10 14z' fill='#{hex-color(darken($ui-base-color, 20%))}'/%3E%3C/svg%3E");
+
+$balloon-tail: url("data:image/svg+xml,%3Csvg width='12' height='14' xmlns='http://www.w3.org/2000/svg'%3E %3Cline id='svg_1' y2='12.412' x2='10.03575' y1='0.833' x1='10.03575' stroke-miterlimit='10' stroke-width='2' stroke='#{hex-color($panel-shadow)}' fill='none'/%3E %3Cpath id='svg_2' d='m9.76,1c0,0 -4.8235,0.92675 -8,5.833c5.42675,1 8,5.334 8,5.334' stroke-miterlimit='10' stroke-linecap='round' stroke-width='2' stroke='#{hex-color($panel-border)}' fill='#{hex-color($panel-shadow)}'/%3E %3C/svg%3E");
+
+$muted-balloon-tail: url("data:image/svg+xml,%3Csvg width='12' height='14' xmlns='http://www.w3.org/2000/svg'%3E %3Cline id='svg_1' y2='12.412' x2='10.03575' y1='0.833' x1='10.03575' stroke-miterlimit='10' stroke-width='2' stroke='#{hex-color($panel-shadow)}' fill='none'/%3E %3Cpath id='svg_2' d='m9.76,1c0,0 -4.8235,0.92675 -8,5.833c5.42675,1 8,5.334 8,5.334' stroke-miterlimit='10' stroke-linecap='round' stroke-width='2' stroke='#{hex-color($panel-border)}' fill='#{hex-color($panel-shadow)}'/%3E %3C/svg%3E");
+
+$black-background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6) 45%, rgba(0,0,0,0.7) 65%, rgba(0,0,0,0.8));
+$white-background: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.6) 45%, rgba(255,255,255,0.7) 65%, rgba(255,255,255,0.8));
