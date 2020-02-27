@@ -26,7 +26,7 @@ $primary-text-color: #7b5d4d !default;
 $darker-text-color: #6a4643 !default;
 $dark-text-color: #8e9956 !default;
 $secondary-text-color: #ed649c !default;
-$highlight-text-color: $ui-highlight-color !default;
+$highlight-text-color: #8e9956 !default;
 $action-button-color: lighten(desaturate($darker-text-color, 5%), 12%) !default;
 
 // For texts on inverted backgrounds
