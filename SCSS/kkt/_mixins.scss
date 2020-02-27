@@ -1,22 +1,7 @@
-@mixin avatar-radius() {
-  border-radius: 4px;
-  background: transparent no-repeat;
-  background-position: 50%;
-  background-clip: padding-box;
-  border: solid 2px $yellow-ui;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
-}
-
-@mixin avatar-size($size:48px) {
-  width: $size;
-  height: $size;
-  background-size: $size $size;
-}
-
-@mixin status-format($opacity:1) {
-  background: $yellow-background;
+@mixin panel-format($opacity:1) {
+  background: $panel-background;
   border-radius: 8px;
-  border: solid 2px $yellow-ui;
+  border: solid 2px $panel-border;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
 }
 
@@ -26,3 +11,13 @@
   padding-left: 8px;
   margin-bottom: 8px;
 }
+
+@mixin avatar-radius() {
+  border-radius: 4px;
+  background: transparent no-repeat;
+  background-position: 50%;
+  background-clip: padding-box;
+  border: solid 2px $panel-border;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
