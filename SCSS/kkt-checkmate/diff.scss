@@ -549,7 +549,7 @@ body.about-body {
 .button.logo-button {
   background: darken($ui-base-color, 10%);
   &:hover {
-    background: $white;
+    background: $ui-base-lighter-color;
   }
 }
 
@@ -586,13 +586,13 @@ body.about-body {
 
 .muted {
   .status__content p {
-    color: lighten($primary-text-color, 15%);
+    color: darken($primary-text-color, 35%);
   }
 
   .status__content a,
   .display-name__account
   {
-    color: lighten($dark-text-color, 15%);
+    color: darken($dark-text-color, 15%);
   }
 
   .status__display-name strong,
@@ -839,6 +839,10 @@ body.about-body {
 .public-account-header__image::after,
 .card::after {
   background: $black-background;
+}
+
+.reduce-motion button.icon-button.active i.fa-retweet {
+  color: $ui-highlight-color;
 }
 
 .icon-button {
