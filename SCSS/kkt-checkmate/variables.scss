@@ -42,7 +42,7 @@ $panel-shadow: #121423;
 $banner-color: #65112b;
 $banner-shadow: #FFF;
 
-$panel-background: $panel-shadow;
+$panel-background: linear-gradient(to bottom, desaturate(lighten($panel-shadow, 5%), 10%) 0%, desaturate(lighten($panel-shadow, 5%), 10%) 65%, desaturate($panel-shadow, 5%) 100%);
 
 $panel-box-shadow: -1px -1px 0 $panel-shadow, 1px -1px 0 $panel-shadow, -1px 1px 0 $panel-shadow, 1px 1px 0 $panel-shadow;
 
@@ -58,9 +58,9 @@ $base-color-diamonds: url("data:image/svg+xml,%3Csvg xmlns:rdf='http://www.w3.or
 
 $highlight-color-diamonds: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='28' width='20'%3E%3Crect height='28' width='20' y='0' x='0' fill='#{hex-color(darken($ui-base-color,10%))}'/%3E%3Cpath d='m0 14 10-14 10 14-10 14z' fill='#{hex-color(darken($ui-base-color, 20%))}'/%3E%3C/svg%3E");
 
-$balloon-tail: url("data:image/svg+xml,%3Csvg width='12' height='14' xmlns='http://www.w3.org/2000/svg'%3E %3Cline id='svg_1' y2='12.412' x2='10.03575' y1='0.833' x1='10.03575' stroke-miterlimit='10' stroke-width='2' stroke='#{hex-color($panel-shadow)}' fill='none'/%3E %3Cpath id='svg_2' d='m9.76,1c0,0 -4.8235,0.92675 -8,5.833c5.42675,1 8,5.334 8,5.334' stroke-miterlimit='10' stroke-linecap='round' stroke-width='2' stroke='#{hex-color($panel-border)}' fill='#{hex-color($panel-shadow)}'/%3E %3C/svg%3E");
+$balloon-tail: url("data:image/svg+xml,%3Csvg width='12' height='14' xmlns='http://www.w3.org/2000/svg'%3E %3Cline id='svg_1' y2='12.412' x2='10.03575' y1='0.833' x1='10.03575' stroke-miterlimit='10' stroke-width='2' stroke='#{hex-color(desaturate(lighten($panel-shadow, 5%), 10%))}' fill='none'/%3E %3Cpath id='svg_2' d='m9.76,1c0,0 -4.8235,0.92675 -8,5.833c5.42675,1 8,5.334 8,5.334' stroke-miterlimit='10' stroke-linecap='round' stroke-width='2' stroke='#{hex-color($panel-border)}' fill='#{hex-color(desaturate(lighten($panel-shadow, 5%), 10%))}'/%3E %3C/svg%3E");
 
-$muted-balloon-tail: url("data:image/svg+xml,%3Csvg width='12' height='14' xmlns='http://www.w3.org/2000/svg'%3E %3Cline id='svg_1' y2='12.412' x2='10.03575' y1='0.833' x1='10.03575' stroke-miterlimit='10' stroke-width='2' stroke='#{hex-color($panel-shadow)}' fill='none'/%3E %3Cpath id='svg_2' d='m9.76,1c0,0 -4.8235,0.92675 -8,5.833c5.42675,1 8,5.334 8,5.334' stroke-miterlimit='10' stroke-linecap='round' stroke-width='2' stroke='#{hex-color($panel-border)}' fill='#{hex-color($panel-shadow)}'/%3E %3C/svg%3E");
+$muted-balloon-tail: url("data:image/svg+xml,%3Csvg width='12' height='14' xmlns='http://www.w3.org/2000/svg'%3E %3Cline id='svg_1' y2='12.412' x2='10.03575' y1='0.833' x1='10.03575' stroke-miterlimit='10' stroke-width='2' stroke='#{hex-color(desaturate(lighten($panel-shadow, 5%), 10%))}' fill='none'/%3E %3Cpath id='svg_2' d='m9.76,1c0,0 -4.8235,0.92675 -8,5.833c5.42675,1 8,5.334 8,5.334' stroke-miterlimit='10' stroke-linecap='round' stroke-width='2' stroke='#{hex-color($panel-border)}' fill='#{hex-color(desaturate(lighten($panel-shadow, 5%), 10%))}'/%3E %3C/svg%3E");
 
 $black-background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6) 45%, rgba(0,0,0,0.7) 65%, rgba(0,0,0,0.8));
 $white-background: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.6) 45%, rgba(255,255,255,0.7) 65%, rgba(255,255,255,0.8));
