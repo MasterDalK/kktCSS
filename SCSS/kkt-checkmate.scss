@@ -3,7 +3,9 @@
 //
 // https://github.com/MasterDalK/kktCSS
 @import 'kkt-checkmate/variables';
-@import 'kkt-checkmate/_mixins';
+@import 'kkt/_mixins';
 @import 'application';
-@import 'kkt-checkmate/boost';
+@import 'kkt/boost';
+@import 'kkt/banner';
+@import 'kkt/diff';
 @import 'kkt-checkmate/diff';

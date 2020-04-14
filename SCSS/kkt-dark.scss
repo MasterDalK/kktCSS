@@ -3,7 +3,8 @@
 //
 // https://github.com/MasterDalK/kktCSS
 @import 'kkt-dark/variables';
-@import 'kkt-dark/_mixins';
+@import 'kkt/_mixins';
 @import 'application';
-@import 'kkt-dark/boost';
+@import 'kkt/boost';
+@import 'kkt/diff';
 @import 'kkt-dark/diff';
